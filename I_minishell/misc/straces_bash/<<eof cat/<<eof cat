@@ -1,0 +1,465 @@
+74185 pselect6(1, [0], NULL, NULL, NULL, {sigmask=[], sigsetsize=8}) = 1 (in [0])
+74185 read(0, "<", 1)                   = 1
+74185 pselect6(1, [0], NULL, [0], {tv_sec=0, tv_nsec=0}, {sigmask=NULL, sigsetsize=8}) = 0 (Timeout)
+74185 write(2, "<", 1)                  = 1
+74185 pselect6(1, [0], NULL, NULL, NULL, {sigmask=[], sigsetsize=8}) = 1 (in [0])
+74185 read(0, "<", 1)                   = 1
+74185 pselect6(1, [0], NULL, [0], {tv_sec=0, tv_nsec=0}, {sigmask=NULL, sigsetsize=8}) = 0 (Timeout)
+74185 write(2, "<", 1)                  = 1
+74185 pselect6(1, [0], NULL, NULL, NULL, {sigmask=[], sigsetsize=8}) = 1 (in [0])
+74185 read(0, "e", 1)                   = 1
+74185 pselect6(1, [0], NULL, [0], {tv_sec=0, tv_nsec=0}, {sigmask=NULL, sigsetsize=8}) = 0 (Timeout)
+74185 write(2, "e", 1)                  = 1
+74185 pselect6(1, [0], NULL, NULL, NULL, {sigmask=[], sigsetsize=8}) = 1 (in [0])
+74185 read(0, "o", 1)                   = 1
+74185 pselect6(1, [0], NULL, [0], {tv_sec=0, tv_nsec=0}, {sigmask=NULL, sigsetsize=8}) = 0 (Timeout)
+74185 write(2, "o", 1)                  = 1
+74185 pselect6(1, [0], NULL, NULL, NULL, {sigmask=[], sigsetsize=8}) = 1 (in [0])
+74185 read(0, "f", 1)                   = 1
+74185 pselect6(1, [0], NULL, [0], {tv_sec=0, tv_nsec=0}, {sigmask=NULL, sigsetsize=8}) = 0 (Timeout)
+74185 write(2, "f", 1)                  = 1
+74185 pselect6(1, [0], NULL, NULL, NULL, {sigmask=[], sigsetsize=8}) = 1 (in [0])
+74185 read(0, " ", 1)                   = 1
+74185 pselect6(1, [0], NULL, [0], {tv_sec=0, tv_nsec=0}, {sigmask=NULL, sigsetsize=8}) = 0 (Timeout)
+74185 write(2, " ", 1)                  = 1
+74185 pselect6(1, [0], NULL, NULL, NULL, {sigmask=[], sigsetsize=8}) = 1 (in [0])
+74185 read(0, "c", 1)                   = 1
+74185 pselect6(1, [0], NULL, [0], {tv_sec=0, tv_nsec=0}, {sigmask=NULL, sigsetsize=8}) = 0 (Timeout)
+74185 write(2, "c", 1)                  = 1
+74185 pselect6(1, [0], NULL, NULL, NULL, {sigmask=[], sigsetsize=8}) = 1 (in [0])
+74185 read(0, "a", 1)                   = 1
+74185 pselect6(1, [0], NULL, [0], {tv_sec=0, tv_nsec=0}, {sigmask=NULL, sigsetsize=8}) = 0 (Timeout)
+74185 write(2, "a", 1)                  = 1
+74185 pselect6(1, [0], NULL, NULL, NULL, {sigmask=[], sigsetsize=8}) = 1 (in [0])
+74185 read(0, "t", 1)                   = 1
+74185 pselect6(1, [0], NULL, [0], {tv_sec=0, tv_nsec=0}, {sigmask=NULL, sigsetsize=8}) = 0 (Timeout)
+74185 write(2, "t", 1)                  = 1
+74185 pselect6(1, [0], NULL, NULL, NULL, {sigmask=[], sigsetsize=8}) = 1 (in [0])
+74185 read(0, "\r", 1)                  = 1
+74185 write(2, "\n", 1)                 = 1
+74185 write(2, "\33[?2004l\r", 9)       = 9
+
+
+74185 ioctl(0, TCGETS, {c_iflag=IXON|IXANY|IMAXBEL|IUTF8, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|OPOST|ONLCR, c_cflag=B38400|CS8|CREAD, c_lflag=ISIG|ECHOE|ECHOK|IEXTEN|ECHOCTL|ECHOKE|PENDIN, ...}) = 0
+74185 ioctl(0, TCSETSW, {c_iflag=ICRNL|IXON|IXANY|IMAXBEL|IUTF8, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|OPOST|ONLCR, c_cflag=B38400|CS8|CREAD, c_lflag=ISIG|ICANON|ECHO|ECHOE|ECHOK|IEXTEN|ECHOCTL|ECHOKE|PENDIN, ...}) = 0
+74185 ioctl(0, TCGETS, {c_iflag=ICRNL|IXON|IXANY|IMAXBEL|IUTF8, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|OPOST|ONLCR, c_cflag=B38400|CS8|CREAD, c_lflag=ISIG|ICANON|ECHO|ECHOE|ECHOK|IEXTEN|ECHOCTL|ECHOKE|PENDIN, ...}) = 0
+74185 rt_sigaction(SIGINT, {sa_handler=0x55a2b7178aa0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, {sa_handler=0x55a2b71d6d00, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, 8) = 0
+74185 rt_sigaction(SIGHUP, {sa_handler=0x55a2b7178f30, sa_mask=[HUP INT ILL TRAP ABRT BUS FPE USR1 SEGV USR2 PIPE ALRM TERM XCPU XFSZ VTALRM SYS], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, {sa_handler=0x55a2b71d6d00, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, 8) = 0
+74185 rt_sigaction(SIGALRM, {sa_handler=0x55a2b7178f30, sa_mask=[HUP INT ILL TRAP ABRT BUS FPE USR1 SEGV USR2 PIPE ALRM TERM XCPU XFSZ VTALRM SYS], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, {sa_handler=0x55a2b71d6d00, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, 8) = 0
+74185 rt_sigaction(SIGWINCH, {sa_handler=0x55a2b7178520, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7f78554de050}, {sa_handler=0x55a2b71d6d10, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7f78554de050}, 8) = 0
+74185 rt_sigaction(SIGINT, {sa_handler=0x55a2b7178aa0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, {sa_handler=0x55a2b7178aa0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, 8) = 0
+74185 rt_sigprocmask(SIG_BLOCK, [CHLD TSTP TTIN TTOU], [], 8) = 0
+74185 ioctl(255, TIOCSPGRP, [74185])    = 0
+74185 rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+74185 rt_sigaction(SIGINT, {sa_handler=0x55a2b7178aa0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, {sa_handler=0x55a2b7178aa0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, 8) = 0
+
+74185 fcntl(0, F_GETFL)                 = 0x2 (flags O_RDWR)
+
+74185 ioctl(0, TIOCGWINSZ, {ws_row=54, ws_col=118, ws_xpixel=944, ws_ypixel=972}) = 0
+74185 ioctl(0, TIOCSWINSZ, {ws_row=54, ws_col=118, ws_xpixel=944, ws_ypixel=972}) = 0
+74185 ioctl(0, TCGETS, {c_iflag=ICRNL|IXON|IXANY|IMAXBEL|IUTF8, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|OPOST|ONLCR, c_cflag=B38400|CS8|CREAD, c_lflag=ISIG|ICANON|ECHO|ECHOE|ECHOK|IEXTEN|ECHOCTL|ECHOKE|PENDIN, ...}) = 0
+74185 ioctl(0, TCGETS, {c_iflag=ICRNL|IXON|IXANY|IMAXBEL|IUTF8, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|OPOST|ONLCR, c_cflag=B38400|CS8|CREAD, c_lflag=ISIG|ICANON|ECHO|ECHOE|ECHOK|IEXTEN|ECHOCTL|ECHOKE|PENDIN, ...}) = 0
+74185 ioctl(0, TCSETSW, {c_iflag=IXON|IXANY|IMAXBEL|IUTF8, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|OPOST|ONLCR, c_cflag=B38400|CS8|CREAD, c_lflag=ISIG|ECHOE|ECHOK|IEXTEN|ECHOCTL|ECHOKE|PENDIN, ...}) = 0
+74185 ioctl(0, TCGETS, {c_iflag=IXON|IXANY|IMAXBEL|IUTF8, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|OPOST|ONLCR, c_cflag=B38400|CS8|CREAD, c_lflag=ISIG|ECHOE|ECHOK|IEXTEN|ECHOCTL|ECHOKE|PENDIN, ...}) = 0
+74185 write(2, "\33[?2004h", 8)         = 8
+
+74185 rt_sigprocmask(SIG_BLOCK, [HUP INT QUIT ALRM TERM TSTP TTIN TTOU], [], 8) = 0
+74185 rt_sigaction(SIGINT, {sa_handler=0x55a2b71d6d00, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, {sa_handler=0x55a2b7178aa0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, 8) = 0
+74185 rt_sigaction(SIGTERM, {sa_handler=0x55a2b71d6d00, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, 8) = 0
+74185 rt_sigaction(SIGTERM, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, {sa_handler=0x55a2b71d6d00, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, 8) = 0
+74185 rt_sigaction(SIGHUP, {sa_handler=0x55a2b71d6d00, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, {sa_handler=0x55a2b7178f30, sa_mask=[HUP INT ILL TRAP ABRT BUS FPE USR1 SEGV USR2 PIPE ALRM TERM XCPU XFSZ VTALRM SYS], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, 8) = 0
+74185 rt_sigaction(SIGQUIT, {sa_handler=0x55a2b71d6d00, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, 8) = 0
+74185 rt_sigaction(SIGQUIT, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, {sa_handler=0x55a2b71d6d00, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, 8) = 0
+74185 rt_sigaction(SIGALRM, {sa_handler=0x55a2b71d6d00, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, {sa_handler=0x55a2b7178f30, sa_mask=[HUP INT ILL TRAP ABRT BUS FPE USR1 SEGV USR2 PIPE ALRM TERM XCPU XFSZ VTALRM SYS], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, 8) = 0
+74185 rt_sigaction(SIGTSTP, {sa_handler=0x55a2b71d6d00, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, 8) = 0
+74185 rt_sigaction(SIGTSTP, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, {sa_handler=0x55a2b71d6d00, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, 8) = 0
+74185 rt_sigaction(SIGTTOU, {sa_handler=0x55a2b71d6d00, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, 8) = 0
+74185 rt_sigaction(SIGTTOU, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, {sa_handler=0x55a2b71d6d00, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, 8) = 0
+74185 rt_sigaction(SIGTTIN, {sa_handler=0x55a2b71d6d00, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, 8) = 0
+74185 rt_sigaction(SIGTTIN, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, {sa_handler=0x55a2b71d6d00, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, 8) = 0
+74185 rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+74185 rt_sigaction(SIGWINCH, {sa_handler=0x55a2b71d6d10, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7f78554de050}, {sa_handler=0x55a2b7178520, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7f78554de050}, 8) = 0
+
+
+// read one
+74185 write(2, "> ", 2)                 = 2
+74185 pselect6(1, [0], NULL, NULL, NULL, {sigmask=[], sigsetsize=8}) = 1 (in [0])
+74185 read(0, "o", 1)                   = 1
+74185 pselect6(1, [0], NULL, [0], {tv_sec=0, tv_nsec=0}, {sigmask=NULL, sigsetsize=8}) = 0 (Timeout)
+74185 write(2, "o", 1)                  = 1
+74185 pselect6(1, [0], NULL, NULL, NULL, {sigmask=[], sigsetsize=8}) = 1 (in [0])
+74185 read(0, "n", 1)                   = 1
+74185 pselect6(1, [0], NULL, [0], {tv_sec=0, tv_nsec=0}, {sigmask=NULL, sigsetsize=8}) = 0 (Timeout)
+74185 write(2, "n", 1)                  = 1
+74185 pselect6(1, [0], NULL, NULL, NULL, {sigmask=[], sigsetsize=8}) = 1 (in [0])
+74185 read(0, "e", 1)                   = 1
+74185 pselect6(1, [0], NULL, [0], {tv_sec=0, tv_nsec=0}, {sigmask=NULL, sigsetsize=8}) = 0 (Timeout)
+74185 write(2, "e", 1)                  = 1
+74185 pselect6(1, [0], NULL, NULL, NULL, {sigmask=[], sigsetsize=8}) = 1 (in [0])
+74185 read(0, " ", 1)                   = 1
+74185 pselect6(1, [0], NULL, [0], {tv_sec=0, tv_nsec=0}, {sigmask=NULL, sigsetsize=8}) = 0 (Timeout)
+74185 write(2, " ", 1)                  = 1
+74185 pselect6(1, [0], NULL, NULL, NULL, {sigmask=[], sigsetsize=8}) = 1 (in [0])
+74185 read(0, "\177", 1)                = 1
+74185 write(2, "\10\33[K", 4)           = 4
+74185 pselect6(1, [0], NULL, NULL, NULL, {sigmask=[], sigsetsize=8}) = 1 (in [0])
+74185 read(0, "\r", 1)                  = 1
+74185 write(2, "\n", 1)                 = 1
+
+// finish this heredoc line
+74185 write(2, "\33[?2004l\r", 9)       = 9
+74185 ioctl(0, TCGETS, {c_iflag=IXON|IXANY|IMAXBEL|IUTF8, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|OPOST|ONLCR, c_cflag=B38400|CS8|CREAD, c_lflag=ISIG|ECHOE|ECHOK|IEXTEN|ECHOCTL|ECHOKE|PENDIN, ...}) = 0
+74185 ioctl(0, TCSETSW, {c_iflag=ICRNL|IXON|IXANY|IMAXBEL|IUTF8, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|OPOST|ONLCR, c_cflag=B38400|CS8|CREAD, c_lflag=ISIG|ICANON|ECHO|ECHOE|ECHOK|IEXTEN|ECHOCTL|ECHOKE|PENDIN, ...}) = 0
+74185 ioctl(0, TCGETS, {c_iflag=ICRNL|IXON|IXANY|IMAXBEL|IUTF8, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|OPOST|ONLCR, c_cflag=B38400|CS8|CREAD, c_lflag=ISIG|ICANON|ECHO|ECHOE|ECHOK|IEXTEN|ECHOCTL|ECHOKE|PENDIN, ...}) = 0
+74185 rt_sigaction(SIGINT, {sa_handler=0x55a2b7178aa0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, {sa_handler=0x55a2b71d6d00, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, 8) = 0
+74185 rt_sigaction(SIGHUP, {sa_handler=0x55a2b7178f30, sa_mask=[HUP INT ILL TRAP ABRT BUS FPE USR1 SEGV USR2 PIPE ALRM TERM XCPU XFSZ VTALRM SYS], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, {sa_handler=0x55a2b71d6d00, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, 8) = 0
+74185 rt_sigaction(SIGALRM, {sa_handler=0x55a2b7178f30, sa_mask=[HUP INT ILL TRAP ABRT BUS FPE USR1 SEGV USR2 PIPE ALRM TERM XCPU XFSZ VTALRM SYS], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, {sa_handler=0x55a2b71d6d00, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, 8) = 0
+74185 rt_sigaction(SIGWINCH, {sa_handler=0x55a2b7178520, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7f78554de050}, {sa_handler=0x55a2b71d6d10, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7f78554de050}, 8) = 0
+74185 rt_sigaction(SIGINT, {sa_handler=0x55a2b7178aa0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, {sa_handler=0x55a2b7178aa0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, 8) = 0
+
+// start new heredoc line
+74185 rt_sigprocmask(SIG_BLOCK, [CHLD TSTP TTIN TTOU], [], 8) = 0
+74185 ioctl(255, TIOCSPGRP, [74185])    = 0
+74185 rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+74185 rt_sigaction(SIGINT, {sa_handler=0x55a2b7178aa0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, {sa_handler=0x55a2b7178aa0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, 8) = 0
+74185 fcntl(0, F_GETFL)                 = 0x2 (flags O_RDWR)
+74185 ioctl(0, TIOCGWINSZ, {ws_row=54, ws_col=118, ws_xpixel=944, ws_ypixel=972}) = 0
+74185 ioctl(0, TIOCSWINSZ, {ws_row=54, ws_col=118, ws_xpixel=944, ws_ypixel=972}) = 0
+74185 ioctl(0, TCGETS, {c_iflag=ICRNL|IXON|IXANY|IMAXBEL|IUTF8, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|OPOST|ONLCR, c_cflag=B38400|CS8|CREAD, c_lflag=ISIG|ICANON|ECHO|ECHOE|ECHOK|IEXTEN|ECHOCTL|ECHOKE|PENDIN, ...}) = 0
+74185 ioctl(0, TCGETS, {c_iflag=ICRNL|IXON|IXANY|IMAXBEL|IUTF8, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|OPOST|ONLCR, c_cflag=B38400|CS8|CREAD, c_lflag=ISIG|ICANON|ECHO|ECHOE|ECHOK|IEXTEN|ECHOCTL|ECHOKE|PENDIN, ...}) = 0
+74185 ioctl(0, TCSETSW, {c_iflag=IXON|IXANY|IMAXBEL|IUTF8, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|OPOST|ONLCR, c_cflag=B38400|CS8|CREAD, c_lflag=ISIG|ECHOE|ECHOK|IEXTEN|ECHOCTL|ECHOKE|PENDIN, ...}) = 0
+74185 ioctl(0, TCGETS, {c_iflag=IXON|IXANY|IMAXBEL|IUTF8, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|OPOST|ONLCR, c_cflag=B38400|CS8|CREAD, c_lflag=ISIG|ECHOE|ECHOK|IEXTEN|ECHOCTL|ECHOKE|PENDIN, ...}) = 0
+74185 write(2, "\33[?2004h", 8)         = 8
+
+74185 rt_sigprocmask(SIG_BLOCK, [HUP INT QUIT ALRM TERM TSTP TTIN TTOU], [], 8) = 0
+74185 rt_sigaction(SIGINT, {sa_handler=0x55a2b71d6d00, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, {sa_handler=0x55a2b7178aa0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, 8) = 0
+74185 rt_sigaction(SIGTERM, {sa_handler=0x55a2b71d6d00, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, 8) = 0
+74185 rt_sigaction(SIGTERM, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, {sa_handler=0x55a2b71d6d00, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, 8) = 0
+74185 rt_sigaction(SIGHUP, {sa_handler=0x55a2b71d6d00, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, {sa_handler=0x55a2b7178f30, sa_mask=[HUP INT ILL TRAP ABRT BUS FPE USR1 SEGV USR2 PIPE ALRM TERM XCPU XFSZ VTALRM SYS], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, 8) = 0
+74185 rt_sigaction(SIGQUIT, {sa_handler=0x55a2b71d6d00, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, 8) = 0
+74185 rt_sigaction(SIGQUIT, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, {sa_handler=0x55a2b71d6d00, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, 8) = 0
+74185 rt_sigaction(SIGALRM, {sa_handler=0x55a2b71d6d00, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, {sa_handler=0x55a2b7178f30, sa_mask=[HUP INT ILL TRAP ABRT BUS FPE USR1 SEGV USR2 PIPE ALRM TERM XCPU XFSZ VTALRM SYS], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, 8) = 0
+74185 rt_sigaction(SIGTSTP, {sa_handler=0x55a2b71d6d00, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, 8) = 0
+74185 rt_sigaction(SIGTSTP, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, {sa_handler=0x55a2b71d6d00, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, 8) = 0
+74185 rt_sigaction(SIGTTOU, {sa_handler=0x55a2b71d6d00, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, 8) = 0
+74185 rt_sigaction(SIGTTOU, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, {sa_handler=0x55a2b71d6d00, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, 8) = 0
+74185 rt_sigaction(SIGTTIN, {sa_handler=0x55a2b71d6d00, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, 8) = 0
+74185 rt_sigaction(SIGTTIN, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, {sa_handler=0x55a2b71d6d00, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, 8) = 0
+74185 rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+74185 rt_sigaction(SIGWINCH, {sa_handler=0x55a2b71d6d10, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7f78554de050}, {sa_handler=0x55a2b7178520, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7f78554de050}, 8) = 0
+
+// read two
+74185 write(2, "> ", 2)                 = 2
+74185 pselect6(1, [0], NULL, NULL, NULL, {sigmask=[], sigsetsize=8}) = 1 (in [0])
+74185 read(0, "t", 1)                   = 1
+74185 pselect6(1, [0], NULL, [0], {tv_sec=0, tv_nsec=0}, {sigmask=NULL, sigsetsize=8}) = 0 (Timeout)
+74185 write(2, "t", 1)                  = 1
+74185 pselect6(1, [0], NULL, NULL, NULL, {sigmask=[], sigsetsize=8}) = 1 (in [0])
+74185 read(0, "w", 1)                   = 1
+74185 pselect6(1, [0], NULL, [0], {tv_sec=0, tv_nsec=0}, {sigmask=NULL, sigsetsize=8}) = 0 (Timeout)
+74185 write(2, "w", 1)                  = 1
+74185 pselect6(1, [0], NULL, NULL, NULL, {sigmask=[], sigsetsize=8}) = 1 (in [0])
+74185 read(0, "o", 1)                   = 1
+74185 pselect6(1, [0], NULL, [0], {tv_sec=0, tv_nsec=0}, {sigmask=NULL, sigsetsize=8}) = 0 (Timeout)
+74185 write(2, "o", 1)                  = 1
+74185 pselect6(1, [0], NULL, NULL, NULL, {sigmask=[], sigsetsize=8}) = 1 (in [0])
+74185 read(0, "\r", 1)                  = 1
+74185 write(2, "\n", 1)                 = 1
+74185 write(2, "\33[?2004l\r", 9)       = 9
+
+// finish this heredoc line
+74185 ioctl(0, TCGETS, {c_iflag=IXON|IXANY|IMAXBEL|IUTF8, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|OPOST|ONLCR, c_cflag=B38400|CS8|CREAD, c_lflag=ISIG|ECHOE|ECHOK|IEXTEN|ECHOCTL|ECHOKE|PENDIN, ...}) = 0
+74185 ioctl(0, TCSETSW, {c_iflag=ICRNL|IXON|IXANY|IMAXBEL|IUTF8, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|OPOST|ONLCR, c_cflag=B38400|CS8|CREAD, c_lflag=ISIG|ICANON|ECHO|ECHOE|ECHOK|IEXTEN|ECHOCTL|ECHOKE|PENDIN, ...}) = 0
+74185 ioctl(0, TCGETS, {c_iflag=ICRNL|IXON|IXANY|IMAXBEL|IUTF8, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|OPOST|ONLCR, c_cflag=B38400|CS8|CREAD, c_lflag=ISIG|ICANON|ECHO|ECHOE|ECHOK|IEXTEN|ECHOCTL|ECHOKE|PENDIN, ...}) = 0
+74185 rt_sigaction(SIGINT, {sa_handler=0x55a2b7178aa0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, {sa_handler=0x55a2b71d6d00, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, 8) = 0
+74185 rt_sigaction(SIGHUP, {sa_handler=0x55a2b7178f30, sa_mask=[HUP INT ILL TRAP ABRT BUS FPE USR1 SEGV USR2 PIPE ALRM TERM XCPU XFSZ VTALRM SYS], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, {sa_handler=0x55a2b71d6d00, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, 8) = 0
+74185 rt_sigaction(SIGALRM, {sa_handler=0x55a2b7178f30, sa_mask=[HUP INT ILL TRAP ABRT BUS FPE USR1 SEGV USR2 PIPE ALRM TERM XCPU XFSZ VTALRM SYS], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, {sa_handler=0x55a2b71d6d00, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, 8) = 0
+74185 rt_sigaction(SIGWINCH, {sa_handler=0x55a2b7178520, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7f78554de050}, {sa_handler=0x55a2b71d6d10, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7f78554de050}, 8) = 0
+74185 rt_sigaction(SIGINT, {sa_handler=0x55a2b7178aa0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, {sa_handler=0x55a2b7178aa0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, 8) = 0
+
+// start new heredoc line
+74185 rt_sigprocmask(SIG_BLOCK, [CHLD TSTP TTIN TTOU], [], 8) = 0
+74185 ioctl(255, TIOCSPGRP, [74185])    = 0
+74185 rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+74185 rt_sigaction(SIGINT, {sa_handler=0x55a2b7178aa0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, {sa_handler=0x55a2b7178aa0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, 8) = 0
+74185 fcntl(0, F_GETFL)                 = 0x2 (flags O_RDWR)
+74185 ioctl(0, TIOCGWINSZ, {ws_row=54, ws_col=118, ws_xpixel=944, ws_ypixel=972}) = 0
+74185 ioctl(0, TIOCSWINSZ, {ws_row=54, ws_col=118, ws_xpixel=944, ws_ypixel=972}) = 0
+74185 ioctl(0, TCGETS, {c_iflag=ICRNL|IXON|IXANY|IMAXBEL|IUTF8, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|OPOST|ONLCR, c_cflag=B38400|CS8|CREAD, c_lflag=ISIG|ICANON|ECHO|ECHOE|ECHOK|IEXTEN|ECHOCTL|ECHOKE|PENDIN, ...}) = 0
+74185 ioctl(0, TCGETS, {c_iflag=ICRNL|IXON|IXANY|IMAXBEL|IUTF8, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|OPOST|ONLCR, c_cflag=B38400|CS8|CREAD, c_lflag=ISIG|ICANON|ECHO|ECHOE|ECHOK|IEXTEN|ECHOCTL|ECHOKE|PENDIN, ...}) = 0
+74185 ioctl(0, TCSETSW, {c_iflag=IXON|IXANY|IMAXBEL|IUTF8, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|OPOST|ONLCR, c_cflag=B38400|CS8|CREAD, c_lflag=ISIG|ECHOE|ECHOK|IEXTEN|ECHOCTL|ECHOKE|PENDIN, ...}) = 0
+74185 ioctl(0, TCGETS, {c_iflag=IXON|IXANY|IMAXBEL|IUTF8, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|OPOST|ONLCR, c_cflag=B38400|CS8|CREAD, c_lflag=ISIG|ECHOE|ECHOK|IEXTEN|ECHOCTL|ECHOKE|PENDIN, ...}) = 0
+74185 write(2, "\33[?2004h", 8)         = 8
+
+74185 rt_sigprocmask(SIG_BLOCK, [HUP INT QUIT ALRM TERM TSTP TTIN TTOU], [], 8) = 0
+74185 rt_sigaction(SIGINT, {sa_handler=0x55a2b71d6d00, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, {sa_handler=0x55a2b7178aa0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, 8) = 0
+74185 rt_sigaction(SIGTERM, {sa_handler=0x55a2b71d6d00, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, 8) = 0
+74185 rt_sigaction(SIGTERM, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, {sa_handler=0x55a2b71d6d00, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, 8) = 0
+74185 rt_sigaction(SIGHUP, {sa_handler=0x55a2b71d6d00, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, {sa_handler=0x55a2b7178f30, sa_mask=[HUP INT ILL TRAP ABRT BUS FPE USR1 SEGV USR2 PIPE ALRM TERM XCPU XFSZ VTALRM SYS], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, 8) = 0
+74185 rt_sigaction(SIGQUIT, {sa_handler=0x55a2b71d6d00, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, 8) = 0
+74185 rt_sigaction(SIGQUIT, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, {sa_handler=0x55a2b71d6d00, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, 8) = 0
+74185 rt_sigaction(SIGALRM, {sa_handler=0x55a2b71d6d00, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, {sa_handler=0x55a2b7178f30, sa_mask=[HUP INT ILL TRAP ABRT BUS FPE USR1 SEGV USR2 PIPE ALRM TERM XCPU XFSZ VTALRM SYS], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, 8) = 0
+74185 rt_sigaction(SIGTSTP, {sa_handler=0x55a2b71d6d00, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, 8) = 0
+74185 rt_sigaction(SIGTSTP, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, {sa_handler=0x55a2b71d6d00, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, 8) = 0
+74185 rt_sigaction(SIGTTOU, {sa_handler=0x55a2b71d6d00, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, 8) = 0
+74185 rt_sigaction(SIGTTOU, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, {sa_handler=0x55a2b71d6d00, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, 8) = 0
+74185 rt_sigaction(SIGTTIN, {sa_handler=0x55a2b71d6d00, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, 8) = 0
+74185 rt_sigaction(SIGTTIN, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, {sa_handler=0x55a2b71d6d00, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, 8) = 0
+74185 rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+74185 rt_sigaction(SIGWINCH, {sa_handler=0x55a2b71d6d10, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7f78554de050}, {sa_handler=0x55a2b7178520, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7f78554de050}, 8) = 0
+
+// read eof
+74185 write(2, "> ", 2)                 = 2
+74185 pselect6(1, [0], NULL, NULL, NULL, {sigmask=[], sigsetsize=8}) = 1 (in [0])
+74185 read(0, "e", 1)                   = 1
+74185 pselect6(1, [0], NULL, [0], {tv_sec=0, tv_nsec=0}, {sigmask=NULL, sigsetsize=8}) = 0 (Timeout)
+74185 write(2, "e", 1)                  = 1
+74185 pselect6(1, [0], NULL, NULL, NULL, {sigmask=[], sigsetsize=8}) = 1 (in [0])
+74185 read(0, "o", 1)                   = 1
+74185 pselect6(1, [0], NULL, [0], {tv_sec=0, tv_nsec=0}, {sigmask=NULL, sigsetsize=8}) = 0 (Timeout)
+74185 write(2, "o", 1)                  = 1
+74185 pselect6(1, [0], NULL, NULL, NULL, {sigmask=[], sigsetsize=8}) = 1 (in [0])
+74185 read(0, "f", 1)                   = 1
+74185 pselect6(1, [0], NULL, [0], {tv_sec=0, tv_nsec=0}, {sigmask=NULL, sigsetsize=8}) = 0 (Timeout)
+74185 write(2, "f", 1)                  = 1
+74185 pselect6(1, [0], NULL, NULL, NULL, {sigmask=[], sigsetsize=8}) = 1 (in [0])
+74185 read(0, "\r", 1)                  = 1
+74185 write(2, "\n", 1)                 = 1
+74185 write(2, "\33[?2004l\r", 9)       = 9
+
+// finish this heredoc line
+74185 ioctl(0, TCGETS, {c_iflag=IXON|IXANY|IMAXBEL|IUTF8, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|OPOST|ONLCR, c_cflag=B38400|CS8|CREAD, c_lflag=ISIG|ECHOE|ECHOK|IEXTEN|ECHOCTL|ECHOKE|PENDIN, ...}) = 0
+74185 ioctl(0, TCSETSW, {c_iflag=ICRNL|IXON|IXANY|IMAXBEL|IUTF8, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|OPOST|ONLCR, c_cflag=B38400|CS8|CREAD, c_lflag=ISIG|ICANON|ECHO|ECHOE|ECHOK|IEXTEN|ECHOCTL|ECHOKE|PENDIN, ...}) = 0
+74185 ioctl(0, TCGETS, {c_iflag=ICRNL|IXON|IXANY|IMAXBEL|IUTF8, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|OPOST|ONLCR, c_cflag=B38400|CS8|CREAD, c_lflag=ISIG|ICANON|ECHO|ECHOE|ECHOK|IEXTEN|ECHOCTL|ECHOKE|PENDIN, ...}) = 0
+74185 rt_sigaction(SIGINT, {sa_handler=0x55a2b7178aa0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, {sa_handler=0x55a2b71d6d00, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, 8) = 0
+74185 rt_sigaction(SIGHUP, {sa_handler=0x55a2b7178f30, sa_mask=[HUP INT ILL TRAP ABRT BUS FPE USR1 SEGV USR2 PIPE ALRM TERM XCPU XFSZ VTALRM SYS], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, {sa_handler=0x55a2b71d6d00, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, 8) = 0
+74185 rt_sigaction(SIGALRM, {sa_handler=0x55a2b7178f30, sa_mask=[HUP INT ILL TRAP ABRT BUS FPE USR1 SEGV USR2 PIPE ALRM TERM XCPU XFSZ VTALRM SYS], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, {sa_handler=0x55a2b71d6d00, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, 8) = 0
+74185 rt_sigaction(SIGWINCH, {sa_handler=0x55a2b7178520, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7f78554de050}, {sa_handler=0x55a2b71d6d10, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7f78554de050}, 8) = 0
+74185 rt_sigaction(SIGINT, {sa_handler=0x55a2b7178aa0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, {sa_handler=0x55a2b7178aa0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, 8) = 0
+
+
+// search path
+74185 newfstatat(AT_FDCWD, ".", {st_mode=S_IFDIR|0700, st_size=4096, ...}, 0) = 0
+74185 newfstatat(AT_FDCWD, "/opt/homebrew/opt/openjdk/bin/cat", 0x7fff77721290, 0) = -1 ENOENT (No such file or directory)
+74185 newfstatat(AT_FDCWD, "/home/linuxbrew/.linuxbrew/bin/cat", 0x7fff77721290, 0) = -1 ENOENT (No such file or directory)
+74185 newfstatat(AT_FDCWD, "/home/linuxbrew/.linuxbrew/sbin/cat", 0x7fff77721290, 0) = -1 ENOENT (No such file or directory)
+74185 newfstatat(AT_FDCWD, "/opt/homebrew/opt/openjdk/bin/cat", 0x7fff77721290, 0) = -1 ENOENT (No such file or directory)
+74185 newfstatat(AT_FDCWD, "/home/linuxbrew/.linuxbrew/bin/cat", 0x7fff77721290, 0) = -1 ENOENT (No such file or directory)
+74185 newfstatat(AT_FDCWD, "/home/linuxbrew/.linuxbrew/sbin/cat", 0x7fff77721290, 0) = -1 ENOENT (No such file or directory)
+74185 newfstatat(AT_FDCWD, "/usr/local/bin/cat", 0x7fff77721290, 0) = -1 ENOENT (No such file or directory)
+74185 newfstatat(AT_FDCWD, "/usr/bin/cat", {st_mode=S_IFREG|0755, st_size=44016, ...}, 0) = 0
+74185 newfstatat(AT_FDCWD, "/usr/bin/cat", {st_mode=S_IFREG|0755, st_size=44016, ...}, 0) = 0
+74185 geteuid()                         = 1000
+74185 getegid()                         = 1000
+74185 getuid()                          = 1000
+74185 getgid()                          = 1000
+74185 access("/usr/bin/cat", X_OK)      = 0
+74185 newfstatat(AT_FDCWD, "/usr/bin/cat", {st_mode=S_IFREG|0755, st_size=44016, ...}, 0) = 0
+74185 geteuid()                         = 1000
+74185 getegid()                         = 1000
+74185 getuid()                          = 1000
+74185 getgid()                          = 1000
+74185 access("/usr/bin/cat", R_OK)      = 0
+
+
+74185 rt_sigprocmask(SIG_BLOCK, NULL, [], 8) = 0
+74185 rt_sigprocmask(SIG_BLOCK, [INT TERM CHLD], [], 8) = 0
+74185 rt_sigaction(SIGTERM, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, 8) = 0
+
+
+74185 pipe2([3, 4], 0)                  = 0
+74185 clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7f785549fa10) = 74230
+
+74230 set_robust_list(0x7f785549fa20, 24 <unfinished ...>
+74185 rt_sigaction(SIGTERM, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050},  <unfinished ...>
+74230 <... set_robust_list resumed>)    = 0
+74185 <... rt_sigaction resumed>{sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, 8) = 0
+74230 getpid( <unfinished ...>
+74185 setpgid(74230, 74230 <unfinished ...>
+74230 <... getpid resumed>)             = 74230
+74185 <... setpgid resumed>)            = 0
+74230 rt_sigprocmask(SIG_SETMASK, [],  <unfinished ...>
+74185 rt_sigprocmask(SIG_SETMASK, [],  <unfinished ...>
+74230 <... rt_sigprocmask resumed>NULL, 8) = 0
+74185 <... rt_sigprocmask resumed>NULL, 8) = 0
+74230 rt_sigaction(SIGTSTP, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, 8) = 0
+74185 rt_sigprocmask(SIG_BLOCK, [CHLD],  <unfinished ...>
+74230 rt_sigaction(SIGTTIN, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050},  <unfinished ...>
+74185 <... rt_sigprocmask resumed>[], 8) = 0
+74230 <... rt_sigaction resumed>{sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, 8) = 0
+74185 close(3 <unfinished ...>
+74230 rt_sigaction(SIGTTOU, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050},  <unfinished ...>
+74185 <... close resumed>)              = 0
+74230 <... rt_sigaction resumed>{sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, 8) = 0
+74185 close(4 <unfinished ...>
+74230 setpgid(74230, 74230 <unfinished ...>
+74185 <... close resumed>)              = 0
+74230 <... setpgid resumed>)            = 0
+74230 rt_sigprocmask(SIG_BLOCK, [CHLD TSTP TTIN TTOU],  <unfinished ...>
+74185 ioctl(255, TIOCGPGRP <unfinished ...>
+74230 <... rt_sigprocmask resumed>[], 8) = 0
+74185 <... ioctl resumed>, [74185])     = 0
+74230 ioctl(255, TIOCSPGRP, [74230] <unfinished ...>
+74185 rt_sigprocmask(SIG_BLOCK, [CHLD TSTP TTIN TTOU],  <unfinished ...>
+74230 <... ioctl resumed>)              = 0
+74185 <... rt_sigprocmask resumed>[CHLD], 8) = 0
+74230 rt_sigprocmask(SIG_SETMASK, [],  <unfinished ...>
+74185 ioctl(255, TIOCSPGRP, [74230] <unfinished ...>
+74230 <... rt_sigprocmask resumed>NULL, 8) = 0
+74185 <... ioctl resumed>)              = 0
+74230 close(4 <unfinished ...>
+74185 rt_sigprocmask(SIG_SETMASK, [CHLD],  <unfinished ...>
+74230 <... close resumed>)              = 0
+74185 <... rt_sigprocmask resumed>NULL, 8) = 0
+74230 read(3,  <unfinished ...>
+74185 rt_sigprocmask(SIG_SETMASK, [],  <unfinished ...>
+74230 <... read resumed>"", 1)          = 0
+74185 <... rt_sigprocmask resumed>NULL, 8) = 0
+74230 close(3 <unfinished ...>
+74185 rt_sigprocmask(SIG_BLOCK, [CHLD],  <unfinished ...>
+74230 <... close resumed>)              = 0
+74185 <... rt_sigprocmask resumed>[], 8) = 0
+74230 rt_sigaction(SIGHUP, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050},  <unfinished ...>
+74185 wait4(-1,  <unfinished ...>
+
+
+74230 <... rt_sigaction resumed>NULL, 8) = 0
+74230 rt_sigaction(SIGILL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, NULL, 8) = 0
+74230 rt_sigaction(SIGTRAP, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, NULL, 8) = 0
+74230 rt_sigaction(SIGABRT, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, NULL, 8) = 0
+74230 rt_sigaction(SIGFPE, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, NULL, 8) = 0
+74230 rt_sigaction(SIGBUS, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, NULL, 8) = 0
+74230 rt_sigaction(SIGSEGV, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, NULL, 8) = 0
+74230 rt_sigaction(SIGSYS, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, NULL, 8) = 0
+74230 rt_sigaction(SIGPIPE, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, NULL, 8) = 0
+74230 rt_sigaction(SIGALRM, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, NULL, 8) = 0
+74230 rt_sigaction(SIGXCPU, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, NULL, 8) = 0
+74230 rt_sigaction(SIGXFSZ, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, NULL, 8) = 0
+74230 rt_sigaction(SIGVTALRM, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, NULL, 8) = 0
+74230 rt_sigaction(SIGUSR1, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, NULL, 8) = 0
+74230 rt_sigaction(SIGUSR2, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, NULL, 8) = 0
+74230 rt_sigaction(SIGINT, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, {sa_handler=0x55a2b7178aa0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, 8) = 0
+74230 rt_sigaction(SIGQUIT, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, 8) = 0
+74230 rt_sigaction(SIGTERM, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, 8) = 0
+74230 rt_sigaction(SIGCHLD, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7f78554de050}, {sa_handler=0x55a2b7156e40, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7f78554de050}, 8) = 0
+
+
+// write documents in pipe
+74230 pipe2([3, 4], 0)                  = 0
+74230 fcntl(4, F_GETPIPE_SZ)            = 65536
+74230 write(4, "one\ntwo\n", 8)         = 8
+74230 close(4)                          = 0
+74230 dup2(3, 0)                        = 0
+74230 close(3)                          = 0
+
+74230 execve("/usr/bin/cat", ["cat"], 0x55a2d56a5480 /* 33 vars */) = 0
+74230 brk(NULL)                         = 0x562ae665e000
+74230 mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f234031b000
+74230 access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+74230 openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+74230 newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=36842, ...}, AT_EMPTY_PATH) = 0
+74230 mmap(NULL, 36842, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f2340312000
+74230 close(3)                          = 0
+74230 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+74230 read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\20t\2\0\0\0\0\0"..., 832) = 832
+74230 pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+74230 newfstatat(3, "", {st_mode=S_IFREG|0755, st_size=1922136, ...}, AT_EMPTY_PATH) = 0
+74230 pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+74230 mmap(NULL, 1970000, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f2340131000
+74230 mmap(0x7f2340157000, 1396736, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x26000) = 0x7f2340157000
+74230 mmap(0x7f23402ac000, 339968, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x17b000) = 0x7f23402ac000
+74230 mmap(0x7f23402ff000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1ce000) = 0x7f23402ff000
+74230 mmap(0x7f2340305000, 53072, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f2340305000
+74230 close(3)                          = 0
+74230 mmap(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f234012e000
+74230 arch_prctl(ARCH_SET_FS, 0x7f234012e740) = 0
+74230 set_tid_address(0x7f234012ea10)   = 74230
+74230 set_robust_list(0x7f234012ea20, 24) = 0
+74230 rseq(0x7f234012f060, 0x20, 0, 0x53053053) = 0
+74230 mprotect(0x7f23402ff000, 16384, PROT_READ) = 0
+74230 mprotect(0x562adc5b8000, 4096, PROT_READ) = 0
+74230 mprotect(0x7f234034d000, 8192, PROT_READ) = 0
+74230 prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+74230 munmap(0x7f2340312000, 36842)     = 0
+74230 getrandom("\x8d\x8a\x58\x96\x19\xec\xf1\x9b", 8, GRND_NONBLOCK) = 8
+74230 brk(NULL)                         = 0x562ae665e000
+74230 brk(0x562ae667f000)               = 0x562ae667f000
+74230 openat(AT_FDCWD, "/usr/lib/locale/locale-archive", O_RDONLY|O_CLOEXEC) = 3
+74230 newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=3048928, ...}, AT_EMPTY_PATH) = 0
+74230 mmap(NULL, 3048928, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f233fe00000
+74230 close(3)                          = 0
+74230 newfstatat(1, "", {st_mode=S_IFCHR|0620, st_rdev=makedev(0x88, 0x5), ...}, AT_EMPTY_PATH) = 0
+74230 newfstatat(0, "", {st_mode=S_IFIFO|0600, st_size=0, ...}, AT_EMPTY_PATH) = 0
+74230 fadvise64(0, 0, 0, POSIX_FADV_SEQUENTIAL) = -1 ESPIPE (Illegal seek)
+74230 mmap(NULL, 139264, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f234010c000
+
+74230 read(0, "one\ntwo\n", 131072)     = 8
+74230 write(1, "one\ntwo\n", 8)         = 8
+74230 read(0, "", 131072)               = 0
+74230 munmap(0x7f234010c000, 139264)    = 0
+74230 close(0)                          = 0
+74230 close(1)                          = 0
+74230 close(2)                          = 0
+74230 exit_group(0)                     = ?
+74230 +++ exited with 0 +++
+
+
+74185 <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 0}], WSTOPPED|WCONTINUED, NULL) = 74230
+74185 rt_sigprocmask(SIG_BLOCK, [CHLD TSTP TTIN TTOU], [CHLD], 8) = 0
+74185 ioctl(255, TIOCSPGRP, [74185])    = 0
+74185 rt_sigprocmask(SIG_SETMASK, [CHLD], NULL, 8) = 0
+74185 ioctl(255, TCGETS, {c_iflag=ICRNL|IXON|IXANY|IMAXBEL|IUTF8, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|OPOST|ONLCR, c_cflag=B38400|CS8|CREAD, c_lflag=ISIG|ICANON|ECHO|ECHOE|ECHOK|IEXTEN|ECHOCTL|ECHOKE|PENDIN, ...}) = 0
+74185 ioctl(255, TIOCGWINSZ, {ws_row=54, ws_col=118, ws_xpixel=944, ws_ypixel=972}) = 0
+74185 rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+
+74185 --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=74230, si_uid=1000, si_status=0, si_utime=0, si_stime=0} ---
+// checking there's no more child ??
+74185 wait4(-1, 0x7fff77720e90, WNOHANG|WSTOPPED|WCONTINUED, NULL) = -1 ECHILD (No child processes)
+
+74185 rt_sigreturn({mask=[]})           = 0
+74185 rt_sigaction(SIGINT, {sa_handler=0x55a2b7178aa0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, {sa_handler=0x55a2b7178aa0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, 8) = 0
+74185 rt_sigprocmask(SIG_BLOCK, NULL, [], 8) = 0
+
+// write read history
+74185 newfstatat(AT_FDCWD, "/home/aurel/.bash_history", {st_mode=S_IFREG|0600, st_size=7763, ...}, 0) = 0
+74185 newfstatat(AT_FDCWD, "/home/aurel/.bash_history", {st_mode=S_IFREG|0600, st_size=7763, ...}, 0) = 0
+74185 openat(AT_FDCWD, "/home/aurel/.bash_history", O_WRONLY|O_APPEND) = 3
+74185 write(3, "<<eof cat\none\ntwo\neof\n\n", 23) = 23
+74185 close(3)                          = 0
+74185 chown("/home/aurel/.bash_history", 1000, 1000) = 0
+74185 openat(AT_FDCWD, "/home/aurel/.bash_history", O_RDONLY) = 3
+74185 newfstatat(3, "", {st_mode=S_IFREG|0600, st_size=7786, ...}, AT_EMPTY_PATH) = 0
+74185 read(3, "ls -al\nssh-keygen -lf id_ed25519"..., 7786) = 7786
+74185 close(3)                          = 0
+
+// finish everything
+74185 rt_sigprocmask(SIG_BLOCK, [CHLD TSTP TTIN TTOU], [], 8) = 0
+74185 ioctl(255, TIOCSPGRP, [74185])    = 0
+74185 rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+74185 rt_sigaction(SIGINT, {sa_handler=0x55a2b7178aa0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, {sa_handler=0x55a2b7178aa0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, 8) = 0
+74185 fcntl(0, F_GETFL)                 = 0x2 (flags O_RDWR)
+74185 ioctl(0, TIOCGWINSZ, {ws_row=54, ws_col=118, ws_xpixel=944, ws_ypixel=972}) = 0
+74185 ioctl(0, TIOCSWINSZ, {ws_row=54, ws_col=118, ws_xpixel=944, ws_ypixel=972}) = 0
+74185 ioctl(0, TCGETS, {c_iflag=ICRNL|IXON|IXANY|IMAXBEL|IUTF8, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|OPOST|ONLCR, c_cflag=B38400|CS8|CREAD, c_lflag=ISIG|ICANON|ECHO|ECHOE|ECHOK|IEXTEN|ECHOCTL|ECHOKE|PENDIN, ...}) = 0
+74185 ioctl(0, TCGETS, {c_iflag=ICRNL|IXON|IXANY|IMAXBEL|IUTF8, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|OPOST|ONLCR, c_cflag=B38400|CS8|CREAD, c_lflag=ISIG|ICANON|ECHO|ECHOE|ECHOK|IEXTEN|ECHOCTL|ECHOKE|PENDIN, ...}) = 0
+74185 ioctl(0, TCSETSW, {c_iflag=IXON|IXANY|IMAXBEL|IUTF8, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|OPOST|ONLCR, c_cflag=B38400|CS8|CREAD, c_lflag=ISIG|ECHOE|ECHOK|IEXTEN|ECHOCTL|ECHOKE|PENDIN, ...}) = 0
+74185 ioctl(0, TCGETS, {c_iflag=IXON|IXANY|IMAXBEL|IUTF8, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|OPOST|ONLCR, c_cflag=B38400|CS8|CREAD, c_lflag=ISIG|ECHOE|ECHOK|IEXTEN|ECHOCTL|ECHOKE|PENDIN, ...}) = 0
+74185 write(2, "\33[?2004h", 8)         = 8
+74185 rt_sigprocmask(SIG_BLOCK, [HUP INT QUIT ALRM TERM TSTP TTIN TTOU], [], 8) = 0
+74185 rt_sigaction(SIGINT, {sa_handler=0x55a2b71d6d00, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, {sa_handler=0x55a2b7178aa0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, 8) = 0
+74185 rt_sigaction(SIGTERM, {sa_handler=0x55a2b71d6d00, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, 8) = 0
+74185 rt_sigaction(SIGTERM, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, {sa_handler=0x55a2b71d6d00, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, 8) = 0
+74185 rt_sigaction(SIGHUP, {sa_handler=0x55a2b71d6d00, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, {sa_handler=0x55a2b7178f30, sa_mask=[HUP INT ILL TRAP ABRT BUS FPE USR1 SEGV USR2 PIPE ALRM TERM XCPU XFSZ VTALRM SYS], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, 8) = 0
+74185 rt_sigaction(SIGQUIT, {sa_handler=0x55a2b71d6d00, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, 8) = 0
+74185 rt_sigaction(SIGQUIT, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, {sa_handler=0x55a2b71d6d00, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, 8) = 0
+74185 rt_sigaction(SIGALRM, {sa_handler=0x55a2b71d6d00, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, {sa_handler=0x55a2b7178f30, sa_mask=[HUP INT ILL TRAP ABRT BUS FPE USR1 SEGV USR2 PIPE ALRM TERM XCPU XFSZ VTALRM SYS], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, 8) = 0
+74185 rt_sigaction(SIGTSTP, {sa_handler=0x55a2b71d6d00, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, 8) = 0
+74185 rt_sigaction(SIGTSTP, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, {sa_handler=0x55a2b71d6d00, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, 8) = 0
+74185 rt_sigaction(SIGTTOU, {sa_handler=0x55a2b71d6d00, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, 8) = 0
+74185 rt_sigaction(SIGTTOU, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, {sa_handler=0x55a2b71d6d00, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, 8) = 0
+74185 rt_sigaction(SIGTTIN, {sa_handler=0x55a2b71d6d00, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, 8) = 0
+74185 rt_sigaction(SIGTTIN, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, {sa_handler=0x55a2b71d6d00, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f78554de050}, 8) = 0
+74185 rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+74185 rt_sigaction(SIGWINCH, {sa_handler=0x55a2b71d6d10, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7f78554de050}, {sa_handler=0x55a2b7178520, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7f78554de050}, 8) = 0
+74185 write(2, "aurel@debian:~$ ", 16)  = 16
+74185 pselect6(1, [0], NULL, NULL, NULL, {sigmask=[], sigsetsize=8} <detached ...>

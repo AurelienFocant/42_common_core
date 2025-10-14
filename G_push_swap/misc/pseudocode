@@ -1,0 +1,45 @@
+push_swap pseudocode
+
+-- main
+
+    --check args
+
+    -- init stacks
+		-- find stacklen
+
+    -- push_swap
+        -- if is sorted -> good
+        -- if there are 2 nbs
+        -- if there are 3 nbs
+
+else    
+        -- if len_stack > 3 : pb pb
+
+        -- while len_stack > 3
+            -- "init node"
+                - save its index inside node struct
+                - save if its above median
+            -- does this for both stacks
+            -- set target
+                - save address of target node in each node struct
+            -- calculate cost
+                - if node is above median, cost = index
+                else its stack_len - index
+            -- set cheapest
+                    - get cheapest node : bool in its struct
+
+        -- move a to b until len_stack_a is 3
+            - rotate both to the top
+                    - if both above median
+                        rr till one on top
+                    - elif both under
+                        rrr till one on top
+                    - rotate each to top
+            - pb
+
+        -- sort_three
+
+        -- move b to a until the end
+            - set target b to a closest bigger or smallest
+            - rotate or reverse depending on median, till top
+            - push

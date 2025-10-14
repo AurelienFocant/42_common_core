@@ -1,0 +1,87 @@
+env what | grep PWD
+echo $'$'
+echo '$'$'$'$'$'
+echo '$'$'$'$'$'$'$'
+echo $'HOME'
+echo $'HOME'
+echo $"HOME"
+echo $"42$"
+echo $"HOME"$USER
+echo $"HOM"E$USER
+echo $'HOM'E$USER
+/bin/echo $'HOME'
+/bin/echo $'HOM'E$USER
+ls|cat Makefile|>> out|cd ..
+pwd
+ls|cat Makefile|cat<<"asd">out
+ls|cat Makefile|cat<<'asd'>out
+ls|cat Makefile|cat<<asd>out
+ls|cat Makefile|>> out
+ls|cat Makefile|> out
+ls|cat Makefile|ls
+ls|cat Makefile|<wc -l
+<| echo ok
+>| echo sure
+/bin/echo $'$'
+/bin/echo $'HOM'E$USER
+/bin/echo $'HOME'
+ls | cat << stop | ls -la | cat << stop1 | ls | cat << stop2 | ls -la | cat << stop3
+ls | cat << stop | ls -la | cat << stop1 | ls | cat << stop2 | ls -la > > out | cat << stop3
+.
+..
+"."
+###WORKSBUTNOTSANITIZEDYET###
+exit +++000
+exit --1
+exit --12560
+ext 1 2
+exit something somethingv2
+exit 0 0
+exit ""
+exit +++++
+exit ------
+exit ""
+unset -TEST
+unset TES;T
+export HELLO=123 A
+export ""=""
+export export
+export echo
+export cd
+export test
+export TEST
+export $? 
+export TEST
+export TEST=
+export TEST=123
+export ___TEST=123
+export --TEST=123
+export ''=''
+export "="="="
+export '='='='
+export TE-ST=100
+export -TEST=100
+export TEST-=100
+export _TEST=100
+export ==========
+export 1TEST=
+export ""=""
+export TES=T=""
+export TE+S=T=""
+export TES.T=123
+export TES.T=123
+export TES+T=123
+export TES=T=123
+export TES}T=123
+export TES{T=123
+export TES-T=123
+export -TEST=123
+export _TEST=123
+export export
+export echo
+export -TEST=123
+export TES+T=123
+export TE+S=T=""
+export ==========
+export --TEST=123
+

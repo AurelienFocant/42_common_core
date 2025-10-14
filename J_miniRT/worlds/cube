@@ -1,0 +1,40 @@
+# Camera	vec(pos)	vec(dir)		float(fov)
+# Ambient	float(ratio)												vec(color)
+# Light		vec(pos)	float(bright)									vec(color)
+
+# sphere	vec(pos)					float(diam)						vec(color)	|||	pat(pattern color)	mat(material)	tex(textureFile)
+# plane		vec(pos)	vec(dir)										vec(color)	|||	pat(pattern color)	mat(material)	tex(textureFile) 
+# cylinder	vec(pos)	vec(dir)		float(diam)		float(height)	vec(color)	|||	pat(pattern color)	mat(material)	tex(textureFile) 
+# cone		vec(pos)	vec(dir)		float(diam)		float(height)	vec(color)	||| pat(pattern color)	mat(material)	tex(textureFile) 
+# cube		vec(pos)	vec(dir)		vec(sizes)						vec(color)	||| pat(pattern color)	mat(material)	tex(textureFile) 
+
+
+
+C			0,0,-7		0,0,1			70
+A			0.5															255,255,255
+L			4,4,-5		1												255,255,255
+L			-4,4,-5		1												255,255,255
+# L			-5,8,-5		0.7												255,255,255
+
+cu			0,0,0		1,1,1			1,1,1							195,217,196		tex(beach)
+
+
+
+#	BLOND		255,248,213
+#	LILAC		230,170,210
+#	VERDE		157,214,173
+#	WHITE		250,248,246
+#	BLUEGREEN	165,227,224
+#	AQUA		213,246,251
+#	BLUE		178,201,226
+#	MARINE		128,125,219
+#	SALMON		246,193,178
+#	TULIP		255,164,169
+#	BURGUNDY	151,76,94
+#	RED			194,89,100
+#	CLAY		232,198,170
+#	TAUPE		117,101,90
+#	MAUVE		235,204,255
+#	CERULEAN	163,204,227
+#	SAGE		195,217,196
+#	BEIGE		231,215,20

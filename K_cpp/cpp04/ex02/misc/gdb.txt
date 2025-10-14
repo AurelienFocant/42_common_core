@@ -1,0 +1,3 @@
++set print object
++set print pretty
+Reading symbols from animalsBrains...

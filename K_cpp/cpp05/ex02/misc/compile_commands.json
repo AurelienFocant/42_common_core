@@ -1,0 +1,122 @@
+[
+  {
+    "arguments": [
+      "/usr/bin/c++",
+      "-g",
+      "-D_GLIBCXX_DEBUG",
+      "-std=c++98",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-IClasses",
+      "-IClasses/Forms",
+      "-c",
+      "-o",
+      ".build/Classes/Forms/RobotomyRequestForm.o",
+      "Classes/Forms/RobotomyRequestForm.cpp"
+    ],
+    "directory": "/home/afocant/common_core_19/cpp/cpp05/ex02",
+    "file": "/home/afocant/common_core_19/cpp/cpp05/ex02/Classes/Forms/RobotomyRequestForm.cpp",
+    "output": "/home/afocant/common_core_19/cpp/cpp05/ex02/.build/Classes/Forms/RobotomyRequestForm.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/c++",
+      "-g",
+      "-D_GLIBCXX_DEBUG",
+      "-std=c++98",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-IClasses",
+      "-IClasses/Forms",
+      "-c",
+      "-o",
+      ".build/Classes/Forms/PresidentialPardonForm.o",
+      "Classes/Forms/PresidentialPardonForm.cpp"
+    ],
+    "directory": "/home/afocant/common_core_19/cpp/cpp05/ex02",
+    "file": "/home/afocant/common_core_19/cpp/cpp05/ex02/Classes/Forms/PresidentialPardonForm.cpp",
+    "output": "/home/afocant/common_core_19/cpp/cpp05/ex02/.build/Classes/Forms/PresidentialPardonForm.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/c++",
+      "-g",
+      "-D_GLIBCXX_DEBUG",
+      "-std=c++98",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-IClasses",
+      "-IClasses/Forms",
+      "-c",
+      "-o",
+      ".build/Classes/Forms/AForm.o",
+      "Classes/Forms/AForm.cpp"
+    ],
+    "directory": "/home/afocant/common_core_19/cpp/cpp05/ex02",
+    "file": "/home/afocant/common_core_19/cpp/cpp05/ex02/Classes/Forms/AForm.cpp",
+    "output": "/home/afocant/common_core_19/cpp/cpp05/ex02/.build/Classes/Forms/AForm.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/c++",
+      "-g",
+      "-D_GLIBCXX_DEBUG",
+      "-std=c++98",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-IClasses",
+      "-IClasses/Forms",
+      "-c",
+      "-o",
+      ".build/Classes/Forms/ShrubberyCreationForm.o",
+      "Classes/Forms/ShrubberyCreationForm.cpp"
+    ],
+    "directory": "/home/afocant/common_core_19/cpp/cpp05/ex02",
+    "file": "/home/afocant/common_core_19/cpp/cpp05/ex02/Classes/Forms/ShrubberyCreationForm.cpp",
+    "output": "/home/afocant/common_core_19/cpp/cpp05/ex02/.build/Classes/Forms/ShrubberyCreationForm.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/c++",
+      "-g",
+      "-D_GLIBCXX_DEBUG",
+      "-std=c++98",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-IClasses",
+      "-IClasses/Forms",
+      "-c",
+      "-o",
+      ".build/Classes/Bureaucrat.o",
+      "Classes/Bureaucrat.cpp"
+    ],
+    "directory": "/home/afocant/common_core_19/cpp/cpp05/ex02",
+    "file": "/home/afocant/common_core_19/cpp/cpp05/ex02/Classes/Bureaucrat.cpp",
+    "output": "/home/afocant/common_core_19/cpp/cpp05/ex02/.build/Classes/Bureaucrat.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/c++",
+      "-g",
+      "-D_GLIBCXX_DEBUG",
+      "-std=c++98",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-IClasses",
+      "-IClasses/Forms",
+      "-c",
+      "-o",
+      ".build/main.o",
+      "main.cpp"
+    ],
+    "directory": "/home/afocant/common_core_19/cpp/cpp05/ex02",
+    "file": "/home/afocant/common_core_19/cpp/cpp05/ex02/main.cpp",
+    "output": "/home/afocant/common_core_19/cpp/cpp05/ex02/.build/main.o"
+  }
+]

@@ -1,0 +1,38 @@
+[
+  {
+    "arguments": [
+      "/usr/bin/c++",
+      "-c",
+      "-g",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "--warn-implicit-fallthrough=0",
+      "-std=c++98",
+      "-o",
+      ".build/Harl.o",
+      "Harl.cpp"
+    ],
+    "directory": "/home/afocant/common_core_19/cpp/cpp01/ex06",
+    "file": "/home/afocant/common_core_19/cpp/cpp01/ex06/Harl.cpp",
+    "output": "/home/afocant/common_core_19/cpp/cpp01/ex06/.build/Harl.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/c++",
+      "-c",
+      "-g",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "--warn-implicit-fallthrough=0",
+      "-std=c++98",
+      "-o",
+      ".build/main.o",
+      "main.cpp"
+    ],
+    "directory": "/home/afocant/common_core_19/cpp/cpp01/ex06",
+    "file": "/home/afocant/common_core_19/cpp/cpp01/ex06/main.cpp",
+    "output": "/home/afocant/common_core_19/cpp/cpp01/ex06/.build/main.o"
+  }
+]

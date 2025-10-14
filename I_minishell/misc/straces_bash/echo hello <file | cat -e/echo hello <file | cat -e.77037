@@ -1,0 +1,43 @@
+set_robust_list(0x7fd05a176a20, 24)     = 0
+getpid()                                = 77037
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+rt_sigaction(SIGTSTP, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fd05a1b5050}, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fd05a1b5050}, 8) = 0
+rt_sigaction(SIGTTIN, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fd05a1b5050}, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fd05a1b5050}, 8) = 0
+rt_sigaction(SIGTTOU, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fd05a1b5050}, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fd05a1b5050}, 8) = 0
+setpgid(77037, 77037)                   = 0
+rt_sigprocmask(SIG_BLOCK, [CHLD TSTP TTIN TTOU], [], 8) = 0
+ioctl(255, TIOCSPGRP, [77037])          = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+
+
+close(6)                                = 0
+read(5, "", 1)                          = 0
+close(5)                                = 0
+
+
+close(3)                                = 0
+dup2(4, 1)                              = 1
+close(4)                                = 0
+
+
+rt_sigaction(SIGINT, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fd05a1b5050}, {sa_handler=0x55cbe0ac2aa0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fd05a1b5050}, 8) = 0
+rt_sigaction(SIGQUIT, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fd05a1b5050}, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fd05a1b5050}, 8) = 0
+rt_sigaction(SIGTERM, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fd05a1b5050}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fd05a1b5050}, 8) = 0
+rt_sigaction(SIGCHLD, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fd05a1b5050}, {sa_handler=0x55cbe0aa0e40, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fd05a1b5050}, 8) = 0
+
+pipe2([3, 4], 0)                        = 0
+close(3)                                = 0
+close(4)                                = 0
+
+rt_sigprocmask(SIG_BLOCK, [CHLD], [], 8) = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+rt_sigaction(SIGCHLD, {sa_handler=0x55cbe0aa0e40, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fd05a1b5050}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fd05a1b5050}, 8) = 0
+rt_sigaction(SIGINT, {sa_handler=0x55cbe0ac2f30, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fd05a1b5050}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fd05a1b5050}, 8) = 0
+
+
+openat(AT_FDCWD, "file", O_RDONLY)      = 3
+dup2(3, 0)                              = 0
+close(3)                                = 0
+write(1, "hello\n", 6)                  = 6
+exit_group(0)                           = ?
++++ exited with 0 +++

@@ -1,0 +1,66 @@
+set_robust_list(0x7f63b64d2a20, 24)     = 0
+getpid()                                = 78370
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+rt_sigaction(SIGTSTP, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f63b6511050}, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f63b6511050}, 8) = 0
+rt_sigaction(SIGTTIN, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f63b6511050}, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f63b6511050}, 8) = 0
+rt_sigaction(SIGTTOU, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f63b6511050}, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f63b6511050}, 8) = 0
+setpgid(78370, 78370)                   = 0
+rt_sigprocmask(SIG_BLOCK, [CHLD TSTP TTIN TTOU], [], 8) = 0
+ioctl(255, TIOCSPGRP, [78370])          = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+close(6)                                = 0
+read(5, "", 1)                          = 0
+close(5)                                = 0
+close(3)                                = 0
+dup2(4, 1)                              = 1
+close(4)                                = 0
+newfstatat(AT_FDCWD, ".", {st_mode=S_IFDIR|0700, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/opt/homebrew/opt/openjdk/bin/cmd1", 0x7ffe0d8db740, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/home/linuxbrew/.linuxbrew/bin/cmd1", 0x7ffe0d8db740, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/home/linuxbrew/.linuxbrew/sbin/cmd1", 0x7ffe0d8db740, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/opt/homebrew/opt/openjdk/bin/cmd1", 0x7ffe0d8db740, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/home/linuxbrew/.linuxbrew/bin/cmd1", 0x7ffe0d8db740, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/home/linuxbrew/.linuxbrew/sbin/cmd1", 0x7ffe0d8db740, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/local/bin/cmd1", 0x7ffe0d8db740, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/bin/cmd1", 0x7ffe0d8db740, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/bin/cmd1", 0x7ffe0d8db740, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/games/cmd1", 0x7ffe0d8db740, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/home/aurel/my_scripts/cmd1", 0x7ffe0d8db740, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/home/aurel/my_scripts/git_wrappers/cmd1", 0x7ffe0d8db740, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/home/aurel/my_scripts/vim/cmd1", 0x7ffe0d8db740, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/home/aurel/my_scripts/colors/cmd1", 0x7ffe0d8db740, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/Applications/Visual Studio Code.app/Contents/Resources/app/bin/cmd1", 0x7ffe0d8db740, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/home/aurel/my_scripts/cmd1", 0x7ffe0d8db740, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/home/aurel/my_scripts/git_wrappers/cmd1", 0x7ffe0d8db740, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/home/aurel/my_scripts/vim/cmd1", 0x7ffe0d8db740, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/home/aurel/my_scripts/colors/cmd1", 0x7ffe0d8db740, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/Applications/Visual Studio Code.app/Contents/Resources/app/bin/cmd1", 0x7ffe0d8db740, 0) = -1 ENOENT (No such file or directory)
+rt_sigaction(SIGHUP, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f63b6511050}, NULL, 8) = 0
+rt_sigaction(SIGILL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f63b6511050}, NULL, 8) = 0
+rt_sigaction(SIGTRAP, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f63b6511050}, NULL, 8) = 0
+rt_sigaction(SIGABRT, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f63b6511050}, NULL, 8) = 0
+rt_sigaction(SIGFPE, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f63b6511050}, NULL, 8) = 0
+rt_sigaction(SIGBUS, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f63b6511050}, NULL, 8) = 0
+rt_sigaction(SIGSEGV, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f63b6511050}, NULL, 8) = 0
+rt_sigaction(SIGSYS, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f63b6511050}, NULL, 8) = 0
+rt_sigaction(SIGPIPE, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f63b6511050}, NULL, 8) = 0
+rt_sigaction(SIGALRM, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f63b6511050}, NULL, 8) = 0
+rt_sigaction(SIGXCPU, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f63b6511050}, NULL, 8) = 0
+rt_sigaction(SIGXFSZ, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f63b6511050}, NULL, 8) = 0
+rt_sigaction(SIGVTALRM, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f63b6511050}, NULL, 8) = 0
+rt_sigaction(SIGUSR1, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f63b6511050}, NULL, 8) = 0
+rt_sigaction(SIGUSR2, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f63b6511050}, NULL, 8) = 0
+rt_sigaction(SIGINT, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f63b6511050}, {sa_handler=0x56488d8c2aa0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f63b6511050}, 8) = 0
+rt_sigaction(SIGQUIT, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f63b6511050}, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f63b6511050}, 8) = 0
+rt_sigaction(SIGTERM, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f63b6511050}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f63b6511050}, 8) = 0
+rt_sigaction(SIGCHLD, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7f63b6511050}, {sa_handler=0x56488d8a0e40, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7f63b6511050}, 8) = 0
+openat(AT_FDCWD, "/usr/share/locale/locale.alias", O_RDONLY|O_CLOEXEC) = 3
+newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=2996, ...}, AT_EMPTY_PATH) = 0
+read(3, "# Locale name alias data base.\n#"..., 4096) = 2996
+read(3, "", 4096)                       = 0
+close(3)                                = 0
+openat(AT_FDCWD, "/usr/share/locale/en_US/LC_MESSAGES/bash.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/share/locale/en/LC_MESSAGES/bash.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+write(2, "bash: cmd1: command not found\n", 30) = 30
+exit_group(127)                         = ?
++++ exited with 127 +++

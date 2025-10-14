@@ -1,0 +1,70 @@
+[
+  {
+    "arguments": [
+      "/usr/bin/c++",
+      "-c",
+      "-g",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-std=c++98",
+      "-o",
+      ".build/FixedMinMax.o",
+      "FixedMinMax.cpp"
+    ],
+    "directory": "/home/afocant/common_core_19/cpp/cpp02/ex02",
+    "file": "/home/afocant/common_core_19/cpp/cpp02/ex02/FixedMinMax.cpp",
+    "output": "/home/afocant/common_core_19/cpp/cpp02/ex02/.build/FixedMinMax.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/c++",
+      "-c",
+      "-g",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-std=c++98",
+      "-o",
+      ".build/main.o",
+      "main.cpp"
+    ],
+    "directory": "/home/afocant/common_core_19/cpp/cpp02/ex02",
+    "file": "/home/afocant/common_core_19/cpp/cpp02/ex02/main.cpp",
+    "output": "/home/afocant/common_core_19/cpp/cpp02/ex02/.build/main.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/c++",
+      "-c",
+      "-g",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-std=c++98",
+      "-o",
+      ".build/FixedOperators.o",
+      "FixedOperators.cpp"
+    ],
+    "directory": "/home/afocant/common_core_19/cpp/cpp02/ex02",
+    "file": "/home/afocant/common_core_19/cpp/cpp02/ex02/FixedOperators.cpp",
+    "output": "/home/afocant/common_core_19/cpp/cpp02/ex02/.build/FixedOperators.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/c++",
+      "-c",
+      "-g",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-std=c++98",
+      "-o",
+      ".build/Fixed.o",
+      "Fixed.cpp"
+    ],
+    "directory": "/home/afocant/common_core_19/cpp/cpp02/ex02",
+    "file": "/home/afocant/common_core_19/cpp/cpp02/ex02/Fixed.cpp",
+    "output": "/home/afocant/common_core_19/cpp/cpp02/ex02/.build/Fixed.o"
+  }
+]

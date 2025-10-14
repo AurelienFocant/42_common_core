@@ -1,0 +1,19 @@
+[
+  {
+    "arguments": [
+      "/usr/bin/c++",
+      "-c",
+      "-g",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-std=c++98",
+      "-o",
+      ".build/Hal.o",
+      "Hal.cpp"
+    ],
+    "directory": "/Users/aurelienfocant/cursus_nineteen/cpp/cpp01/ex05",
+    "file": "/Users/aurelienfocant/cursus_nineteen/cpp/cpp01/ex05/Hal.cpp",
+    "output": "/Users/aurelienfocant/cursus_nineteen/cpp/cpp01/ex05/.build/Hal.o"
+  }
+]

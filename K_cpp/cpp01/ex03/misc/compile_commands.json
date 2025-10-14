@@ -1,0 +1,70 @@
+[
+  {
+    "arguments": [
+      "/usr/bin/c++",
+      "-c",
+      "-g",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-std=c++98",
+      "-o",
+      ".build/Weapon.o",
+      "Weapon.cpp"
+    ],
+    "directory": "/home/aurel/cursus_19/cpp/cpp01/ex03",
+    "file": "/home/aurel/cursus_19/cpp/cpp01/ex03/Weapon.cpp",
+    "output": "/home/aurel/cursus_19/cpp/cpp01/ex03/.build/Weapon.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/c++",
+      "-c",
+      "-g",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-std=c++98",
+      "-o",
+      ".build/HumanA.o",
+      "HumanA.cpp"
+    ],
+    "directory": "/home/aurel/cursus_19/cpp/cpp01/ex03",
+    "file": "/home/aurel/cursus_19/cpp/cpp01/ex03/HumanA.cpp",
+    "output": "/home/aurel/cursus_19/cpp/cpp01/ex03/.build/HumanA.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/c++",
+      "-c",
+      "-g",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-std=c++98",
+      "-o",
+      ".build/HumanB.o",
+      "HumanB.cpp"
+    ],
+    "directory": "/home/aurel/cursus_19/cpp/cpp01/ex03",
+    "file": "/home/aurel/cursus_19/cpp/cpp01/ex03/HumanB.cpp",
+    "output": "/home/aurel/cursus_19/cpp/cpp01/ex03/.build/HumanB.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/c++",
+      "-c",
+      "-g",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-std=c++98",
+      "-o",
+      ".build/main.o",
+      "main.cpp"
+    ],
+    "directory": "/home/aurel/cursus_19/cpp/cpp01/ex03",
+    "file": "/home/aurel/cursus_19/cpp/cpp01/ex03/main.cpp",
+    "output": "/home/aurel/cursus_19/cpp/cpp01/ex03/.build/main.o"
+  }
+]

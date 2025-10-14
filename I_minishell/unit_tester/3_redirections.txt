@@ -1,0 +1,32 @@
+echo hello > ./unit_tester/test_dir/test.txt
+cat < ./unit_tester/test_dir/test.txt
+echo append >> ./unit_tester/test_dir/test.txt
+cat ./unit_tester/test_dir/test.txt
+echo hello >/dev/stdout | cat
+cat < ./unit_tester/test_dir/input.txt > ./unit_tester/test_dir/output.txt
+echo "hello" >> ./unit_tester/test_dir/append.txt
+>
+>./unit_tester/test_dir/file
+(cat <./unit_tester/test_dir/file1 >./unit_tester/test_dir/file3) <./unit_tester/test_dir/file2
+(cat >./unit_tester/test_dir/file3) <./unit_tester/test_dir/file2 <./unit_tester/test_dir/file1
+cat ./unit_tester/test_dir/test > ./unit_tester/test_dir/test
+(cat ./unit_tester/test_dir/test) > ./unit_tester/test_dir/test
+(echo abc && cat ./unit_tester/test_dir/test) > ./unit_tester/test_dir/test
+echo "Hello World" > ./unit_tester/test_dir/output.txt
+ls -la > ./unit_tester/test_dir/directory_contents.txt
+echo "Appending text" >> ./unit_tester/test_dir/output.txt
+cat ./unit_tester/test_dir/file.txt > ./unit_tester/test_dir/copy.txt
+pwd > ./unit_tester/test_dir/current_directory.txt
+cat < ./unit_tester/test_dir/input.txt
+wc -l < ./unit_tester/test_dir/input.txt
+grep "pattern" < ./unit_tester/test_dir/large_file.txt
+cat < ./unit_tester/test_dir/input.txt > ./unit_tester/test_dir/output.txt
+sort < ./unit_tester/test_dir/unsorted.txt > ./unit_tester/test_dir/sorted.txt
+grep "search term" < ./unit_tester/test_dir/file.txt > ./unit_tester/test_dir/results.txt
+cat < ./unit_tester/test_dir/input.txt >> ./unit_tester/test_dir/appended.txt
+cat < ./unit_tester/test_dir/file1.txt > ./unit_tester/test_dir/output.txt && cat < ./unit_tester/test_dir/file2.txt >> ./unit_tester/test_dir/output.txt
+cat < ./unit_tester/test_dir/input.txt > ./unit_tester/test_dir/temp.txt && sort < ./unit_tester/test_dir/temp.txt > ./unit_tester/test_dir/sorted.txt
+echo "Line with    spaces" > "./unit_tester/test_dir/file with spaces.txt"
+cat < "./unit_tester/test_dir/file with spaces.txt" > "./unit_tester/test_dir/another file.txt"
+cat < ./unit_tester/test_dir/input.txt > ./unit_tester/test_dir/input.txt
+echo "test" > ./unit_tester/test_dir/file1.txt > ./unit_tester/test_dir/file2.txt > ./unit_tester/test_dir/file3.txt

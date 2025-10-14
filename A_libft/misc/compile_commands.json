@@ -1,0 +1,971 @@
+[
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "obj/get_next_line/get_next_line.o",
+      "src/get_next_line/get_next_line.c"
+    ],
+    "directory": "/home/afocant/common_core_19/0_libft",
+    "file": "/home/afocant/common_core_19/0_libft/src/get_next_line/get_next_line.c",
+    "output": "/home/afocant/common_core_19/0_libft/obj/get_next_line/get_next_line.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "obj/get_next_line/get_next_line_utils.o",
+      "src/get_next_line/get_next_line_utils.c"
+    ],
+    "directory": "/home/afocant/common_core_19/0_libft",
+    "file": "/home/afocant/common_core_19/0_libft/src/get_next_line/get_next_line_utils.c",
+    "output": "/home/afocant/common_core_19/0_libft/obj/get_next_line/get_next_line_utils.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "obj/list_fn/ft_lstadd_back_bonus.o",
+      "src/list_fn/ft_lstadd_back_bonus.c"
+    ],
+    "directory": "/home/afocant/common_core_19/0_libft",
+    "file": "/home/afocant/common_core_19/0_libft/src/list_fn/ft_lstadd_back_bonus.c",
+    "output": "/home/afocant/common_core_19/0_libft/obj/list_fn/ft_lstadd_back_bonus.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "obj/list_fn/ft_lstadd_front_bonus.o",
+      "src/list_fn/ft_lstadd_front_bonus.c"
+    ],
+    "directory": "/home/afocant/common_core_19/0_libft",
+    "file": "/home/afocant/common_core_19/0_libft/src/list_fn/ft_lstadd_front_bonus.c",
+    "output": "/home/afocant/common_core_19/0_libft/obj/list_fn/ft_lstadd_front_bonus.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "obj/list_fn/ft_lstclear_bonus.o",
+      "src/list_fn/ft_lstclear_bonus.c"
+    ],
+    "directory": "/home/afocant/common_core_19/0_libft",
+    "file": "/home/afocant/common_core_19/0_libft/src/list_fn/ft_lstclear_bonus.c",
+    "output": "/home/afocant/common_core_19/0_libft/obj/list_fn/ft_lstclear_bonus.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "obj/list_fn/ft_lstdelone_bonus.o",
+      "src/list_fn/ft_lstdelone_bonus.c"
+    ],
+    "directory": "/home/afocant/common_core_19/0_libft",
+    "file": "/home/afocant/common_core_19/0_libft/src/list_fn/ft_lstdelone_bonus.c",
+    "output": "/home/afocant/common_core_19/0_libft/obj/list_fn/ft_lstdelone_bonus.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "obj/list_fn/ft_lstiter_bonus.o",
+      "src/list_fn/ft_lstiter_bonus.c"
+    ],
+    "directory": "/home/afocant/common_core_19/0_libft",
+    "file": "/home/afocant/common_core_19/0_libft/src/list_fn/ft_lstiter_bonus.c",
+    "output": "/home/afocant/common_core_19/0_libft/obj/list_fn/ft_lstiter_bonus.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "obj/list_fn/ft_lstlast_bonus.o",
+      "src/list_fn/ft_lstlast_bonus.c"
+    ],
+    "directory": "/home/afocant/common_core_19/0_libft",
+    "file": "/home/afocant/common_core_19/0_libft/src/list_fn/ft_lstlast_bonus.c",
+    "output": "/home/afocant/common_core_19/0_libft/obj/list_fn/ft_lstlast_bonus.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "obj/list_fn/ft_lstmap_bonus.o",
+      "src/list_fn/ft_lstmap_bonus.c"
+    ],
+    "directory": "/home/afocant/common_core_19/0_libft",
+    "file": "/home/afocant/common_core_19/0_libft/src/list_fn/ft_lstmap_bonus.c",
+    "output": "/home/afocant/common_core_19/0_libft/obj/list_fn/ft_lstmap_bonus.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "obj/list_fn/ft_lstnew_bonus.o",
+      "src/list_fn/ft_lstnew_bonus.c"
+    ],
+    "directory": "/home/afocant/common_core_19/0_libft",
+    "file": "/home/afocant/common_core_19/0_libft/src/list_fn/ft_lstnew_bonus.c",
+    "output": "/home/afocant/common_core_19/0_libft/obj/list_fn/ft_lstnew_bonus.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "obj/list_fn/ft_lstsize_bonus.o",
+      "src/list_fn/ft_lstsize_bonus.c"
+    ],
+    "directory": "/home/afocant/common_core_19/0_libft",
+    "file": "/home/afocant/common_core_19/0_libft/src/list_fn/ft_lstsize_bonus.c",
+    "output": "/home/afocant/common_core_19/0_libft/obj/list_fn/ft_lstsize_bonus.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "obj/mem_fn/ft_bzero.o",
+      "src/mem_fn/ft_bzero.c"
+    ],
+    "directory": "/home/afocant/common_core_19/0_libft",
+    "file": "/home/afocant/common_core_19/0_libft/src/mem_fn/ft_bzero.c",
+    "output": "/home/afocant/common_core_19/0_libft/obj/mem_fn/ft_bzero.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "obj/mem_fn/ft_calloc.o",
+      "src/mem_fn/ft_calloc.c"
+    ],
+    "directory": "/home/afocant/common_core_19/0_libft",
+    "file": "/home/afocant/common_core_19/0_libft/src/mem_fn/ft_calloc.c",
+    "output": "/home/afocant/common_core_19/0_libft/obj/mem_fn/ft_calloc.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "obj/mem_fn/ft_free_null.o",
+      "src/mem_fn/ft_free_null.c"
+    ],
+    "directory": "/home/afocant/common_core_19/0_libft",
+    "file": "/home/afocant/common_core_19/0_libft/src/mem_fn/ft_free_null.c",
+    "output": "/home/afocant/common_core_19/0_libft/obj/mem_fn/ft_free_null.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "obj/mem_fn/ft_free_null_strv.o",
+      "src/mem_fn/ft_free_null_strv.c"
+    ],
+    "directory": "/home/afocant/common_core_19/0_libft",
+    "file": "/home/afocant/common_core_19/0_libft/src/mem_fn/ft_free_null_strv.c",
+    "output": "/home/afocant/common_core_19/0_libft/obj/mem_fn/ft_free_null_strv.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "obj/mem_fn/ft_free_strv.o",
+      "src/mem_fn/ft_free_strv.c"
+    ],
+    "directory": "/home/afocant/common_core_19/0_libft",
+    "file": "/home/afocant/common_core_19/0_libft/src/mem_fn/ft_free_strv.c",
+    "output": "/home/afocant/common_core_19/0_libft/obj/mem_fn/ft_free_strv.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "obj/mem_fn/ft_memchr.o",
+      "src/mem_fn/ft_memchr.c"
+    ],
+    "directory": "/home/afocant/common_core_19/0_libft",
+    "file": "/home/afocant/common_core_19/0_libft/src/mem_fn/ft_memchr.c",
+    "output": "/home/afocant/common_core_19/0_libft/obj/mem_fn/ft_memchr.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "obj/mem_fn/ft_memcmp.o",
+      "src/mem_fn/ft_memcmp.c"
+    ],
+    "directory": "/home/afocant/common_core_19/0_libft",
+    "file": "/home/afocant/common_core_19/0_libft/src/mem_fn/ft_memcmp.c",
+    "output": "/home/afocant/common_core_19/0_libft/obj/mem_fn/ft_memcmp.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "obj/mem_fn/ft_memcpy.o",
+      "src/mem_fn/ft_memcpy.c"
+    ],
+    "directory": "/home/afocant/common_core_19/0_libft",
+    "file": "/home/afocant/common_core_19/0_libft/src/mem_fn/ft_memcpy.c",
+    "output": "/home/afocant/common_core_19/0_libft/obj/mem_fn/ft_memcpy.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "obj/mem_fn/ft_memmove.o",
+      "src/mem_fn/ft_memmove.c"
+    ],
+    "directory": "/home/afocant/common_core_19/0_libft",
+    "file": "/home/afocant/common_core_19/0_libft/src/mem_fn/ft_memmove.c",
+    "output": "/home/afocant/common_core_19/0_libft/obj/mem_fn/ft_memmove.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "obj/mem_fn/ft_memset.o",
+      "src/mem_fn/ft_memset.c"
+    ],
+    "directory": "/home/afocant/common_core_19/0_libft",
+    "file": "/home/afocant/common_core_19/0_libft/src/mem_fn/ft_memset.c",
+    "output": "/home/afocant/common_core_19/0_libft/obj/mem_fn/ft_memset.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "obj/printf/ft_printf.o",
+      "src/printf/ft_printf.c"
+    ],
+    "directory": "/home/afocant/common_core_19/0_libft",
+    "file": "/home/afocant/common_core_19/0_libft/src/printf/ft_printf.c",
+    "output": "/home/afocant/common_core_19/0_libft/obj/printf/ft_printf.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "obj/printf/ft_printf_utils.o",
+      "src/printf/ft_printf_utils.c"
+    ],
+    "directory": "/home/afocant/common_core_19/0_libft",
+    "file": "/home/afocant/common_core_19/0_libft/src/printf/ft_printf_utils.c",
+    "output": "/home/afocant/common_core_19/0_libft/obj/printf/ft_printf_utils.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "obj/str_fn/ft_atoi.o",
+      "src/str_fn/ft_atoi.c"
+    ],
+    "directory": "/home/afocant/common_core_19/0_libft",
+    "file": "/home/afocant/common_core_19/0_libft/src/str_fn/ft_atoi.c",
+    "output": "/home/afocant/common_core_19/0_libft/obj/str_fn/ft_atoi.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "obj/str_fn/ft_atol.o",
+      "src/str_fn/ft_atol.c"
+    ],
+    "directory": "/home/afocant/common_core_19/0_libft",
+    "file": "/home/afocant/common_core_19/0_libft/src/str_fn/ft_atol.c",
+    "output": "/home/afocant/common_core_19/0_libft/obj/str_fn/ft_atol.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "obj/str_fn/ft_isalnum.o",
+      "src/str_fn/ft_isalnum.c"
+    ],
+    "directory": "/home/afocant/common_core_19/0_libft",
+    "file": "/home/afocant/common_core_19/0_libft/src/str_fn/ft_isalnum.c",
+    "output": "/home/afocant/common_core_19/0_libft/obj/str_fn/ft_isalnum.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "obj/str_fn/ft_isalpha.o",
+      "src/str_fn/ft_isalpha.c"
+    ],
+    "directory": "/home/afocant/common_core_19/0_libft",
+    "file": "/home/afocant/common_core_19/0_libft/src/str_fn/ft_isalpha.c",
+    "output": "/home/afocant/common_core_19/0_libft/obj/str_fn/ft_isalpha.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "obj/str_fn/ft_isascii.o",
+      "src/str_fn/ft_isascii.c"
+    ],
+    "directory": "/home/afocant/common_core_19/0_libft",
+    "file": "/home/afocant/common_core_19/0_libft/src/str_fn/ft_isascii.c",
+    "output": "/home/afocant/common_core_19/0_libft/obj/str_fn/ft_isascii.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "obj/str_fn/ft_isdigit.o",
+      "src/str_fn/ft_isdigit.c"
+    ],
+    "directory": "/home/afocant/common_core_19/0_libft",
+    "file": "/home/afocant/common_core_19/0_libft/src/str_fn/ft_isdigit.c",
+    "output": "/home/afocant/common_core_19/0_libft/obj/str_fn/ft_isdigit.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "obj/str_fn/ft_isprint.o",
+      "src/str_fn/ft_isprint.c"
+    ],
+    "directory": "/home/afocant/common_core_19/0_libft",
+    "file": "/home/afocant/common_core_19/0_libft/src/str_fn/ft_isprint.c",
+    "output": "/home/afocant/common_core_19/0_libft/obj/str_fn/ft_isprint.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "obj/str_fn/ft_isquote.o",
+      "src/str_fn/ft_isquote.c"
+    ],
+    "directory": "/home/afocant/common_core_19/0_libft",
+    "file": "/home/afocant/common_core_19/0_libft/src/str_fn/ft_isquote.c",
+    "output": "/home/afocant/common_core_19/0_libft/obj/str_fn/ft_isquote.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "obj/str_fn/ft_isspace.o",
+      "src/str_fn/ft_isspace.c"
+    ],
+    "directory": "/home/afocant/common_core_19/0_libft",
+    "file": "/home/afocant/common_core_19/0_libft/src/str_fn/ft_isspace.c",
+    "output": "/home/afocant/common_core_19/0_libft/obj/str_fn/ft_isspace.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "obj/str_fn/ft_itoa.o",
+      "src/str_fn/ft_itoa.c"
+    ],
+    "directory": "/home/afocant/common_core_19/0_libft",
+    "file": "/home/afocant/common_core_19/0_libft/src/str_fn/ft_itoa.c",
+    "output": "/home/afocant/common_core_19/0_libft/obj/str_fn/ft_itoa.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "obj/str_fn/ft_print_nbr.o",
+      "src/str_fn/ft_print_nbr.c"
+    ],
+    "directory": "/home/afocant/common_core_19/0_libft",
+    "file": "/home/afocant/common_core_19/0_libft/src/str_fn/ft_print_nbr.c",
+    "output": "/home/afocant/common_core_19/0_libft/obj/str_fn/ft_print_nbr.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "obj/str_fn/ft_print_ptr.o",
+      "src/str_fn/ft_print_ptr.c"
+    ],
+    "directory": "/home/afocant/common_core_19/0_libft",
+    "file": "/home/afocant/common_core_19/0_libft/src/str_fn/ft_print_ptr.c",
+    "output": "/home/afocant/common_core_19/0_libft/obj/str_fn/ft_print_ptr.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "obj/str_fn/ft_print_strv.o",
+      "src/str_fn/ft_print_strv.c"
+    ],
+    "directory": "/home/afocant/common_core_19/0_libft",
+    "file": "/home/afocant/common_core_19/0_libft/src/str_fn/ft_print_strv.c",
+    "output": "/home/afocant/common_core_19/0_libft/obj/str_fn/ft_print_strv.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "obj/str_fn/ft_putchar_fd.o",
+      "src/str_fn/ft_putchar_fd.c"
+    ],
+    "directory": "/home/afocant/common_core_19/0_libft",
+    "file": "/home/afocant/common_core_19/0_libft/src/str_fn/ft_putchar_fd.c",
+    "output": "/home/afocant/common_core_19/0_libft/obj/str_fn/ft_putchar_fd.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "obj/str_fn/ft_putendl_fd.o",
+      "src/str_fn/ft_putendl_fd.c"
+    ],
+    "directory": "/home/afocant/common_core_19/0_libft",
+    "file": "/home/afocant/common_core_19/0_libft/src/str_fn/ft_putendl_fd.c",
+    "output": "/home/afocant/common_core_19/0_libft/obj/str_fn/ft_putendl_fd.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "obj/str_fn/ft_putnbr_fd.o",
+      "src/str_fn/ft_putnbr_fd.c"
+    ],
+    "directory": "/home/afocant/common_core_19/0_libft",
+    "file": "/home/afocant/common_core_19/0_libft/src/str_fn/ft_putnbr_fd.c",
+    "output": "/home/afocant/common_core_19/0_libft/obj/str_fn/ft_putnbr_fd.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "obj/str_fn/ft_putstr_fd.o",
+      "src/str_fn/ft_putstr_fd.c"
+    ],
+    "directory": "/home/afocant/common_core_19/0_libft",
+    "file": "/home/afocant/common_core_19/0_libft/src/str_fn/ft_putstr_fd.c",
+    "output": "/home/afocant/common_core_19/0_libft/obj/str_fn/ft_putstr_fd.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "obj/str_fn/ft_split.o",
+      "src/str_fn/ft_split.c"
+    ],
+    "directory": "/home/afocant/common_core_19/0_libft",
+    "file": "/home/afocant/common_core_19/0_libft/src/str_fn/ft_split.c",
+    "output": "/home/afocant/common_core_19/0_libft/obj/str_fn/ft_split.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "obj/str_fn/ft_strcmp.o",
+      "src/str_fn/ft_strcmp.c"
+    ],
+    "directory": "/home/afocant/common_core_19/0_libft",
+    "file": "/home/afocant/common_core_19/0_libft/src/str_fn/ft_strcmp.c",
+    "output": "/home/afocant/common_core_19/0_libft/obj/str_fn/ft_strcmp.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "obj/str_fn/ft_strdup.o",
+      "src/str_fn/ft_strdup.c"
+    ],
+    "directory": "/home/afocant/common_core_19/0_libft",
+    "file": "/home/afocant/common_core_19/0_libft/src/str_fn/ft_strdup.c",
+    "output": "/home/afocant/common_core_19/0_libft/obj/str_fn/ft_strdup.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "obj/str_fn/ft_striteri.o",
+      "src/str_fn/ft_striteri.c"
+    ],
+    "directory": "/home/afocant/common_core_19/0_libft",
+    "file": "/home/afocant/common_core_19/0_libft/src/str_fn/ft_striteri.c",
+    "output": "/home/afocant/common_core_19/0_libft/obj/str_fn/ft_striteri.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "obj/str_fn/ft_strjoin.o",
+      "src/str_fn/ft_strjoin.c"
+    ],
+    "directory": "/home/afocant/common_core_19/0_libft",
+    "file": "/home/afocant/common_core_19/0_libft/src/str_fn/ft_strjoin.c",
+    "output": "/home/afocant/common_core_19/0_libft/obj/str_fn/ft_strjoin.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "obj/str_fn/ft_strlcat.o",
+      "src/str_fn/ft_strlcat.c"
+    ],
+    "directory": "/home/afocant/common_core_19/0_libft",
+    "file": "/home/afocant/common_core_19/0_libft/src/str_fn/ft_strlcat.c",
+    "output": "/home/afocant/common_core_19/0_libft/obj/str_fn/ft_strlcat.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "obj/str_fn/ft_strlcpy.o",
+      "src/str_fn/ft_strlcpy.c"
+    ],
+    "directory": "/home/afocant/common_core_19/0_libft",
+    "file": "/home/afocant/common_core_19/0_libft/src/str_fn/ft_strlcpy.c",
+    "output": "/home/afocant/common_core_19/0_libft/obj/str_fn/ft_strlcpy.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "obj/str_fn/ft_strlen.o",
+      "src/str_fn/ft_strlen.c"
+    ],
+    "directory": "/home/afocant/common_core_19/0_libft",
+    "file": "/home/afocant/common_core_19/0_libft/src/str_fn/ft_strlen.c",
+    "output": "/home/afocant/common_core_19/0_libft/obj/str_fn/ft_strlen.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "obj/str_fn/ft_strmapi.o",
+      "src/str_fn/ft_strmapi.c"
+    ],
+    "directory": "/home/afocant/common_core_19/0_libft",
+    "file": "/home/afocant/common_core_19/0_libft/src/str_fn/ft_strmapi.c",
+    "output": "/home/afocant/common_core_19/0_libft/obj/str_fn/ft_strmapi.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "obj/str_fn/ft_strncmp.o",
+      "src/str_fn/ft_strncmp.c"
+    ],
+    "directory": "/home/afocant/common_core_19/0_libft",
+    "file": "/home/afocant/common_core_19/0_libft/src/str_fn/ft_strncmp.c",
+    "output": "/home/afocant/common_core_19/0_libft/obj/str_fn/ft_strncmp.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "obj/str_fn/ft_strnstr.o",
+      "src/str_fn/ft_strnstr.c"
+    ],
+    "directory": "/home/afocant/common_core_19/0_libft",
+    "file": "/home/afocant/common_core_19/0_libft/src/str_fn/ft_strnstr.c",
+    "output": "/home/afocant/common_core_19/0_libft/obj/str_fn/ft_strnstr.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "obj/str_fn/ft_strrchr.o",
+      "src/str_fn/ft_strrchr.c"
+    ],
+    "directory": "/home/afocant/common_core_19/0_libft",
+    "file": "/home/afocant/common_core_19/0_libft/src/str_fn/ft_strrchr.c",
+    "output": "/home/afocant/common_core_19/0_libft/obj/str_fn/ft_strrchr.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "obj/str_fn/ft_substr.o",
+      "src/str_fn/ft_substr.c"
+    ],
+    "directory": "/home/afocant/common_core_19/0_libft",
+    "file": "/home/afocant/common_core_19/0_libft/src/str_fn/ft_substr.c",
+    "output": "/home/afocant/common_core_19/0_libft/obj/str_fn/ft_substr.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "obj/str_fn/ft_tolower.o",
+      "src/str_fn/ft_tolower.c"
+    ],
+    "directory": "/home/afocant/common_core_19/0_libft",
+    "file": "/home/afocant/common_core_19/0_libft/src/str_fn/ft_tolower.c",
+    "output": "/home/afocant/common_core_19/0_libft/obj/str_fn/ft_tolower.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "obj/str_fn/ft_toupper.o",
+      "src/str_fn/ft_toupper.c"
+    ],
+    "directory": "/home/afocant/common_core_19/0_libft",
+    "file": "/home/afocant/common_core_19/0_libft/src/str_fn/ft_toupper.c",
+    "output": "/home/afocant/common_core_19/0_libft/obj/str_fn/ft_toupper.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "obj/str_fn/ft_strtrim.o",
+      "src/str_fn/ft_strtrim.c"
+    ],
+    "directory": "/home/afocant/common_core_19/0_libft",
+    "file": "/home/afocant/common_core_19/0_libft/src/str_fn/ft_strtrim.c",
+    "output": "/home/afocant/common_core_19/0_libft/obj/str_fn/ft_strtrim.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-g3",
+      "-Iinclude",
+      "-c",
+      "-o",
+      "obj/str_fn/ft_strchr.o",
+      "src/str_fn/ft_strchr.c"
+    ],
+    "directory": "/home/afocant/common_core_19/0_libft",
+    "file": "/home/afocant/common_core_19/0_libft/src/str_fn/ft_strchr.c",
+    "output": "/home/afocant/common_core_19/0_libft/obj/str_fn/ft_strchr.o"
+  }
+]

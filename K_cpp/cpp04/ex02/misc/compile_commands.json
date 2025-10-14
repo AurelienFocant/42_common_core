@@ -1,0 +1,23 @@
+[
+  {
+    "arguments": [
+      "/usr/bin/g++",
+      "-std=c++98",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-Wshadow",
+      "-IClasses",
+      "-g",
+      "-D_GLIBCXX_DEBUG",
+      "-fdump-lang-class",
+      "-c",
+      "-o",
+      ".build/Classes/Cat.o",
+      "Classes/Cat.cpp"
+    ],
+    "directory": "/home/aurel/cursus_19/cpp/cpp04/ex01",
+    "file": "/home/aurel/cursus_19/cpp/cpp04/ex01/Classes/Cat.cpp",
+    "output": "/home/aurel/cursus_19/cpp/cpp04/ex01/.build/Classes/Cat.o"
+  }
+]

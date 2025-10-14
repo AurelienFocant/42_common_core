@@ -1,0 +1,98 @@
+1  ls
+    2  echo hi
+    3  ls |||
+    4  echo 0
+    5  ls |||
+    6  ©
+    7  echo ©
+    8  sh
+    9  ( ls
+   10  (ls) > file
+   11  ls
+   12  cat file 
+   13  ls || |
+   14  ls | |
+   15  ls | &&
+   16  make
+   17  ls | ()
+   18  ()
+   19  ()
+   20  ()
+   21  ()
+   22  ()
+   23  fg
+   24  ls ()
+   25  ls && ()
+   26  ls && |
+   27  ls && (
+   28  ls | () echo hello
+   29  ls && () echo hello
+   30  ls && (echo) echo hello
+   31  ls && (echo hi) echo hello
+   32  ls && (echo hi) | echo hello
+   33  ls && (echo ) | echo hello
+   34  ls && () | echo hello
+   35  ls && (    ) | echo hello
+   36  ls && (   | echo hello
+   37  ./tinyshell 
+   38  ./tinyshell 
+   39  cat (ls)
+   40  echo (ls)
+   41  (ls)
+   42  echo hi>file
+   43  <file (echo)
+   44  (echo) <file
+   45  cat file 
+   46  echo <file
+   47  (cat) <file
+   48  <file (cat)
+   49  ls ()
+   50  ls (
+   51  ls )
+   52  ls && ( )
+   53  ls && | echo
+   54  ls && ( | echo hello
+   55  echo ( hello
+   56  echo ( cat
+   57  echo ( cat )
+   58  ./tinyshell 
+   59  ls |||
+   60  ls &&|
+   61  ./tinyshell 
+   62  make
+   63  cat &&
+   64  cat && ( )
+   65  cat && ( )
+   66  cat ()
+   67  cat () ls
+   68  ls
+   69  cat () Makefile
+   70  echo () Makefile
+   71  echo ()  hi
+   72  echo () &&
+   73  ls ()
+   74  echo hi || (ls; )
+   75  bbr
+   76  ssh -p 4242 aurel@77.109.122.125
+   77  bbr
+   78  make
+   79  ./tinyshell 
+   80  make
+   81  ./tinyshell 
+   82  make
+   83  ./tinyshell 
+   84  ls &&&
+   85  mke
+   86  make
+   87  ./tinyshell 
+   88  make
+   89  make
+   90  ./tinyshell 
+   91  ls | ||
+   92  gdb tinyshell 
+   93  ls && &&
+   94  ls &&&
+   95  ls | ||
+   96  ls ( echo
+   97  echo ( ls
+   98  echo hi || ( ls

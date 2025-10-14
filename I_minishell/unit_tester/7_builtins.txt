@@ -1,0 +1,58 @@
+echo -n hello
+echo hello | cat -e | wc -l
+echo ~
+echo ~ d
+echo ~d
+echo $
+echo $? + $?
+echo hello<
+echo -nnnn
+echo -na
+echo -n hello
+echo -nnnnn hello
+echo -n -n -n hello
+echo hello && echo world | cat -e
+(echo hello && echo world) | cat -e
+echo "hello       world"
+echo $var
+echo -n test1		test2
+echo test1		test2
+cd
+cd ..
+cd ~
+cd -
+cd --
+mkdir ./unit_tester/test_dir/7_plouf
+cd ./unit_tester/test_dir/7_plouf && env | grep PWD
+pwd
+pwd > ./unit_tester/test_dir/filepwd.txt
+pwd | cat
+export HELLO="123 A-"
+export var="hello      world"
+export var=plaf <file1 >file2
+export var=hi && echo $var
+export T=ech
+echo $T"o "
+export T=ech
+echo $T'o '
+exit
+exit 258
+exit 8
+exit 9223372036854775805
+exit 123"123"
+exit 01
+exit 001
+exit 0001
+exit -1
+exit -12560
+exit 255
+exit +1
+exit 9223372036854775807
+exit
+exit "+100"
+exit "-100"
+exit -9223372036854775805
+exit 0
+exit 10
+exit 42
+exit 1

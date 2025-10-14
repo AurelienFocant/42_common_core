@@ -1,0 +1,122 @@
+❌ Command 1: FAILED - usr/bin/echo Hello! This is Simon
+ - pico:exec failed 
+- bash:/usr/bin/bash: line 1: usr/bin/echo: No such file or directory
+✅ Test 2: PASSED - /usr/bin/echo HelloWorld
+
+✅ Test 3: PASSED - /bin/ls -lv
+
+✅ Test 4: PASSED - /usr/bin/cat Makefile | /usr/bin/wc -l
+
+❌ Command 5: FAILED - cat <<eof  | cat -e
+ - pico:exec failed
+exec failed 
+- bash:/usr/bin/bash: line 1: warning: here-document at line 1 delimited by end-of-file (wanted `eof')
+❌ Command 6: FAILED - cat <<eof >file1 | cat -e
+ - pico:exec failed
+exec failed 
+- bash:/usr/bin/bash: line 1: warning: here-document at line 1 delimited by end-of-file (wanted `eof')
+❌ Command 7: FAILED - cat <<eof | cat
+ - pico:exec failed
+exec failed 
+- bash:/usr/bin/bash: line 1: warning: here-document at line 1 delimited by end-of-file (wanted `eof')
+❌ Command 8: FAILED - cat <<eof | cat <<EOF
+ - pico:exec failed
+exec failed 
+- bash:/usr/bin/bash: line 1: warning: here-document at line 1 delimited by end-of-file (wanted `eof')
+/usr/bin/bash: line 1: warning: here-document at line 1 delimited by end-of-file (wanted `EOF')
+❌ Command 9: FAILED - echo hello >/dev/stdout | cat
+ - pico:exec failed
+exec failed 
+- bash:hello
+❌ Exit Code 9: FAILED - pico:127 
+- bash:0
+❌ Command 10: FAILED - echo hello >/dev/stdout | cat <<eof <<EOF
+ - pico:exec failed
+exec failed 
+- bash:/usr/bin/bash: line 1: warning: here-document at line 1 delimited by end-of-file (wanted `eof')
+/usr/bin/bash: line 1: warning: here-document at line 1 delimited by end-of-file (wanted `EOF')
+❌ Command 11: FAILED - ./minishell
+ - pico:exec failed 
+- bash:/usr/bin/bash: line 1: ./minishell: No such file or directory
+❌ Exit Code 11: FAILED - pico:0 
+- bash:127
+❌ Command 12: FAILED - echo $? + $?
+ - pico:exec failed 
+- bash:0 + 0
+✅ Test 13: PASSED - exit | exit
+
+❌ Command 14: FAILED - ls ctrl C
+ - pico:exec failed 
+- bash:ls: cannot access 'ctrl': No such file or directory
+ls: cannot access 'C': No such file or directory
+❌ Exit Code 14: FAILED - pico:0 
+- bash:2
+❌ Command 15: FAILED - minishell
+ - pico:exec failed 
+- bash:/usr/bin/bash: line 1: minishell: command not found
+❌ Exit Code 15: FAILED - pico:0 
+- bash:127
+❌ Command 16: FAILED - cd $PWD
+ - pico:exec failed 
+- bash:
+❌ Exit Code 16: FAILED - pico:127 
+- bash:0
+❌ Command 17: FAILED - echo ~
+ - pico:exec failed 
+- bash:/home/slangero
+❌ Command 18: FAILED - echo ~ d
+ - pico:exec failed 
+- bash:/home/slangero d
+❌ Command 19: FAILED - echo ~d
+ - pico:exec failed 
+- bash:~d
+❌ Command 20: FAILED - echo $
+ - pico:exec failed 
+- bash:$
+❌ Command 21: FAILED - echo $? + $?
+ - pico:exec failed 
+- bash:0 + 0
+❌ Command 22: FAILED - exit 258
+ - pico:exec failed 
+- bash:
+❌ Command 23: FAILED - exit 42 world
+ - pico:exec failed 
+- bash:/usr/bin/bash: line 1: exit: too many arguments
+❌ Exit Code 23: FAILED - pico:127 
+- bash:1
+❌ Command 24: FAILED - exit 8
+ - pico:exec failed 
+- bash:
+❌ Command 25: FAILED - exit 8 8
+ - pico:exec failed 
+- bash:/usr/bin/bash: line 1: exit: too many arguments
+❌ Exit Code 25: FAILED - pico:0 
+- bash:1
+❌ Command 26: FAILED - exit m
+ - pico:exec failed 
+- bash:/usr/bin/bash: line 1: exit: m: numeric argument required
+❌ Exit Code 26: FAILED - pico:0 
+- bash:2
+❌ Command 27: FAILED - exit m m
+ - pico:exec failed 
+- bash:/usr/bin/bash: line 1: exit: m: numeric argument required
+❌ Exit Code 27: FAILED - pico:0 
+- bash:2
+❌ Command 28: FAILED - export HELLO="123 A-"
+ - pico:exec failed 
+- bash:
+❌ Command 29: FAILED - export HELLO=123 A
+ - pico:exec failed 
+- bash:
+❌ Command 30: FAILED - pwd
+ - pico:exec failed 
+- bash:/home/slangero/0minishell/misc/prototypes/picoshell
+❌ Command 31: FAILED - unset PATH
+ - pico:exec failed 
+- bash:
+❌ Command 32: FAILED - <file1 <file2 <<here1 <<here2 cmd
+ - pico:prout file
+exec failed 
+- bash:/usr/bin/bash: line 1: warning: here-document at line 1 delimited by end-of-file (wanted `here1')
+/usr/bin/bash: line 1: warning: here-document at line 1 delimited by end-of-file (wanted `here2')
+/usr/bin/bash: line 1: file2: No such file or directory

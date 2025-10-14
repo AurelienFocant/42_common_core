@@ -1,0 +1,38 @@
+Test #,Command,Status,Picoshell Output,Bash Output,Exit Code Match
+1,usr/bin/echo Hello! This is Simon,FAILED,exec failed,/usr/bin/bash: line 1: usr/bin/echo: No such file or directory,YES
+2,/usr/bin/echo HelloWorld,PASSED,HelloWorld,HelloWorld,YES
+3,/bin/ls -lv,PASSED,total 220
+-rw-r--r-- 1 slangero 2024_s19   2585 Jan 25 13:23 Makefile
+-rw-r--r-- 1 slangero 2024_s19      0 Jan 27 17:43 file1
+drwxr-xr-x 2 slangero 2024_s19    107 Jan 27 15:41 include
+lrwxrwxrwx 1 slangero 2024_s19     14 Jan 14 17:59 libft -> ../../../libft
+drwxr-xr-x 6 slangero 2024_s19    118 Jan 24 14:57 misc
+-rwxr-xr-x 1 slangero 2024_s19 207424 Jan 27 16:00 picoshell
+drwxr-xr-x 7 slangero 2024_s19    102 Jan 27 15:41 src
+-rw-r--r-- 1 slangero 2024_s19  10274 Jan 23 10:57 tags
+drwxr-xr-x 2 slangero 2024_s19    243 Jan 27 17:48 unit_tests,total 220
+-rw-r--r-- 1 slangero 2024_s19   2585 Jan 25 13:23 Makefile
+-rw-r--r-- 1 slangero 2024_s19      0 Jan 27 17:43 file1
+drwxr-xr-x 2 slangero 2024_s19    107 Jan 27 15:41 include
+lrwxrwxrwx 1 slangero 2024_s19     14 Jan 14 17:59 libft -> ../../../libft
+drwxr-xr-x 6 slangero 2024_s19    118 Jan 24 14:57 misc
+-rwxr-xr-x 1 slangero 2024_s19 207424 Jan 27 16:00 picoshell
+drwxr-xr-x 7 slangero 2024_s19    102 Jan 27 15:41 src
+-rw-r--r-- 1 slangero 2024_s19  10274 Jan 23 10:57 tags
+drwxr-xr-x 2 slangero 2024_s19    243 Jan 27 17:48 unit_tests,YES
+4,/usr/bin/cat Makefile | /usr/bin/wc -l,PASSED,92,92,YES
+5,cat <<eof  | cat -e,FAILED,exec failed
+exec failed,/usr/bin/bash: line 1: warning: here-document at line 1 delimited by end-of-file (wanted `eof'),NO
+6,cat <<eof >file1 | cat -e,FAILED,exec failed
+exec failed,/usr/bin/bash: line 1: warning: here-document at line 1 delimited by end-of-file (wanted `eof'),YES
+7,cat <<eof | cat,FAILED,exec failed
+exec failed,/usr/bin/bash: line 1: warning: here-document at line 1 delimited by end-of-file (wanted `eof'),YES
+8,cat <<eof | cat <<EOF,FAILED,exec failed
+exec failed,/usr/bin/bash: line 1: warning: here-document at line 1 delimited by end-of-file (wanted `eof')
+/usr/bin/bash: line 1: warning: here-document at line 1 delimited by end-of-file (wanted `EOF'),YES
+9,echo hello >/dev/stdout | cat,FAILED,exec failed
+exec failed,hello,YES
+10,echo hello >/dev/stdout | cat <<eof <<EOF,FAILED,exec failed
+exec failed,/usr/bin/bash: line 1: warning: here-document at line 1 delimited by end-of-file (wanted `eof')
+/usr/bin/bash: line 1: warning: here-document at line 1 delimited by end-of-file (wanted `EOF'),YES
+11,/usr/bin/ls,FAILED,Makefile  file1  include  libft  misc  picoshell  src  tags  unit_tests,file1  include	libft  Makefile  misc  picoshell  src  tags  unit_tests,YES

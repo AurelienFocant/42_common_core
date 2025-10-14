@@ -1,0 +1,12 @@
+echo Hello World
+/usr/bin/echo Hello World
+/usr/bin/echo HelloWorld
+usr/bin/echo HelloWorld
+pwd
+ls
+/bin/ls -l
+/bin/ls -lv
+/usr/bin/whoami
+mkdir -p ./unit_tester/test_dir/plaf/plouf
+cd ./unit_tester/test_dir/plaf/plouf
+./bin/ls -l

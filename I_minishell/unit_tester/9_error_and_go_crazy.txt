@@ -1,0 +1,50 @@
+ls | |
+echo $? + $?
+9223372036854775807
+=
+?
+cat aurel_likes_petanque.dot
+echo """"""""$USER""""""""
+echo '              $USER          '
+echo text"'$USER'" ' $USER '
+echo " '$USER' "
+echo "'$USER'"
+echo "'$?'"
+echo '$ '
+echo "$ "
+echo "'"'$USER'"'"
+echo '"'"$USER"'"'
+echo "exit_code ->$? user ->$USER home -> $HOME"
+echo """"""""$USER""""""""
+echo "'$USER'"
+echo ""$?""
+/bin/echo '\1$42' > tmp_redir_out
+rm tmp_redir_out
+export test="arg1	arg2"
+echo $HOME
+unset HOME
+echo $HOME
+echo | |
+EechoE
+.echo.
+>echo>
+/bin/rm -f echo
+<echo<
+/bin/rm -f echo
+>>echo>>
+cd /bin/
+ls
+touch tmp_x_file1
+tmp_x_file1
+rm tmp_x_file1
+echo "$USER"
+echo "   $   "
+echo '$USER'
+echo '   $   '
+echo "$HO ME"
+echo '$HO ME'
+echo ""$PWD""
+echo ''$PWD''
+echo $USE"R"$HOME
+echo "$"$
+echo '$'$

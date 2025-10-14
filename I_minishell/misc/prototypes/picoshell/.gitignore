@@ -1,0 +1,4 @@
+picoshell
+misc/graph/*.dot
+misc/graph/*.pdf
+misc/.cache/clangd/

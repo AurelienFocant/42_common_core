@@ -1,0 +1,74 @@
+[
+  {
+    "arguments": [
+      "/usr/bin/c++",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-std=c++98",
+      "-g",
+      "-D_GLIBCXX_DEBUG",
+      "-c",
+      "-o",
+      ".build/FragTrap.o",
+      "FragTrap.cpp"
+    ],
+    "directory": "/home/aurel/cursus_19/cpp/cpp03/ex03",
+    "file": "/home/aurel/cursus_19/cpp/cpp03/ex03/FragTrap.cpp",
+    "output": "/home/aurel/cursus_19/cpp/cpp03/ex03/.build/FragTrap.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/c++",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-std=c++98",
+      "-g",
+      "-D_GLIBCXX_DEBUG",
+      "-c",
+      "-o",
+      ".build/ScavTrap.o",
+      "ScavTrap.cpp"
+    ],
+    "directory": "/home/aurel/cursus_19/cpp/cpp03/ex03",
+    "file": "/home/aurel/cursus_19/cpp/cpp03/ex03/ScavTrap.cpp",
+    "output": "/home/aurel/cursus_19/cpp/cpp03/ex03/.build/ScavTrap.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/c++",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-std=c++98",
+      "-g",
+      "-D_GLIBCXX_DEBUG",
+      "-c",
+      "-o",
+      ".build/DiamondTrap.o",
+      "DiamondTrap.cpp"
+    ],
+    "directory": "/home/aurel/cursus_19/cpp/cpp03/ex03",
+    "file": "/home/aurel/cursus_19/cpp/cpp03/ex03/DiamondTrap.cpp",
+    "output": "/home/aurel/cursus_19/cpp/cpp03/ex03/.build/DiamondTrap.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/c++",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-std=c++98",
+      "-g",
+      "-D_GLIBCXX_DEBUG",
+      "-c",
+      "-o",
+      ".build/main.o",
+      "main.cpp"
+    ],
+    "directory": "/home/aurel/cursus_19/cpp/cpp03/ex03",
+    "file": "/home/aurel/cursus_19/cpp/cpp03/ex03/main.cpp",
+    "output": "/home/aurel/cursus_19/cpp/cpp03/ex03/.build/main.o"
+  }
+]

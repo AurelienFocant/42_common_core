@@ -1,0 +1,112 @@
+[
+  {
+    "arguments": [
+      "/usr/bin/g++",
+      "-std=c++98",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-Wshadow",
+      "-IClasses",
+      "-IClasses/FixedClass",
+      "-g",
+      "-D_GLIBCXX_DEBUG",
+      "-fdump-lang-class",
+      "-c",
+      "-o",
+      ".build/main.o",
+      "main.cpp"
+    ],
+    "directory": "/home/afocant/common_core_19/cpp/cpp02/ex03",
+    "file": "/home/afocant/common_core_19/cpp/cpp02/ex03/main.cpp",
+    "output": "/home/afocant/common_core_19/cpp/cpp02/ex03/.build/main.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/g++",
+      "-std=c++98",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-Wshadow",
+      "-IClasses",
+      "-IClasses/FixedClass",
+      "-g",
+      "-D_GLIBCXX_DEBUG",
+      "-fdump-lang-class",
+      "-c",
+      "-o",
+      ".build/Classes/FixedClass/Fixed.o",
+      "Classes/FixedClass/Fixed.cpp"
+    ],
+    "directory": "/home/afocant/common_core_19/cpp/cpp02/ex03",
+    "file": "/home/afocant/common_core_19/cpp/cpp02/ex03/Classes/FixedClass/Fixed.cpp",
+    "output": "/home/afocant/common_core_19/cpp/cpp02/ex03/.build/Classes/FixedClass/Fixed.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/g++",
+      "-std=c++98",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-Wshadow",
+      "-IClasses",
+      "-IClasses/FixedClass",
+      "-g",
+      "-D_GLIBCXX_DEBUG",
+      "-fdump-lang-class",
+      "-c",
+      "-o",
+      ".build/Classes/FixedClass/FixedMinMax.o",
+      "Classes/FixedClass/FixedMinMax.cpp"
+    ],
+    "directory": "/home/afocant/common_core_19/cpp/cpp02/ex03",
+    "file": "/home/afocant/common_core_19/cpp/cpp02/ex03/Classes/FixedClass/FixedMinMax.cpp",
+    "output": "/home/afocant/common_core_19/cpp/cpp02/ex03/.build/Classes/FixedClass/FixedMinMax.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/g++",
+      "-std=c++98",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-Wshadow",
+      "-IClasses",
+      "-IClasses/FixedClass",
+      "-g",
+      "-D_GLIBCXX_DEBUG",
+      "-fdump-lang-class",
+      "-c",
+      "-o",
+      ".build/Classes/FixedClass/FixedOperators.o",
+      "Classes/FixedClass/FixedOperators.cpp"
+    ],
+    "directory": "/home/afocant/common_core_19/cpp/cpp02/ex03",
+    "file": "/home/afocant/common_core_19/cpp/cpp02/ex03/Classes/FixedClass/FixedOperators.cpp",
+    "output": "/home/afocant/common_core_19/cpp/cpp02/ex03/.build/Classes/FixedClass/FixedOperators.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/g++",
+      "-std=c++98",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-Wshadow",
+      "-IClasses",
+      "-IClasses/FixedClass",
+      "-g",
+      "-D_GLIBCXX_DEBUG",
+      "-fdump-lang-class",
+      "-c",
+      "-o",
+      ".build/Classes/Point.o",
+      "Classes/Point.cpp"
+    ],
+    "directory": "/home/afocant/common_core_19/cpp/cpp02/ex03",
+    "file": "/home/afocant/common_core_19/cpp/cpp02/ex03/Classes/Point.cpp",
+    "output": "/home/afocant/common_core_19/cpp/cpp02/ex03/.build/Classes/Point.o"
+  }
+]

@@ -1,0 +1,33 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_EXCMD	mixed	/number, pattern, mixed, or combineV2/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
+!_TAG_PROC_CWD	/home/afocant/common_core_19/cpp/cpp01/ex00/	//
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	5.9.0	//
+$(NAME)	Makefile	/^$(NAME): $(OBJ_FILES)$/;"	t
+$(OBJ_DIR)/%.o	Makefile	/^$(OBJ_DIR)\/%.o: .\/%.cpp$/;"	t
+CC	Makefile	/^	CC			=	\/opt\/homebrew\/Cellar\/gcc\/14.2.0_1\/bin\/g++-14$/;"	m
+GCC	Makefile	/^GCC			=	$(shell ls \/opt\/homebrew\/Cellar\/gcc\/14.2.0_1\/bin\/g++-14 2>\/dev\/null)$/;"	m
+NAME	Makefile	/^NAME		=	zombiezz$/;"	m
+OBJ_DIR	Makefile	/^OBJ_DIR		=	.build$/;"	m
+OBJ_FILES	Makefile	/^OBJ_FILES	=	$(SRC_FILES:.\/%.cpp=$(OBJ_DIR)\/%.o)$/;"	m
+SRC_FILES	Makefile	/^SRC_FILES	=	$(shell find . -name "*.cpp")$/;"	m
+Zombie	Zombie.cpp	/^Zombie::Zombie(std::string name) : _name(name)$/;"	f	class:Zombie
+Zombie	Zombie.hpp	/^class Zombie$/;"	c
+__ZOMBIE_HPP__	Zombie.hpp	/^#define __ZOMBIE_HPP__$/;"	d
+_name	Zombie.hpp	/^		std::string	_name;$/;"	m	class:Zombie	typeref:typename:std::string
+all	Makefile	/^all: $(NAME)$/;"	t
+announce	Zombie.cpp	/^void	Zombie::announce( void ) const$/;"	f	class:Zombie	typeref:typename:void
+clean	Makefile	/^clean:$/;"	t
+getName	Zombie.cpp	/^std::string	Zombie::getName( void ) const$/;"	f	class:Zombie	typeref:typename:std::string
+lsp	Makefile	/^lsp:$/;"	t
+main	main.cpp	/^int	main()$/;"	f	typeref:typename:int
+newZombie	newZombie.cpp	/^Zombie*	newZombie( std::string name )$/;"	f	typeref:typename:Zombie *
+randomChump	randomChump.cpp	/^void	randomChump( std::string name)$/;"	f	typeref:typename:void
+re	Makefile	/^re: clean all$/;"	t
+~Zombie	Zombie.cpp	/^Zombie::~Zombie( void )$/;"	f	class:Zombie

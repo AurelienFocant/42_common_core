@@ -1,0 +1,19 @@
+[
+  {
+    "arguments": [
+      "/usr/bin/c++",
+      "-c",
+      "-g",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-std=c++98",
+      "-o",
+      "Phonebook.o",
+      "Phonebook.cpp"
+    ],
+    "directory": "/Users/aurelienfocant/cursus_nineteen/cpp00/ex01",
+    "file": "/Users/aurelienfocant/cursus_nineteen/cpp00/ex01/Phonebook.cpp",
+    "output": "/Users/aurelienfocant/cursus_nineteen/cpp00/ex01/Phonebook.o"
+  }
+]

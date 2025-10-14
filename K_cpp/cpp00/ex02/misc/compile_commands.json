@@ -1,0 +1,36 @@
+[
+  {
+    "arguments": [
+      "/usr/bin/c++",
+      "-c",
+      "-g",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-std=c++98",
+      "-o",
+      ".build/tests.o",
+      "tests.cpp"
+    ],
+    "directory": "/Users/aurelienfocant/cursus_nineteen/cpp00/ex02",
+    "file": "/Users/aurelienfocant/cursus_nineteen/cpp00/ex02/tests.cpp",
+    "output": "/Users/aurelienfocant/cursus_nineteen/cpp00/ex02/.build/tests.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/c++",
+      "-c",
+      "-g",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-std=c++98",
+      "-o",
+      ".build/Account.o",
+      "Account.cpp"
+    ],
+    "directory": "/Users/aurelienfocant/cursus_nineteen/cpp00/ex02",
+    "file": "/Users/aurelienfocant/cursus_nineteen/cpp00/ex02/Account.cpp",
+    "output": "/Users/aurelienfocant/cursus_nineteen/cpp00/ex02/.build/Account.o"
+  }
+]

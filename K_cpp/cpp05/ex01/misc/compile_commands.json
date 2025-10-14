@@ -1,0 +1,42 @@
+[
+  {
+    "arguments": [
+      "/usr/bin/g++",
+      "-std=c++98",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-IClasses",
+      "-g",
+      "-D_GLIBCXX_DEBUG",
+      "-fdump-lang-class",
+      "-c",
+      "-o",
+      ".build/Classes/Bureaucrat.o",
+      "Classes/Bureaucrat.cpp"
+    ],
+    "directory": "/home/aurel/cursus_19/cpp/cpp05/ex00",
+    "file": "/home/aurel/cursus_19/cpp/cpp05/ex00/Classes/Bureaucrat.cpp",
+    "output": "/home/aurel/cursus_19/cpp/cpp05/ex00/.build/Classes/Bureaucrat.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/g++",
+      "-std=c++98",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-IClasses",
+      "-g",
+      "-D_GLIBCXX_DEBUG",
+      "-fdump-lang-class",
+      "-c",
+      "-o",
+      ".build/main.o",
+      "main.cpp"
+    ],
+    "directory": "/home/aurel/cursus_19/cpp/cpp05/ex00",
+    "file": "/home/aurel/cursus_19/cpp/cpp05/ex00/main.cpp",
+    "output": "/home/aurel/cursus_19/cpp/cpp05/ex00/.build/main.o"
+  }
+]

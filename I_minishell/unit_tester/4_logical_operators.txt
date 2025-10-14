@@ -1,0 +1,6 @@
+true && echo succes
+false || echo fallback
+(echo a && echo b) && echo c
+(echo a && echo b) || echo c
+true && (false || echo success)
+echo hello | cat && cat -e

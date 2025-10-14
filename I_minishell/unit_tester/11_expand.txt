@@ -1,0 +1,12 @@
+echo $USER
+echo "$USER"
+echo '$USER'
+echo $USER"$USER"'$USER'
+echo "$USER '$USER' $var plaf   plif ''"
+echo H"ello    $var  $USER world"    how are "you 'today   '  "
+echo '"$USER"' "'$USER'" "'"'$USER'"'" ""'"'"$USER"'"'""
+echo "hello  $USER  $var    world"
+echo 'hello  $USER  $var    world'
+echo 'hello  $USER  $var    world'$var
+echo 'hello  $USER  $var    world'$USER
+echo 'hello  $USER  $var    world'$var$USER

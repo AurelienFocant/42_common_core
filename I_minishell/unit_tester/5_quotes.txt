@@ -1,0 +1,21 @@
+echo "Hello World"
+echo "'Hello World'"
+echo "Hello \'World\'"
+echo 'Hello \"World\"'
+"   '     "
+echo "'hello'"
+echo '"hello"'
+echo """hello"""
+echo """"hello""""
+echo """"'"hello"'""""
+echo """'"hello"'"""
+echo ""'"hello"'""
+echo ""'hello'""
+echo """'hello'"""
+echo """"'hello'""""
+echo ''"hello"''
+echo $USER
+echo "$USER"
+echo '$USER'
+echo '$USER'"$USER"
+echo "$USER"'$USER'

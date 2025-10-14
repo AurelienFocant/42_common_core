@@ -1,0 +1,23 @@
+[
+  {
+    "arguments": [
+      "/usr/bin/g++",
+      "-std=c++98",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-Wshadow",
+      "-IClasses",
+      "-g",
+      "-D_GLIBCXX_DEBUG",
+      "-fdump-lang-class",
+      "-c",
+      "-o",
+      ".build/main.o",
+      "main.cpp"
+    ],
+    "directory": "/home/aurel/cursus_19/cpp/cpp04/ex00",
+    "file": "/home/aurel/cursus_19/cpp/cpp04/ex00/main.cpp",
+    "output": "/home/aurel/cursus_19/cpp/cpp04/ex00/.build/main.o"
+  }
+]

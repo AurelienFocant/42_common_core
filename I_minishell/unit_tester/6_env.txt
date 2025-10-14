@@ -1,0 +1,13 @@
+echo $HOME
+echo $PWD
+echo $?
+cd $PWD
+echo $UNDEFINED_VAR
+export TEST="value" && echo $TEST
+export TEST=value
+echo $TEST
+unset TEST
+echo $TEST
+env | grep PATH
+unset OLDPWD
+tinyshell env -i

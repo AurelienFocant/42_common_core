@@ -1,0 +1,50 @@
+// <<eof cat //
+
+blahblah...
+
+
+7. prepare heredoc line
+8. read heredoc input and write to stderr
+9. finish heredocline and repeat 7-8-9
+
+
+10. search path for executable
+
+
+11. pipe2[3, 4] == bullshit pipe
+
+clone
+
+PARENT:
+- sigaction
+- set pgid
+- sigaction, sigprocmask
+- close(3) == pipe[IN]
+- close(4) == pipe[OUT]
+- ioctl etc.
+- wait4
+
+
+CHILD:
+- set_robust_list, getpid, sigproc etc, setgpid, etc etc
+
+- close(4) == pipe[OUT]
+- read(3) == pipe[IN]
+- close(e0
+
+- signals etc
+
+- pipe[3, 4]
+- write heredoc contents in pipe[out]
+- close(4) == pipe[out]
+- dup2(pipe[IN], STDIN)
+- close(3) == pipe[IN]
+
+- exec
+
+
+PARENT:
+- wait finished
+- check there s no more child ?
+- write read history
+- finish everything

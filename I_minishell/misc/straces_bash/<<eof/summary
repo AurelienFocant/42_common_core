@@ -1,0 +1,45 @@
+// <<eof //
+
+
+1. pselect6
+
+2. read input and write on stderr
+
+3. ioctl: TCGETS, TCSETSW, TCGETS
+4. sigaction
+5. ioctl, sigprocmask, sigaction
+6. activate bracketed paste mode
+7. sigaction
+
+8. read heredoc input and write to stderr
+
+9. ioctl, sigaction, fcntl, ioctl, etc...
+
+10. read heredoc input and write to stderr
+
+
+
+11.pipe2([3, 4], 0)
+   fcntl(4, F_GETPIPE_SZ)
+
+12. write in pipe[4] == pipe[OUT]
+13. close pipe[4]
+
+14. duplicate stdin on 10
+	
+15. dup2(pipe[IN], STDIN)
+16. close pipe[IN]
+17. dup2(10, STDIN)
+18. close(10);
+
+19. write to history
+20. read entire history
+
+
+
+21. ioctl ...
+
+22. sigaction
+
+23. write prompt on stderr
+24 pselect6

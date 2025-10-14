@@ -1,0 +1,18 @@
+# Camera	vec(position)	vec(orientation)	float(fov)
+# Ambient	float(ratio)															vec(color)
+# Light		vec(position)	float(brightness)										vec(color)
+
+# sphere	vec(position)	float(diameter)											vec(color)
+# plane		vec(position)	vec(orientation)										vec(color)
+# cylinder	vec(positioin)	vec(orientation)	float(diameter)		float(height)	vec(color)
+
+C			0,0,-5			0,0,1				70
+A			1																		255,0,255
+L			10,10,-20		1.														255,255,255
+
+sp			0,0,-2			1														122,122,122			mat(GLASS1)
+pl			0,0,12			0,0,-1													0,255,0
+pl			0,-5,0			0,1,0													120,255,0
+pl			0,0,17			-0.707,0,-0.707											0,255,255
+pl			0,15,0			0,1,0													0,0,255
+pl			0,0,-25			0,0,1										255,0,0

@@ -1,0 +1,18 @@
+echo hello | cat
+ls | grep .txt
+ls | grep .c | wc -l
+cat Makefile | wc -l
+/usr/bin/cat Makefile | /usr/bin/wc -l
+cat ./unit_tester/test_dir/file.txt | grep "error" | wc -l > ./unit_tester/test_dir/file2.txt
+ls -la | grep "d" > ./unit_tester/test_dir/file2.txt
+(echo "Test subshell" && ls) | grep T > ./unit_tester/test_dir/file2.txt
+cat < ./unit_tester/test_dir/file2.txt | sort > ./unit_tester/test_dir/file3.txt
+find . -type f -name "*.c" | wc -l > ./unit_tester/test_dir/file2.txt
+echo "Starting test" && (ls -la | grep "c$" > ./unit_tester/test_dir/file2.txt) && echo "Test complete"
+cat < ./unit_tester/test_dir/file.txt | (sort | uniq) > ./unit_tester/test_dir/file2.txt
+(grep "ERROR" ./unit_tester/test_dir/file2.txt || echo "No errors found") | wc -l
+(echo "Line 1" && echo "Line 2") | cat > ./unit_tester/test_dir/file.txt && cat ./unit_tester/test_dir/file.txt | grep Line | wc -l
+(find . -name "*.c") | grep "main" > ./unit_tester/test_dir/file2.txt
+(ls -la > ./unit_tester/test_dir/file.txt) && (cat ./unit_tester/test_dir/file.txt | grep "^d" > ./unit_tester/test_dir/file2.txt) && cat ./unit_tester/test_dir/file2.txt
+cat ./unit_tester/test_dir/file.txt | (grep "pattern1" | tee ./unit_tester/test_dir/file2.txt) && cat ./unit_tester/test_dir/file2.txt
+(find . -type f -name "*.c" | xargs grep -l "malloc") | xargs wc -l > ./unit_tester/test_dir/file2.txt

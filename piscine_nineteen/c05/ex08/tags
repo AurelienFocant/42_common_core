@@ -1,0 +1,12 @@
+Mft_ten_queens_puzzle	ft_ten_queens_puzzle.c	/^int main(void)$/
+N	ft_ten_queens_puzzle.c	/^# define N 5$/
+ft_check_column	ft_ten_queens_puzzle.c	/^int	ft_check_column(int x, int board[N][N])$/
+ft_check_neg_diag	ft_ten_queens_puzzle.c	/^int	ft_check_neg_diag(int y, int x, int board[N][N/
+ft_check_pos_diag	ft_ten_queens_puzzle.c	/^int	ft_check_pos_diag(int y, int x, int board[N][N/
+ft_check_row	ft_ten_queens_puzzle.c	/^int	ft_check_row(int y, int board[N][N])$/
+ft_fill_null	ft_ten_queens_puzzle.c	/^void	ft_fill_null(int matrix[N][N])$/
+ft_isvalid	ft_ten_queens_puzzle.c	/^int	ft_isvalid(int y, int x, int board[N][N])$/
+ft_print_board	ft_ten_queens_puzzle.c	/^void	ft_print_board(int matrix[N][N])$/
+ft_print_positions	ft_ten_queens_puzzle.c	/^void	ft_print_positions(int board[N][N])$/
+ft_solve_puzzle	ft_ten_queens_puzzle.c	/^int	ft_solve_puzzle(int board[N][N], int y)$/
+ft_ten_queens_puzzle	ft_ten_queens_puzzle.c	/^int	ft_ten_queens_puzzle(void)$/

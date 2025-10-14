@@ -1,0 +1,13 @@
+# Camera	vec(position)	vec(orientation)	float(fov)
+# Ambient	float(ratio)															vec(color)
+# Light		vec(position)	float(brightness)										vec(color)
+
+# sphere	vec(position)	float(diameter)											vec(color)
+# plane		vec(position)	vec(orientation)										vec(color)
+# cylinder	vec(positioin)	vec(orientation)	float(diameter)		float(height)	vec(color)
+
+C			0,0,-5			0,0,1				70
+A			0.2																		50,50,50
+L			10,10,-20		1.														255,255,255
+
+sp			0,0,0			2														255,0,0		rota(y, 160)	tex(atlas)

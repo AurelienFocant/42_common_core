@@ -1,0 +1,104 @@
+pselect6(1, [0], NULL, NULL, NULL, {sigmask=[], sigsetsize=8}) = 1 (in [0])
+read(0, "\r", 1)                        = 1
+write(2, "\n", 1)                       = 1
+write(2, "\33[?2004l\r", 9)             = 9
+
+
+ioctl(0, TCGETS, {c_iflag=IXON|IUTF8, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|OPOST|ONLCR, c_cflag=B38400|CS8|CREAD, c_lflag=ISIG|ECHOE|ECHOK|IEXTEN|ECHOCTL|ECHOKE, ...}) = 0
+ioctl(0, TCSETSW, {c_iflag=ICRNL|IXON|IUTF8, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|OPOST|ONLCR, c_cflag=B38400|CS8|CREAD, c_lflag=ISIG|ICANON|ECHO|ECHOE|ECHOK|IEXTEN|ECHOCTL|ECHOKE, ...}) = 0
+ioctl(0, TCGETS, {c_iflag=ICRNL|IXON|IUTF8, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|OPOST|ONLCR, c_cflag=B38400|CS8|CREAD, c_lflag=ISIG|ICANON|ECHO|ECHOE|ECHOK|IEXTEN|ECHOCTL|ECHOKE, ...}) = 0
+rt_sigaction(SIGINT, {sa_handler=0x55717d0a8aa0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f1807d0b050}, {sa_handler=0x55717d106d00, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f1807d0b050}, 8) = 0
+rt_sigaction(SIGHUP, {sa_handler=0x55717d0a8f30, sa_mask=[HUP INT ILL TRAP ABRT BUS FPE USR1 SEGV USR2 PIPE ALRM TERM XCPU XFSZ VTALRM SYS], sa_flags=SA_RESTORER, sa_restorer=0x7f1807d0b050}, {sa_handler=0x55717d106d00, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f1807d0b050}, 8) = 0
+rt_sigaction(SIGALRM, {sa_handler=0x55717d0a8f30, sa_mask=[HUP INT ILL TRAP ABRT BUS FPE USR1 SEGV USR2 PIPE ALRM TERM XCPU XFSZ VTALRM SYS], sa_flags=SA_RESTORER, sa_restorer=0x7f1807d0b050}, {sa_handler=0x55717d106d00, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f1807d0b050}, 8) = 0
+rt_sigaction(SIGWINCH, {sa_handler=0x55717d0a8520, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7f1807d0b050}, {sa_handler=0x55717d106d10, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7f1807d0b050}, 8) = 0
+rt_sigaction(SIGINT, {sa_handler=0x55717d0a8aa0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f1807d0b050}, {sa_handler=0x55717d0a8aa0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f1807d0b050}, 8) = 0
+newfstatat(AT_FDCWD, ".", {st_mode=S_IFDIR|0700, st_size=4096, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/opt/homebrew/opt/openjdk/bin/grep", 0x7ffd61cac1e0, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/home/linuxbrew/.linuxbrew/bin/grep", 0x7ffd61cac1e0, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/home/linuxbrew/.linuxbrew/sbin/grep", 0x7ffd61cac1e0, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/opt/homebrew/opt/openjdk/bin/grep", 0x7ffd61cac1e0, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/home/linuxbrew/.linuxbrew/bin/grep", 0x7ffd61cac1e0, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/home/linuxbrew/.linuxbrew/sbin/grep", 0x7ffd61cac1e0, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/local/bin/grep", 0x7ffd61cac1e0, 0) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/bin/grep", {st_mode=S_IFREG|0755, st_size=203152, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/usr/bin/grep", {st_mode=S_IFREG|0755, st_size=203152, ...}, 0) = 0
+geteuid()                               = 1000
+getegid()                               = 1000
+getuid()                                = 1000
+getgid()                                = 1000
+access("/usr/bin/grep", X_OK)           = 0
+newfstatat(AT_FDCWD, "/usr/bin/grep", {st_mode=S_IFREG|0755, st_size=203152, ...}, 0) = 0
+geteuid()                               = 1000
+getegid()                               = 1000
+getuid()                                = 1000
+getgid()                                = 1000
+access("/usr/bin/grep", R_OK)           = 0
+rt_sigprocmask(SIG_BLOCK, NULL, [], 8)  = 0
+rt_sigprocmask(SIG_BLOCK, [INT TERM CHLD], [], 8) = 0
+rt_sigaction(SIGTERM, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f1807d0b050}, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f1807d0b050}, 8) = 0
+pipe2([3, 4], 0)                        = 0
+clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7f1807ccca10) = 78509
+rt_sigaction(SIGTERM, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f1807d0b050}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f1807d0b050}, 8) = 0
+setpgid(78509, 78509)                   = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+rt_sigprocmask(SIG_BLOCK, [CHLD], [], 8) = 0
+close(3)                                = 0
+close(4)                                = 0
+ioctl(255, TIOCGPGRP, [78469])          = 0
+rt_sigprocmask(SIG_BLOCK, [CHLD TSTP TTIN TTOU], [CHLD], 8) = 0
+ioctl(255, TIOCSPGRP, [78509])          = 0
+rt_sigprocmask(SIG_SETMASK, [CHLD], NULL, 8) = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+rt_sigprocmask(SIG_BLOCK, [CHLD], [], 8) = 0
+wait4(-1, [{WIFEXITED(s) && WEXITSTATUS(s) == 2}], WSTOPPED|WCONTINUED, NULL) = 78509
+rt_sigprocmask(SIG_BLOCK, [CHLD TSTP TTIN TTOU], [CHLD], 8) = 0
+ioctl(255, TIOCSPGRP, [78469])          = 0
+rt_sigprocmask(SIG_SETMASK, [CHLD], NULL, 8) = 0
+ioctl(255, TCGETS, {c_iflag=ICRNL|IXON|IUTF8, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|OPOST|ONLCR, c_cflag=B38400|CS8|CREAD, c_lflag=ISIG|ICANON|ECHO|ECHOE|ECHOK|IEXTEN|ECHOCTL|ECHOKE, ...}) = 0
+ioctl(255, TIOCGWINSZ, {ws_row=59, ws_col=126, ws_xpixel=0, ws_ypixel=0}) = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=78509, si_uid=1000, si_status=2, si_utime=0, si_stime=0} ---
+wait4(-1, 0x7ffd61cabdd0, WNOHANG|WSTOPPED|WCONTINUED, NULL) = -1 ECHILD (No child processes)
+rt_sigreturn({mask=[]})                 = 0
+rt_sigaction(SIGINT, {sa_handler=0x55717d0a8aa0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f1807d0b050}, {sa_handler=0x55717d0a8aa0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f1807d0b050}, 8) = 0
+rt_sigprocmask(SIG_BLOCK, NULL, [], 8)  = 0
+newfstatat(AT_FDCWD, "/home/aurel/.bash_history", {st_mode=S_IFREG|0600, st_size=8616, ...}, 0) = 0
+newfstatat(AT_FDCWD, "/home/aurel/.bash_history", {st_mode=S_IFREG|0600, st_size=8616, ...}, 0) = 0
+openat(AT_FDCWD, "/home/aurel/.bash_history", O_WRONLY|O_APPEND) = 3
+write(3, "grep o file1\n", 13)          = 13
+close(3)                                = 0
+chown("/home/aurel/.bash_history", 1000, 1000) = 0
+openat(AT_FDCWD, "/home/aurel/.bash_history", O_RDONLY) = 3
+newfstatat(3, "", {st_mode=S_IFREG|0600, st_size=8629, ...}, AT_EMPTY_PATH) = 0
+read(3, "ls -al\nssh-keygen -lf id_ed25519"..., 8629) = 8629
+close(3)                                = 0
+rt_sigprocmask(SIG_BLOCK, [CHLD TSTP TTIN TTOU], [], 8) = 0
+ioctl(255, TIOCSPGRP, [78469])          = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+rt_sigaction(SIGINT, {sa_handler=0x55717d0a8aa0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f1807d0b050}, {sa_handler=0x55717d0a8aa0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f1807d0b050}, 8) = 0
+fcntl(0, F_GETFL)                       = 0x2 (flags O_RDWR)
+ioctl(0, TIOCGWINSZ, {ws_row=59, ws_col=126, ws_xpixel=0, ws_ypixel=0}) = 0
+ioctl(0, TIOCSWINSZ, {ws_row=59, ws_col=126, ws_xpixel=0, ws_ypixel=0}) = 0
+ioctl(0, TCGETS, {c_iflag=ICRNL|IXON|IUTF8, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|OPOST|ONLCR, c_cflag=B38400|CS8|CREAD, c_lflag=ISIG|ICANON|ECHO|ECHOE|ECHOK|IEXTEN|ECHOCTL|ECHOKE, ...}) = 0
+ioctl(0, TCGETS, {c_iflag=ICRNL|IXON|IUTF8, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|OPOST|ONLCR, c_cflag=B38400|CS8|CREAD, c_lflag=ISIG|ICANON|ECHO|ECHOE|ECHOK|IEXTEN|ECHOCTL|ECHOKE, ...}) = 0
+ioctl(0, TCSETSW, {c_iflag=IXON|IUTF8, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|OPOST|ONLCR, c_cflag=B38400|CS8|CREAD, c_lflag=ISIG|ECHOE|ECHOK|IEXTEN|ECHOCTL|ECHOKE, ...}) = 0
+ioctl(0, TCGETS, {c_iflag=IXON|IUTF8, c_oflag=NL0|CR0|TAB0|BS0|VT0|FF0|OPOST|ONLCR, c_cflag=B38400|CS8|CREAD, c_lflag=ISIG|ECHOE|ECHOK|IEXTEN|ECHOCTL|ECHOKE, ...}) = 0
+write(2, "\33[?2004h", 8)               = 8
+rt_sigprocmask(SIG_BLOCK, [HUP INT QUIT ALRM TERM TSTP TTIN TTOU], [], 8) = 0
+rt_sigaction(SIGINT, {sa_handler=0x55717d106d00, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f1807d0b050}, {sa_handler=0x55717d0a8aa0, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f1807d0b050}, 8) = 0
+rt_sigaction(SIGTERM, {sa_handler=0x55717d106d00, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f1807d0b050}, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f1807d0b050}, 8) = 0
+rt_sigaction(SIGTERM, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f1807d0b050}, {sa_handler=0x55717d106d00, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f1807d0b050}, 8) = 0
+rt_sigaction(SIGHUP, {sa_handler=0x55717d106d00, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f1807d0b050}, {sa_handler=0x55717d0a8f30, sa_mask=[HUP INT ILL TRAP ABRT BUS FPE USR1 SEGV USR2 PIPE ALRM TERM XCPU XFSZ VTALRM SYS], sa_flags=SA_RESTORER, sa_restorer=0x7f1807d0b050}, 8) = 0
+rt_sigaction(SIGQUIT, {sa_handler=0x55717d106d00, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f1807d0b050}, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f1807d0b050}, 8) = 0
+rt_sigaction(SIGQUIT, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f1807d0b050}, {sa_handler=0x55717d106d00, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f1807d0b050}, 8) = 0
+rt_sigaction(SIGALRM, {sa_handler=0x55717d106d00, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f1807d0b050}, {sa_handler=0x55717d0a8f30, sa_mask=[HUP INT ILL TRAP ABRT BUS FPE USR1 SEGV USR2 PIPE ALRM TERM XCPU XFSZ VTALRM SYS], sa_flags=SA_RESTORER, sa_restorer=0x7f1807d0b050}, 8) = 0
+rt_sigaction(SIGTSTP, {sa_handler=0x55717d106d00, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f1807d0b050}, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f1807d0b050}, 8) = 0
+rt_sigaction(SIGTSTP, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f1807d0b050}, {sa_handler=0x55717d106d00, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f1807d0b050}, 8) = 0
+rt_sigaction(SIGTTOU, {sa_handler=0x55717d106d00, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f1807d0b050}, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f1807d0b050}, 8) = 0
+rt_sigaction(SIGTTOU, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f1807d0b050}, {sa_handler=0x55717d106d00, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f1807d0b050}, 8) = 0
+rt_sigaction(SIGTTIN, {sa_handler=0x55717d106d00, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f1807d0b050}, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f1807d0b050}, 8) = 0
+rt_sigaction(SIGTTIN, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f1807d0b050}, {sa_handler=0x55717d106d00, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f1807d0b050}, 8) = 0
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+rt_sigaction(SIGWINCH, {sa_handler=0x55717d106d10, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7f1807d0b050}, {sa_handler=0x55717d0a8520, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7f1807d0b050}, 8) = 0
+write(2, "aurel@debian:~$ ", 16)        = 16
+pselect6(1, [0], NULL, NULL, NULL, {sigmask=[], sigsetsize=8} <detached ...>

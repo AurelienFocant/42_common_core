@@ -1,0 +1,42 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_EXCMD	mixed	/number, pattern, mixed, or combineV2/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
+!_TAG_PROC_CWD	/home/afocant/common_core_19/cpp/cpp02/ex02/	//
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	5.9.0	//
+Fixed	Fixed.cpp	/^Fixed::Fixed	( const float f )$/;"	f	class:Fixed
+Fixed	Fixed.cpp	/^Fixed::Fixed	( const int n )$/;"	f	class:Fixed
+Fixed	Fixed.cpp	/^Fixed::Fixed( const Fixed& src ) :$/;"	f	class:Fixed
+Fixed	Fixed.cpp	/^Fixed::Fixed( void ) : _value(0)$/;"	f	class:Fixed
+_nbFractionalBits	Fixed.cpp	/^const int	Fixed::_nbFractionalBits = NB_BITS;$/;"	m	class:Fixed	typeref:typename:const int
+getRawBits	Fixed.cpp	/^int Fixed::getRawBits( void ) const$/;"	f	class:Fixed	typeref:typename:int
+main	main.cpp	/^int main( void )$/;"	f	typeref:typename:int
+max	FixedMinMax.cpp	/^Fixed&			Fixed::max	( Fixed& f1, Fixed& f2 )$/;"	f	class:Fixed	typeref:typename:Fixed &
+max	FixedMinMax.cpp	/^const Fixed&	Fixed::max	( const Fixed& f1, const Fixed& f2 )$/;"	f	class:Fixed	typeref:typename:const Fixed &
+min	FixedMinMax.cpp	/^Fixed&			Fixed::min	( Fixed& f1, Fixed& f2)$/;"	f	class:Fixed	typeref:typename:Fixed &
+min	FixedMinMax.cpp	/^const Fixed&	Fixed::min	( const Fixed& f1, const Fixed& f2 )$/;"	f	class:Fixed	typeref:typename:const Fixed &
+operator !=	FixedOperators.cpp	/^bool	Fixed::operator!=	( const Fixed & rhs ) const$/;"	f	class:Fixed	typeref:typename:bool
+operator *	FixedOperators.cpp	/^Fixed	Fixed::operator*	( const Fixed & rhs ) const$/;"	f	class:Fixed	typeref:typename:Fixed
+operator +	FixedOperators.cpp	/^Fixed	Fixed::operator+	( const Fixed & rhs ) const$/;"	f	class:Fixed	typeref:typename:Fixed
+operator ++	FixedOperators.cpp	/^Fixed	Fixed::operator++	( int )$/;"	f	class:Fixed	typeref:typename:Fixed
+operator ++	FixedOperators.cpp	/^Fixed&	Fixed::operator++	( void )$/;"	f	class:Fixed	typeref:typename:Fixed &
+operator -	FixedOperators.cpp	/^Fixed	Fixed::operator-	( const Fixed & rhs ) const$/;"	f	class:Fixed	typeref:typename:Fixed
+operator --	FixedOperators.cpp	/^Fixed	Fixed::operator--	( int )$/;"	f	class:Fixed	typeref:typename:Fixed
+operator --	FixedOperators.cpp	/^Fixed&	Fixed::operator--	( void )$/;"	f	class:Fixed	typeref:typename:Fixed &
+operator /	FixedOperators.cpp	/^Fixed	Fixed::operator\/	( const Fixed & rhs ) const$/;"	f	class:Fixed	typeref:typename:Fixed
+operator <	FixedOperators.cpp	/^bool	Fixed::operator<	( const Fixed & rhs ) const$/;"	f	class:Fixed	typeref:typename:bool
+operator <<	Fixed.cpp	/^std::ostream	&	operator<<	(std::ostream & os, const Fixed & src)$/;"	f	typeref:typename:std::ostream &
+operator <=	FixedOperators.cpp	/^bool	Fixed::operator<=	( const Fixed & rhs ) const$/;"	f	class:Fixed	typeref:typename:bool
+operator =	Fixed.cpp	/^Fixed&	Fixed::operator=( const Fixed& rhs )$/;"	f	class:Fixed	typeref:typename:Fixed &
+operator ==	FixedOperators.cpp	/^bool	Fixed::operator==	( const Fixed & rhs ) const$/;"	f	class:Fixed	typeref:typename:bool
+operator >	FixedOperators.cpp	/^bool	Fixed::operator>	( const Fixed & rhs ) const$/;"	f	class:Fixed	typeref:typename:bool
+operator >=	FixedOperators.cpp	/^bool	Fixed::operator>=	( const Fixed & rhs ) const$/;"	f	class:Fixed	typeref:typename:bool
+setRawBits	Fixed.cpp	/^void Fixed::setRawBits( int const raw )$/;"	f	class:Fixed	typeref:typename:void
+toFloat	Fixed.cpp	/^float	Fixed::toFloat( void ) const$/;"	f	class:Fixed	typeref:typename:float
+toInt	Fixed.cpp	/^int	Fixed::toInt( void ) const$/;"	f	class:Fixed	typeref:typename:int
+~Fixed	Fixed.cpp	/^Fixed::~Fixed( void )$/;"	f	class:Fixed
