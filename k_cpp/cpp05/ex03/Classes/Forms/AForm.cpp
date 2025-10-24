@@ -104,8 +104,7 @@ bool	AForm::execute( Bureaucrat const& executor ) const
 	if (executor.getGrade() > this->_gradeToBeExecuted)
 		throw GradeTooLowException("Bureaucrat's grade is too low to execute to execute the form");
 
-	this->_formExecution();
-	return (true);
+	return (this->_formExecution());
 }
 
 std::ostream& operator<<(std::ostream& out, AForm const& form)
