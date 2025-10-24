@@ -7,6 +7,9 @@
 #include <iostream>
 
 static std::string normalizeString( std::string & str);
+static AForm* createShrubbery(std::string const& target);
+static AForm* createRobotomy(std::string const& target);
+static AForm* createPresidential(std::string const& target);
 
 // CONSTRUCTORS //
 Intern::Intern( void )
@@ -29,23 +32,9 @@ Intern::~Intern( void )
 {
 }
 
-static AForm* createShrubbery(std::string const& target)
-{
-    return new ShrubberyCreationForm(target);
-}
-
-static AForm* createRobotomy(std::string const& target)
-{
-    return new RobotomyRequestForm(target);
-}
-
-static AForm* createPresidential(std::string const& target)
-{
-    return new PresidentialPardonForm(target);
-}
 
 // MEMBER FUNCTIONS //
-AForm*	Intern::makeForm( std::string const& f, std::string const& target ) const
+AForm*	Intern::makeForm( std::string form, std::string const target ) const
 {
 	AForm* (*functions[]) (const std::string& target) = {
 		&createShrubbery,
@@ -53,19 +42,20 @@ AForm*	Intern::makeForm( std::string const& f, std::string const& target ) const
         &createPresidential
 	};
 	std::string forms[] = {"ShrubberyCreationForm", "RobotomyRequestForm", "PresidentialPardonForm"};
-	std::string form = f;
+
 
 	// normalize form name
 	normalizeString(form);
 
-
 	for (int i = 0; i < 3; i++) {
 		std::string f = normalizeString(forms[i]);
 		if (normalizeString(forms[i]).find(form) != std::string::npos) {
+			std::cout << "Intern created form " << forms[i] << std::endl;
 			return (functions[i](target));
 		}
 	}
 
+	std::cout << "Intern couldn't create form " << form << std::endl;
 	return (NULL);
 }
 
@@ -92,4 +82,20 @@ static std::string normalizeString( std::string & str)
 	toLower(str);
 	deleteWhitespace(str);
 	return (str);
+}
+
+// HELPER FUNCTIONS: FORM CREATION //
+static AForm* createShrubbery(std::string const& target)
+{
+    return new ShrubberyCreationForm(target);
+}
+
+static AForm* createRobotomy(std::string const& target)
+{
+    return new RobotomyRequestForm(target);
+}
+
+static AForm* createPresidential(std::string const& target)
+{
+    return new PresidentialPardonForm(target);
 }

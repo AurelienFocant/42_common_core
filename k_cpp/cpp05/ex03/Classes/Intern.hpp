@@ -13,7 +13,7 @@ class Intern
 		Intern&	operator=	( const Intern& rhs );
 		~Intern	( void );
 
-		AForm* makeForm( std::string const& f, std::string const& target ) const;
+		AForm* makeForm( std::string f, std::string const target ) const;
 };
 
 #endif // INTERN_HPP
