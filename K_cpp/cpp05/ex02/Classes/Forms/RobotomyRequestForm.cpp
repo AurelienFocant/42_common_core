@@ -4,12 +4,12 @@
 #include <cstdlib>
 
 RobotomyRequestForm::RobotomyRequestForm( void )
-	: AForm("ShrubberyCreationForm", "NoTarget", 72, 45)
+	: AForm("RobotomyRequestForm", "NoTarget", 72, 45)
 {
 }
 
 RobotomyRequestForm::RobotomyRequestForm( const std::string target )
-	: AForm("ShrubberyCreationForm", target, 72, 45)
+	: AForm("RobotomyRequestForm", target, 72, 45)
 {
 }
 

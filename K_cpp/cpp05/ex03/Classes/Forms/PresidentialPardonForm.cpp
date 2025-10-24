@@ -4,12 +4,12 @@
 #include <iostream>
 
 PresidentialPardonForm::PresidentialPardonForm( void )
-	: AForm("ShrubberyCreationForm", "NoTarget", 25, 5)
+	: AForm("PresidentialPardonForm", "NoTarget", 25, 5)
 {
 }
 
 PresidentialPardonForm::PresidentialPardonForm( const std::string target )
-	: AForm("ShrubberyCreationForm", target, 25, 5)
+	: AForm("PresidentialPardonForm", target, 25, 5)
 {
 }
 

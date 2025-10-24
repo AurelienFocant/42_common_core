@@ -12,7 +12,8 @@ int	main( void )
 	std::string	formName;
 
 	formName = "Shrubbery creation";
-	intern.makeForm(formName);
+	AForm* form = intern.makeForm(formName, "Aurel");
+	(void) form;
 
 	std::cout << formName << std::endl;
 }

@@ -1,5 +1,8 @@
 #include "Intern.hpp"
 #include "AForm.hpp"
+#include "ShrubberyCreationForm.hpp"
+#include "RobotomyRequestForm.hpp"
+#include "PresidentialPardonForm.hpp"
 
 #include <iostream>
 
@@ -26,19 +29,40 @@ Intern::~Intern( void )
 {
 }
 
+static AForm* createShrubbery(std::string const& target)
+{
+    return new ShrubberyCreationForm(target);
+}
+
+static AForm* createRobotomy(std::string const& target)
+{
+    return new RobotomyRequestForm(target);
+}
+
+static AForm* createPresidential(std::string const& target)
+{
+    return new PresidentialPardonForm(target);
+}
 
 // MEMBER FUNCTIONS //
-AForm*	Intern::makeForm( std::string form ) const
+AForm*	Intern::makeForm( std::string const& f, std::string const& target ) const
 {
+	AForm* (*functions[]) (const std::string& target) = {
+		&createShrubbery,
+        &createRobotomy,
+        &createPresidential
+	};
 	std::string forms[] = {"ShrubberyCreationForm", "RobotomyRequestForm", "PresidentialPardonForm"};
+	std::string form = f;
 
 	// normalize form name
 	normalizeString(form);
 
 
 	for (int i = 0; i < 3; i++) {
+		std::string f = normalizeString(forms[i]);
 		if (normalizeString(forms[i]).find(form) != std::string::npos) {
-			return (new );
+			return (functions[i](target));
 		}
 	}
 
