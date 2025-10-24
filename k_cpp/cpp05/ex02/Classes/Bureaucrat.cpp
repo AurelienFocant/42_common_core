@@ -5,7 +5,7 @@
 
 Bureaucrat::Bureaucrat( void )
 	: _name("defaultName")
-	, _grade(150)
+	  , _grade(150)
 {
 }
 
@@ -76,27 +76,19 @@ bool	Bureaucrat::signForm(AForm& form) const
 			<< _name << " couldn't sign form " << form.getName()
 			<< " because " << e.what()
 			<< std::endl;
+		throw AForm::GradeTooLowException(e.what());
 		return (false);
 	}
 }
 
 bool	Bureaucrat::executeForm(AForm const& form) const
 {
-	try {
-		form.execute(*this);
-		std::cout
-			<< _name << " executed form " << form.getName()
-			<< " targeted towards " << form.getTarget()
-			<< std::endl;
-		return (true);
-	}
-	catch (std::exception & e) {
-		std::cout
-			<< _name << " could not execute form " << form.getName()
-			<< " because " << e.what()
-			<< std::endl;
-			return (false);
-	}
+	form.execute(*this);
+	std::cout
+		<< _name << " executed form " << form.getName()
+		<< " targeted towards " << form.getTarget()
+		<< std::endl;
+	return (true);
 }
 
 
