@@ -14,6 +14,14 @@ class Intern
 		~Intern	( void );
 
 		AForm* makeForm( std::string f, std::string const target ) const;
+
+		class FormDoesntExistMom : public std::exception {
+			public:
+				FormDoesntExistMom( const char* msg) : _msg(msg) {};
+				const char*	what() const throw() { return _msg; };
+			private:
+				const char* _msg;
+		};
 };
 
 #endif // INTERN_HPP

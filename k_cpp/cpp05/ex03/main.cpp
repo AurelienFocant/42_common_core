@@ -8,12 +8,66 @@
 
 int	main( void )
 {
-	Intern	intern;
+	Intern		intern;
 	std::string	formName;
 
-	formName = "Shrubbery creation";
-	AForm* form = intern.makeForm(formName, "Aurel");
-	(void) form;
+	{
+		formName = "Shrubbery creation";
+		try {
+			AForm* form = intern.makeForm(formName, "Aurel");
+			std::cout << *form << std::endl;
+			delete form;
+		}
+		catch (Intern::FormDoesntExistMom const& e) {
+			std::cout << "Exception caught: " << e.what() << std::endl;
+		}
+	}
 
-	std::cout << formName << std::endl;
+	{
+		formName = "plaf";
+		try {
+			AForm* form = intern.makeForm(formName, "Aurel");
+			std::cout << *form << std::endl;
+			delete form;
+		}
+		catch (Intern::FormDoesntExistMom const& e) {
+			std::cout << "Exception caught: " << e.what() << std::endl;
+		}
+	}
+
+	{
+		formName = "shrubbery creat";
+		try {
+			AForm* form = intern.makeForm(formName, "Aurel");
+			std::cout << *form << std::endl;
+			delete form;
+		}
+		catch (Intern::FormDoesntExistMom const& e) {
+			std::cout << "Exception caught: " << e.what() << std::endl;
+		}
+	}
+
+	{
+		formName = "pres";
+		try {
+			AForm* form = intern.makeForm(formName, "Aurel");
+			std::cout << *form << std::endl;
+			delete form;
+		}
+		catch (Intern::FormDoesntExistMom const& e) {
+			std::cout << "Exception caught: " << e.what() << std::endl;
+		}
+	}
+
+	{
+		formName = "presa";
+		try {
+			AForm* form = intern.makeForm(formName, "Aurel");
+			std::cout << *form << std::endl;
+			delete form;
+		}
+		catch (Intern::FormDoesntExistMom const& e) {
+			std::cout << "Exception caught: " << e.what() << std::endl;
+		}
+	}
 }

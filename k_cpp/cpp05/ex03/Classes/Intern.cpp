@@ -53,6 +53,7 @@ AForm*	Intern::makeForm( std::string form, std::string const target ) const
 	}
 
 	std::cout << "Intern couldn't create form " << form << std::endl;
+	throw FormDoesntExistMom("Form name does not exist\n");
 	return (NULL);
 }
 
