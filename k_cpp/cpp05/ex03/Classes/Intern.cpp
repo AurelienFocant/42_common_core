@@ -6,7 +6,7 @@
 
 #include <iostream>
 
-static std::string normalizeString( std::string & str);
+static std::string normalizeString( std::string str);
 static AForm* createShrubbery(std::string const& target);
 static AForm* createRobotomy(std::string const& target);
 static AForm* createPresidential(std::string const& target);
@@ -44,12 +44,9 @@ AForm*	Intern::makeForm( std::string form, std::string const target ) const
 	std::string forms[] = {"ShrubberyCreationForm", "RobotomyRequestForm", "PresidentialPardonForm"};
 
 
-	// normalize form name
-	normalizeString(form);
-
 	for (int i = 0; i < 3; i++) {
 		std::string f = normalizeString(forms[i]);
-		if (normalizeString(forms[i]).find(form) != std::string::npos) {
+		if (normalizeString(forms[i]).find(normalizeString(form)) != std::string::npos) {
 			std::cout << "Intern created form " << forms[i] << std::endl;
 			return (functions[i](target));
 		}
@@ -73,11 +70,12 @@ static void	deleteWhitespace( std::string & str )
 	for (std::size_t i = 0; i < str.length(); i++) {
 		if (std::isspace(str[i])) {						// take out whitespace
 			str.erase(i, 1);
+			i--;
 		}
 	}
 }
 
-static std::string normalizeString( std::string & str)
+static std::string normalizeString( std::string str)
 {
 	toLower(str);
 	deleteWhitespace(str);
