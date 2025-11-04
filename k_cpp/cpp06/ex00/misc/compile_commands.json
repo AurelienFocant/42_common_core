@@ -1,0 +1,40 @@
+[
+  {
+    "arguments": [
+      "/usr/bin/c++",
+      "-g",
+      "-D_GLIBCXX_DEBUG",
+      "-std=c++98",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-IClasses",
+      "-c",
+      "-o",
+      ".build/Classes/ScalarConverter.o",
+      "Classes/ScalarConverter.cpp"
+    ],
+    "directory": "/home/afocant/common_core/k_cpp/cpp06/ex00",
+    "file": "/home/afocant/common_core/k_cpp/cpp06/ex00/Classes/ScalarConverter.cpp",
+    "output": "/home/afocant/common_core/k_cpp/cpp06/ex00/.build/Classes/ScalarConverter.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/c++",
+      "-g",
+      "-D_GLIBCXX_DEBUG",
+      "-std=c++98",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-IClasses",
+      "-c",
+      "-o",
+      ".build/main.o",
+      "main.cpp"
+    ],
+    "directory": "/home/afocant/common_core/k_cpp/cpp06/ex00",
+    "file": "/home/afocant/common_core/k_cpp/cpp06/ex00/main.cpp",
+    "output": "/home/afocant/common_core/k_cpp/cpp06/ex00/.build/main.o"
+  }
+]
