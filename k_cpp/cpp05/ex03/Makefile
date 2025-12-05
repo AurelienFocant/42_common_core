@@ -14,10 +14,11 @@ NAME		=	internsAtWork
 
 all: $(NAME)
 
-SRC_FILES	=	$(shell find . -name "*.cpp")
+SRC_FILES	=	$(shell find . -maxdepth 1 -name "*.cpp")
+SRC_FILES	+=	$(shell find Classes -name "*.cpp")
 
 OBJ_DIR		=	.build
-OBJ_FILES	=	$(SRC_FILES:./%.cpp=$(OBJ_DIR)/%.o)
+OBJ_FILES	=	$(SRC_FILES:%.cpp=$(OBJ_DIR)/%.o)
 
 #--------------------------DEPENDENCIES-----------------------#
 DEPS							:=	$(OBJ_FILES:.o=.d)

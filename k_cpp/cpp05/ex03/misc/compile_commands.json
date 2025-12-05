@@ -1,0 +1,142 @@
+[
+  {
+    "arguments": [
+      "/home/linuxbrew/.linuxbrew/bin/clang++",
+      "-g",
+      "-D_GLIBCXX_DEBUG",
+      "-std=c++98",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-IClasses",
+      "-IClasses/Forms",
+      "-c",
+      "-o",
+      ".build/Classes/Intern.o",
+      "Classes/Intern.cpp"
+    ],
+    "directory": "/home/aurel/common_core/k_cpp/cpp05/ex03",
+    "file": "/home/aurel/common_core/k_cpp/cpp05/ex03/Classes/Intern.cpp",
+    "output": "/home/aurel/common_core/k_cpp/cpp05/ex03/.build/Classes/Intern.o"
+  },
+  {
+    "arguments": [
+      "/home/linuxbrew/.linuxbrew/bin/clang++",
+      "-g",
+      "-D_GLIBCXX_DEBUG",
+      "-std=c++98",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-IClasses",
+      "-IClasses/Forms",
+      "-c",
+      "-o",
+      ".build/Classes/Forms/ShrubberyCreationForm.o",
+      "Classes/Forms/ShrubberyCreationForm.cpp"
+    ],
+    "directory": "/home/aurel/common_core/k_cpp/cpp05/ex03",
+    "file": "/home/aurel/common_core/k_cpp/cpp05/ex03/Classes/Forms/ShrubberyCreationForm.cpp",
+    "output": "/home/aurel/common_core/k_cpp/cpp05/ex03/.build/Classes/Forms/ShrubberyCreationForm.o"
+  },
+  {
+    "arguments": [
+      "/home/linuxbrew/.linuxbrew/bin/clang++",
+      "-g",
+      "-D_GLIBCXX_DEBUG",
+      "-std=c++98",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-IClasses",
+      "-IClasses/Forms",
+      "-c",
+      "-o",
+      ".build/Classes/Forms/PresidentialPardonForm.o",
+      "Classes/Forms/PresidentialPardonForm.cpp"
+    ],
+    "directory": "/home/aurel/common_core/k_cpp/cpp05/ex03",
+    "file": "/home/aurel/common_core/k_cpp/cpp05/ex03/Classes/Forms/PresidentialPardonForm.cpp",
+    "output": "/home/aurel/common_core/k_cpp/cpp05/ex03/.build/Classes/Forms/PresidentialPardonForm.o"
+  },
+  {
+    "arguments": [
+      "/home/linuxbrew/.linuxbrew/bin/clang++",
+      "-g",
+      "-D_GLIBCXX_DEBUG",
+      "-std=c++98",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-IClasses",
+      "-IClasses/Forms",
+      "-c",
+      "-o",
+      ".build/Classes/Forms/AForm.o",
+      "Classes/Forms/AForm.cpp"
+    ],
+    "directory": "/home/aurel/common_core/k_cpp/cpp05/ex03",
+    "file": "/home/aurel/common_core/k_cpp/cpp05/ex03/Classes/Forms/AForm.cpp",
+    "output": "/home/aurel/common_core/k_cpp/cpp05/ex03/.build/Classes/Forms/AForm.o"
+  },
+  {
+    "arguments": [
+      "/home/linuxbrew/.linuxbrew/bin/clang++",
+      "-g",
+      "-D_GLIBCXX_DEBUG",
+      "-std=c++98",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-IClasses",
+      "-IClasses/Forms",
+      "-c",
+      "-o",
+      ".build/Classes/Forms/RobotomyRequestForm.o",
+      "Classes/Forms/RobotomyRequestForm.cpp"
+    ],
+    "directory": "/home/aurel/common_core/k_cpp/cpp05/ex03",
+    "file": "/home/aurel/common_core/k_cpp/cpp05/ex03/Classes/Forms/RobotomyRequestForm.cpp",
+    "output": "/home/aurel/common_core/k_cpp/cpp05/ex03/.build/Classes/Forms/RobotomyRequestForm.o"
+  },
+  {
+    "arguments": [
+      "/home/linuxbrew/.linuxbrew/bin/clang++",
+      "-g",
+      "-D_GLIBCXX_DEBUG",
+      "-std=c++98",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-IClasses",
+      "-IClasses/Forms",
+      "-c",
+      "-o",
+      ".build/Classes/Bureaucrat.o",
+      "Classes/Bureaucrat.cpp"
+    ],
+    "directory": "/home/aurel/common_core/k_cpp/cpp05/ex03",
+    "file": "/home/aurel/common_core/k_cpp/cpp05/ex03/Classes/Bureaucrat.cpp",
+    "output": "/home/aurel/common_core/k_cpp/cpp05/ex03/.build/Classes/Bureaucrat.o"
+  },
+  {
+    "arguments": [
+      "/home/linuxbrew/.linuxbrew/bin/clang++",
+      "-g",
+      "-D_GLIBCXX_DEBUG",
+      "-std=c++98",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-IClasses",
+      "-IClasses/Forms",
+      "-c",
+      "-o",
+      ".build/main.o",
+      "main.cpp"
+    ],
+    "directory": "/home/aurel/common_core/k_cpp/cpp05/ex03",
+    "file": "/home/aurel/common_core/k_cpp/cpp05/ex03/main.cpp",
+    "output": "/home/aurel/common_core/k_cpp/cpp05/ex03/.build/main.o"
+  }
+]
