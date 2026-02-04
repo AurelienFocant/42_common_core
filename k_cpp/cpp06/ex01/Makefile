@@ -10,25 +10,23 @@ CFLAGS		+=	-Wall -Wextra -Werror
 DEBUGFLAGS	+=	-g -D_GLIBCXX_DEBUG
 
 
-NAME		=	internsAtWork
+NAME		=	serializer
 
 all: $(NAME)
 
-SRC_FILES	=	$(shell find . -maxdepth 1 -name "*.cpp")
-SRC_FILES	+=	$(shell find Classes -name "*.cpp")
+SRC_FILES	=	$(shell find . -name "*.cpp")
 
 OBJ_DIR		=	.build
-OBJ_FILES	=	$(SRC_FILES:%.cpp=$(OBJ_DIR)/%.o)
+OBJ_FILES	=	$(SRC_FILES:./%.cpp=$(OBJ_DIR)/%.o)
 
 #--------------------------DEPENDENCIES-----------------------#
 DEPS							:=	$(OBJ_FILES:.o=.d)
 -include $(DEPS)
 CPPFLAGS						:=	-MMD -MP
 
-CPPFLAGS						+= $(addprefix -I, $(shell find Classes -type d))
 
 
-$(OBJ_DIR)/%.o: %.cpp
+$(OBJ_DIR)/%.o: ./%.cpp
 	@mkdir -p $(@D)
 	$(CC) $(DEBUGFLAGS) $(CFLAGS) $(CPPFLAGS) -c $< -o $@
 
