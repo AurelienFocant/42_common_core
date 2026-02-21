@@ -4,6 +4,8 @@
 #include <iostream>
 #include <list>
 #include <set>
+#include <cstdlib>
+#include <ctime>
 
 int	main()
 {
@@ -50,6 +52,25 @@ int	main()
 			Span	sp2(4);
 			sp2.addRange(list.begin(), list.end());
 			sp2.addRange(set.begin(), set.end());
+		}
+		catch (std::exception const& e) {
+			std::cout << "Exception caught: " << e.what() << std::endl;
+		}
+	}
+
+	std::cout << "===========================\n";
+
+	{
+		srand(time(NULL));
+
+		try {
+			Span sp(50000);
+			for (int i = 0; i < 50000; ++i) {
+				sp.addNumber(rand());
+			}
+
+			std::cout << sp.shortestSpan() << '\n';
+			std::cout << sp.longestSpan() << '\n';
 		}
 		catch (std::exception const& e) {
 			std::cout << "Exception caught: " << e.what() << std::endl;
