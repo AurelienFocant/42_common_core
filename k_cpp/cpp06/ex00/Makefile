@@ -1,3 +1,5 @@
+MAKEFLAGS += --no-print-directory
+
 CLANG		=	$(shell cc -v 2>&1 | grep --quiet clang && echo 1)
 ifeq ($(CLANG),1)
 	CC		=	c++
@@ -37,7 +39,8 @@ $(NAME): $(OBJ_FILES)
 clean:
 	rm -rf $(OBJ_DIR)
 
-re: clean all
+re: clean
+	make all
 
 lsp: clean
 	@rm -f misc/compile_commands.json

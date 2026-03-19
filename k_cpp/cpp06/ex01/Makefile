@@ -36,7 +36,8 @@ $(NAME): $(OBJ_FILES)
 clean:
 	rm -rf $(OBJ_DIR)
 
-re: clean all
+re: clean
+	make all
 
 lsp: clean
 	@rm -f misc/compile_commands.json

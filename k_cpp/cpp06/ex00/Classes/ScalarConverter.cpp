@@ -78,9 +78,9 @@ void ScalarConverter::_outputChar(std::string s)
 		std::cout << "char:	" << c << '\n';
 	else
 		std::cout << "char:	Non displayable\n";
-	std::cout << "int:	" << static_cast<int>(c) << '\n';
-	std::cout << "float:	" << static_cast<float>(c) << ".0f\n";
-	std::cout << "double:	" << static_cast<double>(c) << ".0" << std::endl;
+	std::cout << "int:	"		<< static_cast<int>(c) << '\n';
+	std::cout << "float:	"	<< static_cast<float>(c) << ".0f\n";
+	std::cout << "double:	"	<< static_cast<double>(c) << ".0" << std::endl;
 }
 
 bool ScalarConverter::_isInt(std::string s)
@@ -224,8 +224,8 @@ void ScalarConverter::convert(std::string literal)
 	}
 
 	{
-		bool (*isType[])(std::string) = {_isChar, _isInt, _isFloat, _isDouble};
-		void (*outputType[])(std::string) = {_outputChar, _outputInt, _outputFloat, _outputDouble};
+		bool (*isType[])(std::string)		= {_isChar, _isInt, _isFloat, _isDouble};
+		void (*outputType[])(std::string)	= {_outputChar, _outputInt, _outputFloat, _outputDouble};
 
 		for (int i = 0; i < 4; i++)
 		{
