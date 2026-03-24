@@ -3,9 +3,9 @@
 #include <iostream>
 #include <string>
 
-void	myupper(std::string & s)
+void	myupper(std::string const& s)
 {
-	std::string::iterator it;
+	std::string::const_iterator it;
 	for (it = s.begin(); it != s.end(); it++) {
 		std::cout << static_cast<char>(std::toupper(*it));
 	}
@@ -42,10 +42,10 @@ void printAsChar(T const& t)
 template<typename T>
 void	printArray(T arr[], size_t size)
 {
-		for (size_t i = 0; i < size; ++i) {
-			std::cout << arr[i];
-		}
-		std::cout << '\n';
+	for (size_t i = 0; i < size; ++i) {
+		std::cout << arr[i];
+	}
+	std::cout << '\n';
 }
 
 int	main()
@@ -69,8 +69,8 @@ int	main()
 	}
 
 	{
-		std::string	s[] = {"hello", "world"};
-		size_t	s_len	= sizeof(s) / sizeof(s[0]);
+		std::string	const s[] = {"hello", "world"};
+		size_t	s_len = sizeof(s) / sizeof(s[0]);
 		iter(s, s_len, myupper);
 	}
 }
