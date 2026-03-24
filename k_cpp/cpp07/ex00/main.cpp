@@ -1,28 +1,7 @@
+#include "myTemplates.hpp"
+
 #include <iostream>
 #include <string>
-
-template <typename Type>
-void	swap(Type & a, Type & b)
-{
-	Type	tmp;
-
-	tmp = a;
-	a = b;
-	b = tmp;
-}
-
-template <typename Type>
-Type	min(Type const& a, Type const& b)
-{
-	if (a < b)	return a;
-	else		return b;
-}
-
-template <typename Type>
-Type	max(Type const& a, Type const& b)
-{
-	return (a > b ? a : b);
-}
 
 void	resetVariables(std::string & s1, std::string & s2, int & n1, int & n2, float & f1, float & f2)
 {
@@ -93,5 +72,4 @@ int	main()
 	std::cout << std::max<int>(n1, n2) << '\n';
 	std::cout << std::max<float>(f1, f2) << '\n';
 	std::cout << "---------------------\n";
-
 }

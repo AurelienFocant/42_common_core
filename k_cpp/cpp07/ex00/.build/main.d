@@ -1,1 +1,2 @@
-.build/main.o: main.cpp
+.build/main.o: main.cpp myTemplates.hpp
+myTemplates.hpp:

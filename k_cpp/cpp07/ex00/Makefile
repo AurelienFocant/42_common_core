@@ -24,7 +24,6 @@ DEPS							:=	$(OBJ_FILES:.o=.d)
 -include $(DEPS)
 CPPFLAGS						:=	-MMD -MP
 
-CPPFLAGS						+= $(addprefix -I, $(shell find Classes -type d))
 
 
 $(OBJ_DIR)/%.o: ./%.cpp
@@ -37,7 +36,8 @@ $(NAME): $(OBJ_FILES)
 clean:
 	rm -rf $(OBJ_DIR)
 
-re: clean all
+re: clean
+	make -j4 all
 
 lsp: clean
 	@rm -f misc/compile_commands.json
