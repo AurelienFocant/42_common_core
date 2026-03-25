@@ -16,11 +16,22 @@ int	main()
 			std::cout << *c_it << '\n';
 		}
 
+		std::cout << "========================\n";
+
 		MutantStack<int>::iterator	it = mutant.begin();
 		for (; it != mutant.end(); it++) {
 			*it += 42;
 			std::cout << *it << '\n';
 		}
+
+		std::cout << "========================\n";
+
+		std::cout << "size of mutant is " << mutant.size() << std::endl;
+		std::cout << "top element is " << mutant.top() << std::endl;
+		mutant.pop();
+		std::cout << "size of mutant is " << mutant.size() << std::endl;
+
+		std::cout << "========================\n";
 	}
 
 	{
@@ -34,10 +45,21 @@ int	main()
 			std::cout << *c_it << '\n';
 		}
 
+		std::cout << "========================\n";
+
 		MutantStack<int, std::list<int> >::iterator	it = mutant.begin();
 		for (; it != mutant.end(); it++) {
 			*it += 42;
 			std::cout << *it << '\n';
 		}
+
+		std::cout << "========================\n";
+
+		std::cout << "size of mutant is " << mutant.size() << std::endl;
+		std::cout << "top element is " << mutant.top() << std::endl;
+		mutant.pop();
+		std::cout << "size of mutant is " << mutant.size() << std::endl;
+
+		std::cout << "========================\n";
 	}
 }

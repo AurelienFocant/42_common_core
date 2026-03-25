@@ -29,7 +29,7 @@ int main()
 	list.push_back(5);
 
 	try {
-		std::cout << *easyfind<std::list <int> >(list, 3) << '\n';
+		std::cout << *easyfind<std::list<int> >(list, 3) << '\n';
 		std::cout << *easyfind(list, 6) << '\n';
 	}
 	catch (std::exception const& e) {

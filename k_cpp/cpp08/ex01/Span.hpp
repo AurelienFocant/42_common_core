@@ -3,8 +3,7 @@
 
 #include <stdint.h>
 #include <vector>
-
-#include <iostream>
+#include <stdexcept>
 
 class Span
 {
@@ -21,15 +20,7 @@ class Span
 		void		addNumber(int32_t n);
 
 		template <typename Iterator>
-		void	addRange(Iterator begin, Iterator end)
-		{
-			uint32_t count = std::distance(begin, end);
-			if (_count + count > _size)
-				throw std::runtime_error("Array is too small for this range");
-
-			_count += count;
-			_arr.insert(_arr.end(), begin, end);
-		};
+		void	addRange(Iterator begin, Iterator end);
 
 
 		Span	( uint32_t N );
@@ -37,6 +28,18 @@ class Span
 		Span&	operator= ( const Span& rhs );
 		~Span	( void );
 
+};
+
+
+template <typename Iterator>
+void	Span::addRange(Iterator begin, Iterator end)
+{
+	uint32_t count = std::distance(begin, end);
+	if (_count + count > _size)
+		throw std::runtime_error("Array is too small for this range");
+
+	_count += count;
+	_arr.insert(_arr.end(), begin, end);
 };
 
 #endif // SPAN_HPP

@@ -43,17 +43,19 @@ void	Span::addNumber(int32_t n)
 	_arr.push_back(n);
 }
 
+// template <typename Iterator>
+// void	Span::addRange(Iterator begin, Iterator end);		// function definition in .hpp
 
 
 /* Constructors and Stuff */
 Span::Span( void )
 	: _size	(0)
 	, _count(0)
-	, _arr	()
+	  , _arr	()
 {
 }
 
-Span::Span( uint32_t N)
+Span::Span( uint32_t N )
 	: _size	(N)
 	, _count(0)
 	, _arr	()
