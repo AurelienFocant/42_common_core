@@ -10,7 +10,7 @@ CFLAGS		+=	-Wall -Wextra -Werror
 DEBUGFLAGS	+=	-g -D_GLIBCXX_DEBUG
 
 
-NAME		=	mutants
+NAME		=	Ford-Johnson_de_mes_couilles
 
 all: $(NAME)
 
