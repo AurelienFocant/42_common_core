@@ -138,23 +138,24 @@ void	fillMapWithPrices(std::map<std::time_t, float> & priceMap)
 
 	std::string	line;
 	std::getline(csvfile, line);
-	if (!validateFirstLine(",", line, "date", "exchange_rate")) {
+	std::string	sep(",");
+	if (!validateFirstLine(sep, line, "date", "exchange_rate")) {
 		csvfile.close();
 		error_and_exit("Invalid first line in csv file");
 	}
 
 	while (std::getline(csvfile, line)) {
-		size_t comma = line.find(",");
+		size_t comma = line.find(sep);
 		if (comma == std::string::npos || comma != line.rfind(",")) {
 			csvfile.close();
 			error_and_exit("Invalid line in csv file");
 		}
 
-		std::string	date	= line.substr(0, comma);
-		std::string	value	= line.substr(comma + 1, line.size());
-
 		try {
+			std::string	date	= line.substr(0, comma);
 			std::time_t	time	= validateDate(date);
+
+			std::string	value	= line.substr(comma + sep.size(), line.size());
 			float		price	= validateValue(value);
 
 			priceMap.insert(std::make_pair(time, price));
@@ -168,9 +169,11 @@ void	fillMapWithPrices(std::map<std::time_t, float> & priceMap)
 	csvfile.close();
 }
 
-std::map<std::time_t, float>::iterator	findClosestTime(std::time_t time, std::map<std::time_t, float> & priceMap)
+std::map<std::time_t, float>::const_iterator
+findClosestTime(std::time_t time, std::map<std::time_t, float> const& priceMap)
 {
-	std::map<std::time_t, float>::iterator	it = priceMap.lower_bound(time);
+	std::map<std::time_t, float>::const_iterator it;
+	it = priceMap.lower_bound(time);
 
 	if (it == priceMap.end())
 		return (--it);
@@ -193,16 +196,9 @@ std::string	epochToLocalTime(std::time_t time)
 	return (std::string(buffer));
 }
 
-int	main(int ac, char **av)
+void	lookupAndPrintResults(char *arg, std::map<std::time_t, float> const& priceMap)
 {
-	if (ac != 2)
-		error_and_exit("Usage: ./btc <input file>");
-
-	std::map<std::time_t, float>	priceMap;
-	fillMapWithPrices(priceMap);
-
-
-	std::ifstream	infile(av[1]);
+	std::ifstream	infile(arg);
 	if (!infile.is_open())
 		error_and_exit("Invalid input file");
 
@@ -222,18 +218,31 @@ int	main(int ac, char **av)
 
 		std::string	date	= line.substr(0, pipe);
 		std::string	value	= line.substr(pipe + sep.size(), line.size());
-
 		try {
-			std::time_t	time	= validateDate(date);
-			std::map<std::time_t, float>::iterator	it;
+			std::time_t	time = validateDate(date);
+			std::map<std::time_t, float>::const_iterator it;
 			it = findClosestTime(time, priceMap);
-			std::cout	<< epochToLocalTime(time) << " => ";
+			std::cout << epochToLocalTime(time) << " => ";
 
-			float		quantity = validateQuantity(value);
-			std::cout	<< quantity * it->second << std::endl;
+			float	quantity = validateQuantity(value);
+			float	price	= it->second;
+			std::cout << quantity * price << std::endl;
 		}
 		catch (std::exception const& e) {
 			std::cerr << e.what() << std::endl;
 		}
 	}
+}
+
+int	main(int ac, char **av)
+{
+	if (ac != 2)
+		error_and_exit("Usage: ./btc <input file>");
+
+	std::map<std::time_t, float>	priceMap;
+	fillMapWithPrices(priceMap);
+
+	lookupAndPrintResults(av[1], priceMap);
+
+	return (0);
 }
