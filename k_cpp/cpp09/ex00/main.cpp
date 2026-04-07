@@ -8,6 +8,38 @@
 #include <map>
 #include <climits>
 
+class	dateException: public std::exception
+{
+	private:
+		std::string	_msg;
+
+	public:
+		dateException(std::string const& msg): _msg(msg) {};
+		virtual ~dateException() throw() {}
+
+		virtual const char* what() const throw() {
+			return _msg.c_str();
+		}
+
+
+};
+
+class	valueException: public std::exception
+{
+	private:
+		std::string	_msg;
+
+	public:
+		valueException(std::string const& msg): _msg(msg) {};
+		virtual ~valueException() throw() {}
+
+		virtual const char* what() const throw() {
+			return _msg.c_str();
+		}
+
+
+};
+
 int	error_and_exit(std::string msg)
 {
 	std::cerr << msg << std::endl;
@@ -16,19 +48,19 @@ int	error_and_exit(std::string msg)
 
 bool	validateFirstLine(std::string const& sep, std::string const& line, std::string const& first, std::string const& second)
 {
-			size_t	pos = line.find(sep);
-			size_t	last_pos = line.find_last_of(sep) - sep.size() + 1;
-			if (pos == std::string::npos || pos != last_pos)
-				return (false);
-			if (line.substr(0, pos) != first)
-				return (false);
-			if (line.substr(pos + sep.size(), line.size()) != second)
-				return (false);
+	size_t	pos = line.find(sep);
+	size_t	last_pos = line.rfind(sep);
+	if (pos == std::string::npos || pos != last_pos)
+		return (false);
+	if (line.substr(0, pos) != first)
+		return (false);
+	if (line.substr(pos + sep.size(), line.size()) != second)
+		return (false);
 
-			return (true);
+	return (true);
 }
 
-std::time_t	validateDate(std::string const& date, std::ifstream & file)
+std::time_t	validateDate(std::string const& date)
 {
 	std::tm tm;
 	std::memset(&tm, 0, sizeof(std::tm));
@@ -44,28 +76,23 @@ std::time_t	validateDate(std::string const& date, std::ifstream & file)
 
 		ss >> year;
 		if (ss.fail() || !(ss >> c) || c != '-') {
-			file.close();
-			error_and_exit("Invalid year");
+			throw dateException("Invalid year");
 		}
 		ss >> month;
 		if (ss.fail() || !(ss >> c) || c != '-') {
-			file.close();
-			error_and_exit("Invalid month");
+			throw dateException("Invalid month");
 		}
 		ss >> day;
 		if (ss.fail() || !day || ss >> c) {
-			file.close();
-			error_and_exit("Invalid day");
+			throw dateException("Invalid day");
 		}
+
+		if (year < 1900 || month < 1 || month > 12 || day < 1 || day > 31)
+			throw dateException("Invalid date");
 
 		tm.tm_year	= year - 1900;
 		tm.tm_mon	= month - 1;
 		tm.tm_mday	= day;
-
-		if (tm.tm_year <= 0 || tm.tm_mon < 0 || tm.tm_mday <= 0) {
-			file.close();
-			error_and_exit("Invalid date");
-		}
 	}
 
 	std::tm	copy = tm;
@@ -73,13 +100,12 @@ std::time_t	validateDate(std::string const& date, std::ifstream & file)
 	if	(	tm.tm_year	!= copy.tm_year
 		||	tm.tm_mon	!= copy.tm_mon
 		||	tm.tm_mday	!= copy.tm_mday) {
-		file.close();
-		error_and_exit("Invalid date");
+		throw dateException("Invalid day");
 	}
 	return (t);
 }
 
-float	validateValue(std::string const& value, std::ifstream & file)
+float	validateValue(std::string const& value)
 {
 	float	f = 0;
 	char	c = 0;
@@ -87,23 +113,21 @@ float	validateValue(std::string const& value, std::ifstream & file)
 
 	ss >> f;
 	if (ss >> c || f < 0) {
-		file.close();
-		error_and_exit("Invalid value");
+		throw valueException("Invalid value");
 	}
 	return (f);
 }
 
-float	validateNumber(std::string const& value, std::ifstream & file)
+float	validateQuantity(std::string const& value)
 {
 	double	d = 0;
 	std::stringstream	ss(value);
 
 	ss >> d;
 	if (d > INT_MAX || d < 0) {
-		file.close();
-		error_and_exit("Invalid number");
+		throw valueException("Invalid quantity");
 	}
-	return (validateValue(value, file));
+	return (validateValue(value));
 }
 
 void	fillMapWithPrices(std::map<std::time_t, float> & priceMap)
@@ -121,7 +145,7 @@ void	fillMapWithPrices(std::map<std::time_t, float> & priceMap)
 
 	while (std::getline(csvfile, line)) {
 		size_t comma = line.find(",");
-		if (comma == std::string::npos || comma != line.find_last_of(",")) {
+		if (comma == std::string::npos || comma != line.rfind(",")) {
 			csvfile.close();
 			error_and_exit("Invalid line in csv file");
 		}
@@ -129,10 +153,17 @@ void	fillMapWithPrices(std::map<std::time_t, float> & priceMap)
 		std::string	date	= line.substr(0, comma);
 		std::string	value	= line.substr(comma + 1, line.size());
 
-		std::time_t	time	= validateDate(date, csvfile);
-		float		price	= validateValue(value, csvfile);
+		try {
+			std::time_t	time	= validateDate(date);
+			float		price	= validateValue(value);
 
-		priceMap.insert(std::make_pair(time, price));
+			priceMap.insert(std::make_pair(time, price));
+		}
+		catch (std::exception const& e) {
+			csvfile.close();
+			error_and_exit(e.what());
+		}
+
 	}
 	csvfile.close();
 }
@@ -141,11 +172,14 @@ std::map<std::time_t, float>::iterator	findClosestTime(std::time_t time, std::ma
 {
 	std::map<std::time_t, float>::iterator	it = priceMap.lower_bound(time);
 
-	if (it == priceMap.begin() || it == priceMap.end())
-		return (it);
+	if (it == priceMap.end())
+		return (--it);
 
 	if (it->first == time)
 		return (it);
+
+	if (it == priceMap.begin())
+		throw (dateException("Value out of table"));
 
 	return (--it);
 }
@@ -154,8 +188,8 @@ std::string	epochToLocalTime(std::time_t time)
 {
 	struct tm *tm_info = localtime(&time);
 
-    char buffer[256];
-    strftime(buffer, sizeof(buffer), "%Y-%m-%d", tm_info);
+	char buffer[256];
+	strftime(buffer, sizeof(buffer), "%Y-%m-%d", tm_info);
 	return (std::string(buffer));
 }
 
@@ -181,26 +215,25 @@ int	main(int ac, char **av)
 	}
 	while (std::getline(infile, line)) {
 		size_t pipe = line.find(sep);
-		if (pipe == std::string::npos || pipe != line.find_last_of(sep) - sep.size() + 1) {
-			infile.close();
-			error_and_exit("Invalid line in input file");
+		if (pipe == std::string::npos || pipe != line.rfind(sep)) {
+			std::cerr << "Invalid line in input file\n";
+			continue ;
 		}
 
 		std::string	date	= line.substr(0, pipe);
 		std::string	value	= line.substr(pipe + sep.size(), line.size());
 
-		std::time_t	time	= validateDate(date, infile);
-		float		number	= validateNumber(value, infile);
+		try {
+			std::time_t	time	= validateDate(date);
+			std::map<std::time_t, float>::iterator	it;
+			it = findClosestTime(time, priceMap);
+			std::cout	<< epochToLocalTime(time) << " => ";
 
-		std::map<std::time_t, float>::iterator	it;
-		it = findClosestTime(time, priceMap);
-		if (it == priceMap.begin() || it == priceMap.end()) {
-			std::cout << "value out of table\n";
+			float		quantity = validateQuantity(value);
+			std::cout	<< quantity * it->second << std::endl;
 		}
-		else {
-			std::cout	<< epochToLocalTime(time) << " => "
-						<< number * it->second
-						<< std::endl;
+		catch (std::exception const& e) {
+			std::cerr << e.what() << std::endl;
 		}
 	}
 }
