@@ -1,328 +1,216 @@
-/*
-** Ford-Johnson Algorithm (Merge-Insertion Sort)
-**
-** This algorithm minimizes the number of comparisons needed to sort n elements.
-** It achieves this by:
-**   1. Pairing elements and sorting each pair (1 comparison per pair)
-**   2. Recursively sorting the larger elements of each pair
-**   3. Inserting the smaller elements using binary search in an order
-**      determined by Jacobsthal numbers, which minimizes worst-case comparisons
-**
-** Jacobsthal sequence: 0, 1, 1, 3, 5, 11, 21, 43, 85, 171, ...
-** J(n) = J(n-1) + 2 * J(n-2)
-** The insertion order derived from Jacobsthal numbers ensures each insertion
-** reduces the upper bound of binary search by exactly half.
-*/
-
-#include <iostream>
 #include <vector>
-#include <list>
 #include <deque>
+#include <map>
+#include <algorithm>
+#include <utility>
+#include <iostream>
 #include <sstream>
-#include <stdexcept>
-#include <cstdlib>
+#include <iomanip>
+#include <ctime>
 
-/* ------------------------------------------------------------------ */
-/*  Jacobsthal number generator                                        */
-/* ------------------------------------------------------------------ */
-
-/*
-** Returns the nth Jacobsthal number.
-** J(0) = 0, J(1) = 1, J(n) = J(n-1) + 2 * J(n-2)
-*/
-static size_t jacobsthal(size_t n)
+static std::vector<size_t> jacobsthalSequence(size_t n)
 {
-    if (n == 0) return 0;
-    if (n == 1) return 1;
+    std::vector<size_t> seq;
+    if (n == 0) return seq;
 
-    size_t prev2 = 0;
-    size_t prev1 = 1;
-    size_t current = 0;
-
-    for (size_t i = 2; i <= n; ++i)
+    std::vector<size_t> jNums;
+    jNums.push_back(1);
+    size_t j0 = 0, j1 = 1;
+    while (true)
     {
-        current = prev1 + 2 * prev2;
-        prev2 = prev1;
-        prev1 = current;
+        size_t next = j1 + 2 * j0;
+        if (next > n) break;
+        jNums.push_back(next);
+        j0 = j1;
+        j1 = next;
     }
-    return current;
-}
 
-/*
-** Builds the insertion order sequence based on Jacobsthal numbers.
-**
-** Given 'pending' elements indexed 1..n, we insert them in the order
-** determined by Jacobsthal groups:
-**   Group k covers indices from J(k-1)+1 to J(k), inserted in reverse.
-**
-** Example for 5 pending elements: 2, 1, 4, 3, 5
-*/
-static std::vector<size_t> buildInsertionOrder(size_t pendingSize)
-{
-    std::vector<size_t> order;
-    std::vector<bool>   inserted(pendingSize + 1, false);
-
-    size_t k = 1;
-    while (order.size() < pendingSize)
+    std::vector<bool> added(n + 1, false);
+    for (size_t i = 0; i < jNums.size(); ++i)
     {
-        size_t jk     = jacobsthal(k + 1);   // upper bound of current group
-        size_t jkPrev = jacobsthal(k);        // upper bound of previous group
-
-        if (jk > pendingSize)
-            jk = pendingSize;
-
-        // Insert from jk down to jkPrev + 1 (reverse order within group)
-        for (size_t i = jk; i > jkPrev && i >= 1; --i)
+        size_t curr = jNums[i];
+        size_t prev = (i == 0) ? 0 : jNums[i - 1];
+        for (size_t k = curr; k > prev; --k)
         {
-            if (!inserted[i])
+            if (k <= n && !added[k])
             {
-                order.push_back(i);
-                inserted[i] = true;
+                seq.push_back(k);
+                added[k] = true;
             }
         }
-        ++k;
-
-        // Safety: avoid infinite loop if all pending inserted
-        if (k > pendingSize + 2)
-            break;
     }
+    for (size_t i = 1; i <= n; ++i)
+        if (!added[i]) seq.push_back(i);
 
-    // Catch any remaining elements (shouldn't happen with correct Jacobsthal)
-    for (size_t i = 1; i <= pendingSize; ++i)
-        if (!inserted[i])
-            order.push_back(i);
-
-    return order;
+    return seq;
 }
 
-/* ------------------------------------------------------------------ */
-/*  Binary search insertion                                            */
-/* ------------------------------------------------------------------ */
-
-/*
-** Inserts 'value' into the sorted range [begin, end) using binary search.
-** The search is bounded by 'upperBound' to maintain the comparison-optimal
-** guarantee of Ford-Johnson.
-**
-** upperBound: the exclusive upper index within [begin, end) to search.
-**             Pass chain.end() to search the whole sorted chain.
-*/
-template <typename T>
-typename std::vector<T>::iterator
-binarySearchInsert(std::vector<T> &chain,
-                   typename std::vector<T>::iterator begin,
-                   typename std::vector<T>::iterator end,
-                   const T &value)
+template <typename T, template <typename, typename> class Container>
+Container<T, std::allocator<T> >
+fjSort(const Container<T, std::allocator<T> >& seq)
 {
-    typename std::vector<T>::iterator lo = begin;
-    typename std::vector<T>::iterator hi = end;
+    typedef Container<T, std::allocator<T> > Cont;
 
-    while (lo < hi)
-    {
-        typename std::vector<T>::iterator mid = lo + (hi - lo) / 2;
-        if (*mid < value)
-            lo = mid + 1;
-        else
-            hi = mid;
-    }
-    return chain.insert(lo, value);
-}
-
-/* ------------------------------------------------------------------ */
-/*  Ford-Johnson sort (recursive)                                      */
-/* ------------------------------------------------------------------ */
-
-template <typename T>
-std::vector<T> fordJohnsonSort(std::vector<T> seq)
-{
     size_t n = seq.size();
 
-    // Base cases
     if (n <= 1)
         return seq;
 
     if (n == 2)
     {
-        if (seq[1] < seq[0])
-            std::swap(seq[0], seq[1]);
-        return seq;
+        Cont out(seq);
+        if (out[1] < out[0])
+            std::swap(out[0], out[1]);
+        return out;
     }
 
-    /* ----------------------------------------------------------------
-    ** Step 1: Form pairs and compare each pair so that the larger
-    **         element is first (index 0 of pair = larger).
-    ** If n is odd, the last element is a "straggler" with no pair.
-    ** ---------------------------------------------------------------- */
-    bool        hasStraggler = (n % 2 != 0);
-    T           straggler = hasStraggler ? seq[n - 1] : T();
-    size_t      pairCount = n / 2;
+    bool hasStraggler = (n % 2 != 0);
+    T straggler;
+    if (hasStraggler)
+        straggler = seq[n - 1];
 
-    // pairs[i] = (larger, smaller)
-    std::vector<std::pair<T, T> > pairs(pairCount);
+    size_t pairCount = n / 2;
+
+    // STEP 1: pairs (larger, smaller)
+    Container< std::pair<T, T>, std::allocator< std::pair<T, T> > > pairs;
+
     for (size_t i = 0; i < pairCount; ++i)
     {
-        T a = seq[2 * i];
-        T b = seq[2 * i + 1];
+        T a = seq[2*i];
+        T b = seq[2*i + 1];
+
         if (a < b)
             std::swap(a, b);
-        pairs[i] = std::make_pair(a, b); // (larger, smaller)
+
+        pairs.push_back(std::make_pair(a, b));
     }
 
-    /* ----------------------------------------------------------------
-    ** Step 2: Recursively sort the sequence of larger elements.
-    ** ---------------------------------------------------------------- */
-    std::vector<T> largers;
-    largers.reserve(pairCount);
+    // STEP 2: extract largers
+    Cont largers;
     for (size_t i = 0; i < pairCount; ++i)
         largers.push_back(pairs[i].first);
 
-    largers = fordJohnsonSort(largers);
+    // STEP 3: recursive sort
+    Cont sortedLargers = fjSort<T, Container>(largers);
 
-    /* ----------------------------------------------------------------
-    ** Step 3: Build the main chain from sorted largers.
-    **         Reorder the smalls so that smalls[i] is the pair partner
-    **         of largers[i] after recursive sort.
-    ** ---------------------------------------------------------------- */
+    // STEP 4: multimap for matching
+    std::multimap<T, std::pair<T, T> > mp;
+    for (size_t i = 0; i < pairCount; ++i)
+        mp.insert(std::make_pair(pairs[i].first, pairs[i]));
 
-    // We need to know which small goes with which large after sorting.
-    // Map: original large value -> its small partner
-    // (assumes unique values; for duplicates a more robust map is needed)
-    std::vector<T> smallers(pairCount);
+    Container< std::pair<T, T>, std::allocator< std::pair<T, T> > > ordered;
+
     for (size_t i = 0; i < pairCount; ++i)
     {
-        // Find the position of pairs[i].first in the sorted largers
-        for (size_t j = 0; j < pairCount; ++j)
-        {
-            if (largers[j] == pairs[i].first)
-            {
-                smallers[j] = pairs[i].second;
-                break;
-            }
-        }
+        typename std::multimap<T, std::pair<T, T> >::iterator it =
+            mp.find(sortedLargers[i]);
+
+        ordered.push_back(it->second);
+        mp.erase(it);
     }
 
-    // Main chain starts with sorted largers
-    std::vector<T> chain(largers);
+    // STEP 5: build main chain
+    Cont chain;
 
-    /* ----------------------------------------------------------------
-    ** Step 4: Insert smallers (and straggler) using Jacobsthal order.
-    **
-    **   - smallers[0] is always <= largers[0] (by construction),
-    **     so insert it at the front first (before chain[0]).
-    **   - Then insert remaining smallers in Jacobsthal order,
-    **     each with an upper bound = position of its paired large + 1.
-    ** ---------------------------------------------------------------- */
+    chain.push_back(ordered[0].second);
 
-    // Insert smallers[0] at the beginning (it's <= chain[0])
-    chain.insert(chain.begin(), smallers[0]);
+    for (size_t i = 0; i < pairCount; ++i)
+        chain.push_back(ordered[i].first);
 
-    // Build insertion order for smallers[1..pairCount-1]
-    size_t pendingCount = pairCount - 1;
-
-    if (pendingCount > 0)
+    // STEP 6: Jacobsthal insertion
+    if (pairCount > 1)
     {
-        std::vector<size_t> insertionOrder = buildInsertionOrder(pendingCount);
+        std::vector<size_t> order = jacobsthalSequence(pairCount - 1);
 
-        for (size_t idx = 0; idx < insertionOrder.size(); ++idx)
+        for (size_t i = 0; i < order.size(); ++i)
         {
-            // insertionOrder uses 1-based indexing into smallers[1..]
-            size_t si = insertionOrder[idx]; // 1-based index into pending
-            T      val = smallers[si];       // smallers[si] (si >= 1)
+            size_t idx = order[i];
 
-            // The paired large is largers[si], find its current position in chain
-            // The upper bound for binary search is that position + 1
-            // (we know val <= its paired large)
-            typename std::vector<T>::iterator upperIt = chain.end();
-            for (typename std::vector<T>::iterator it = chain.begin();
-                 it != chain.end(); ++it)
-            {
-                if (*it == largers[si])
-                {
-                    upperIt = it + 1; // search only up to (and including) paired large
-                    break;
-                }
-            }
+            T val   = ordered[idx].second;
+            T bound = ordered[idx].first;
 
-            binarySearchInsert(chain, chain.begin(), upperIt, val);
+            typename Cont::iterator ub =
+                std::upper_bound(chain.begin(), chain.end(), bound);
+
+            typename Cont::iterator pos =
+                std::lower_bound(chain.begin(), ub, val);
+
+            chain.insert(pos, val);
         }
     }
 
-    // Insert straggler (if any) anywhere in the sorted chain
+    // STEP 7: straggler
     if (hasStraggler)
-        binarySearchInsert(chain, chain.begin(), chain.end(), straggler);
+    {
+        typename Cont::iterator pos =
+            std::lower_bound(chain.begin(), chain.end(), straggler);
+        chain.insert(pos, straggler);
+    }
 
     return chain;
 }
 
-/* ------------------------------------------------------------------ */
-/*  PmergeMe class (42 CPP09 style, works with vector and deque)       */
-/* ------------------------------------------------------------------ */
-
-class PmergeMe
+// ------------------------
+// High-resolution timer (microseconds via CLOCK_MONOTONIC)
+// ------------------------
+static double getTimeUs()
 {
-public:
-
-    // Sort using std::vector
-    static std::vector<int> sortVector(const std::vector<int> &input)
-    {
-        return fordJohnsonSort(input);
-    }
-
-    // Sort using std::deque (convert internally)
-    static std::deque<int> sortDeque(const std::deque<int> &input)
-    {
-        std::vector<int> v(input.begin(), input.end());
-        v = fordJohnsonSort(v);
-        return std::deque<int>(v.begin(), v.end());
-    }
-};
-
-/* ------------------------------------------------------------------ */
-/*  Utility: print container                                           */
-/* ------------------------------------------------------------------ */
-
-template <typename Container>
-void printContainer(const std::string &label, const Container &c)
-{
-    std::cout << label;
-    for (typename Container::const_iterator it = c.begin(); it != c.end(); ++it)
-        std::cout << *it << " ";
-    std::cout << std::endl;
+	struct timespec ts;
+	clock_gettime(CLOCK_MONOTONIC, &ts);
+	return ts.tv_sec * 1e6 + ts.tv_nsec / 1e3;
 }
 
-
-int main(int argc, char **argv)
+// ------------------------
+// Main
+// ------------------------
+int main(int argc, char* argv[])
 {
-    if (argc < 2)
-    {
-        std::cerr << "Usage: " << argv[0] << " num1 num2 num3 ..." << std::endl;
-        return 1;
-    }
+	if (argc < 2)
+	{
+		std::cerr << "Usage: " << argv[0] << " <numbers...>\n";
+		return 1;
+	}
 
-    std::vector<int> input;
+	std::vector<int> input;
+	for (int i = 1; i < argc; ++i)
+	{
+		std::istringstream iss(argv[i]);
+		int val;
+		if (!(iss >> val) || val < 0)
+		{
+			std::cerr << "Invalid number: " << argv[i] << "\n";
+			return 1;
+		}
+		input.push_back(val);
+	}
 
-    for (int i = 1; i < argc; ++i)
-    {
-        std::istringstream iss(argv[i]);
-        int val;
-        if (!(iss >> val) || val < 0)
-        {
-            std::cerr << "Error: invalid argument '" << argv[i] << "'" << std::endl;
-            return 1;
-        }
-        input.push_back(val);
-    }
+	size_t n = input.size();
 
-    // --- Vector ---
-    printContainer("Before (vector): ", input);
+	std::cout << "Before:";
+	for (size_t i = 0; i < n; ++i) std::cout << " " << input[i];
+	std::cout << "\n";
 
-    std::vector<int> sortedVec = PmergeMe::sortVector(input);
-    printContainer("After  (vector): ", sortedVec);
+	// --- std::vector sort ---
+	std::vector<int> vecInput = input;
+	double t0 = getTimeUs();
+	std::vector<int> sortedVec = fjSort(vecInput);
+	double t1 = getTimeUs();
 
-    // --- Deque ---
-    std::deque<int> inputDeque(input.begin(), input.end());
-    std::deque<int> sortedDeq = PmergeMe::sortDeque(inputDeque);
-    printContainer("After  (deque) : ", sortedDeq);
+	// --- std::deque sort ---
+	std::deque<int> deqInput(input.begin(), input.end());
+	double t2 = getTimeUs();
+	std::deque<int> sortedDeq = fjSort(deqInput);
+	double t3 = getTimeUs();
 
-    return 0;
+	std::cout << "After:";
+	for (size_t i = 0; i < sortedVec.size(); ++i) std::cout << " " << sortedVec[i];
+	std::cout << "\n";
+
+	std::cout << std::fixed << std::setprecision(5);
+	std::cout << "Time to process a range of " << n
+		<< " elements with std::vector : " << (t1 - t0) << " us\n";
+	std::cout << "Time to process a range of " << n
+		<< " elements with std::deque  : " << (t3 - t2) << " us\n";
+
+	return 0;
 }
