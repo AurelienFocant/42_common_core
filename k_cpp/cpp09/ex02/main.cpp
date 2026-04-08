@@ -45,12 +45,9 @@ static std::vector<size_t> jacobsthalSequence(size_t n)
     return seq;
 }
 
-template <typename T, template <typename, typename> class Container>
-Container<T, std::allocator<T> >
-fjSort(const Container<T, std::allocator<T> >& seq)
+template <typename T>
+static std::vector<T> fjSortVector(const std::vector<T>& seq)
 {
-    typedef Container<T, std::allocator<T> > Cont;
-
     size_t n = seq.size();
 
     if (n <= 1)
@@ -58,66 +55,59 @@ fjSort(const Container<T, std::allocator<T> >& seq)
 
     if (n == 2)
     {
-        Cont out(seq);
-        if (out[1] < out[0])
-            std::swap(out[0], out[1]);
-        return out;
+        std::vector<T> v(seq);
+        if (v[1] < v[0])
+            std::swap(v[0], v[1]);
+        return v;
     }
 
     bool hasStraggler = (n % 2 != 0);
     T straggler;
     if (hasStraggler)
-        straggler = seq[n - 1];
+        straggler = seq.back();
 
     size_t pairCount = n / 2;
 
-    // STEP 1: pairs (larger, smaller)
-    Container< std::pair<T, T>, std::allocator< std::pair<T, T> > > pairs;
+    std::vector<std::pair<T, T> > pairs;
+    pairs.reserve(pairCount);
 
     for (size_t i = 0; i < pairCount; ++i)
     {
         T a = seq[2*i];
         T b = seq[2*i + 1];
-
-        if (a < b)
-            std::swap(a, b);
-
+        if (a < b) std::swap(a, b);
         pairs.push_back(std::make_pair(a, b));
     }
 
-    // STEP 2: extract largers
-    Cont largers;
+    std::vector<T> largers;
+    largers.reserve(pairCount);
     for (size_t i = 0; i < pairCount; ++i)
         largers.push_back(pairs[i].first);
 
-    // STEP 3: recursive sort
-    Cont sortedLargers = fjSort<T, Container>(largers);
+    std::vector<T> sortedLargers = fjSortVector(largers);
 
-    // STEP 4: multimap for matching
     std::multimap<T, std::pair<T, T> > mp;
     for (size_t i = 0; i < pairCount; ++i)
         mp.insert(std::make_pair(pairs[i].first, pairs[i]));
 
-    Container< std::pair<T, T>, std::allocator< std::pair<T, T> > > ordered;
+    std::vector<std::pair<T, T> > ordered;
+    ordered.reserve(pairCount);
 
     for (size_t i = 0; i < pairCount; ++i)
     {
         typename std::multimap<T, std::pair<T, T> >::iterator it =
             mp.find(sortedLargers[i]);
-
         ordered.push_back(it->second);
         mp.erase(it);
     }
 
-    // STEP 5: build main chain
-    Cont chain;
+    std::vector<T> chain;
+    chain.reserve(n); // 🔥 critical
 
     chain.push_back(ordered[0].second);
-
     for (size_t i = 0; i < pairCount; ++i)
         chain.push_back(ordered[i].first);
 
-    // STEP 6: Jacobsthal insertion
     if (pairCount > 1)
     {
         std::vector<size_t> order = jacobsthalSequence(pairCount - 1);
@@ -126,29 +116,122 @@ fjSort(const Container<T, std::allocator<T> >& seq)
         {
             size_t idx = order[i];
 
-            T val   = ordered[idx].second;
+            T val = ordered[idx].second;
             T bound = ordered[idx].first;
 
-            typename Cont::iterator ub =
+            typename std::vector<T>::iterator ub = std::upper_bound(chain.begin(), chain.end(), bound);
+
+            typename std::vector<T>::iterator pos = std::lower_bound(chain.begin(), ub, val);
+
+            chain.insert(pos, val);
+        }
+    }
+
+    if (hasStraggler)
+    {
+        typename std::vector<T>::iterator pos = std::lower_bound(chain.begin(), chain.end(), straggler);
+        chain.insert(pos, straggler);
+    }
+
+    return chain;
+}
+
+#include <deque>
+#include <map>
+#include <algorithm>
+
+template <typename T>
+static std::deque<T> fjSortDeque(const std::deque<T>& seq)
+{
+    size_t n = seq.size();
+
+    if (n <= 1)
+        return seq;
+
+    if (n == 2)
+    {
+        std::deque<T> d(seq);
+        if (d[1] < d[0])
+            std::swap(d[0], d[1]);
+        return d;
+    }
+
+    bool hasStraggler = (n % 2 != 0);
+    T straggler;
+    if (hasStraggler)
+        straggler = seq.back();
+
+    size_t pairCount = n / 2;
+
+    std::deque<std::pair<T, T> > pairs;
+
+    for (size_t i = 0; i < pairCount; ++i)
+    {
+        T a = seq[2*i];
+        T b = seq[2*i + 1];
+        if (a < b) std::swap(a, b);
+        pairs.push_back(std::make_pair(a, b));
+    }
+
+    std::deque<T> largers;
+    for (size_t i = 0; i < pairCount; ++i)
+        largers.push_back(pairs[i].first);
+
+    std::deque<T> sortedLargers = fjSortDeque(largers);
+
+    std::multimap<T, std::pair<T, T> > mp;
+    for (size_t i = 0; i < pairCount; ++i)
+        mp.insert(std::make_pair(pairs[i].first, pairs[i]));
+
+    std::deque<std::pair<T, T> > ordered;
+
+    for (size_t i = 0; i < pairCount; ++i)
+    {
+        typename std::multimap<T, std::pair<T, T> >::iterator it =
+            mp.find(sortedLargers[i]);
+        ordered.push_back(it->second);
+        mp.erase(it);
+    }
+
+    std::deque<T> chain;
+
+    // deque advantage: cheap front insertion
+    chain.push_back(ordered[0].second);
+
+    for (size_t i = 0; i < pairCount; ++i)
+        chain.push_back(ordered[i].first);
+
+    if (pairCount > 1)
+    {
+        std::vector<size_t> order = jacobsthalSequence(pairCount - 1);
+
+        for (size_t i = 0; i < order.size(); ++i)
+        {
+            size_t idx = order[i];
+
+            T val = ordered[idx].second;
+            T bound = ordered[idx].first;
+
+            typename std::deque<T>::iterator ub =
                 std::upper_bound(chain.begin(), chain.end(), bound);
 
-            typename Cont::iterator pos =
+            typename std::deque<T>::iterator pos =
                 std::lower_bound(chain.begin(), ub, val);
 
             chain.insert(pos, val);
         }
     }
 
-    // STEP 7: straggler
     if (hasStraggler)
     {
-        typename Cont::iterator pos =
+        typename std::deque<T>::iterator pos =
             std::lower_bound(chain.begin(), chain.end(), straggler);
         chain.insert(pos, straggler);
     }
 
     return chain;
 }
+
 
 // ------------------------
 // High-resolution timer (microseconds via CLOCK_MONOTONIC)
@@ -193,13 +276,13 @@ int main(int argc, char* argv[])
 	// --- std::vector sort ---
 	std::vector<int> vecInput = input;
 	double t0 = getTimeUs();
-	std::vector<int> sortedVec = fjSort(vecInput);
+	std::vector<int> sortedVec = fjSortVector(vecInput);
 	double t1 = getTimeUs();
 
 	// --- std::deque sort ---
 	std::deque<int> deqInput(input.begin(), input.end());
 	double t2 = getTimeUs();
-	std::deque<int> sortedDeq = fjSort(deqInput);
+	std::deque<int> sortedDeq = fjSortDeque(deqInput);
 	double t3 = getTimeUs();
 
 	std::cout << "After:";
