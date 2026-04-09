@@ -12,7 +12,8 @@
 static std::vector<size_t> jacobsthalSequence(size_t n)
 {
     std::vector<size_t> seq;
-    if (n == 0) return seq;
+    if (n == 0)
+		return seq;
 
     std::vector<size_t> jNums;
     jNums.push_back(1);
@@ -40,8 +41,11 @@ static std::vector<size_t> jacobsthalSequence(size_t n)
             }
         }
     }
-    for (size_t i = 1; i <= n; ++i)
-        if (!added[i]) seq.push_back(i);
+    for (size_t i = n; i > 0; --i)
+	{
+        if (!added[i])
+			seq.push_back(i);
+	}
 
     return seq;
 }
@@ -75,7 +79,7 @@ Container FordJohnson(const Container& input)
 		straggler = seq.back();
 
 
-    // Step 1: form pairs
+    // Step 1: form sorted pairs
     size_t pairCount = seqSize / 2;
     std::vector<std::pair<T, T> > pairs;
     pairs.reserve(pairCount);
@@ -93,7 +97,6 @@ Container FordJohnson(const Container& input)
     std::vector<T> largers;
     for (size_t i = 0; i < pairCount; ++i)
         largers.push_back(pairs[i].first);
-
     largers = FordJohnson<std::vector<T> >(largers);
 
 
@@ -122,10 +125,10 @@ Container FordJohnson(const Container& input)
     // Step 5: insert pending elements in Jacobsthal order
     if (pairCount > 1)
     {
-        std::vector<size_t> jacbosthalSeq = jacobsthalSequence(pairCount - 1);
-        for (size_t i = 0; i < jacbosthalSeq.size(); ++i)
+        std::vector<size_t> jacobsthalSeq = jacobsthalSequence(pairCount - 1);
+        for (size_t i = 0; i < jacobsthalSeq.size(); ++i)
         {
-            size_t idx  = jacbosthalSeq[i];
+            size_t idx  = jacobsthalSeq[i];
             T val       = smallers[idx].second;
             T bound     = smallers[idx].first;
 

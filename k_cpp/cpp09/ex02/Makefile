@@ -10,7 +10,7 @@ CFLAGS		+=	-Wall -Wextra -Werror
 DEBUGFLAGS	+=	-g -D_GLIBCXX_DEBUG
 
 
-NAME		=	Ford-Johnson_de_mes_couilles
+NAME		=	PmergeMe
 
 all: $(NAME)
 
