@@ -47,13 +47,14 @@ static std::vector<size_t> jacobsthalSequence(size_t n)
 }
 
 template <typename Container>
-Container fjSort(const Container& input)
+Container FordJohnson(const Container& input)
 {
     typedef typename Container::value_type T;
     typedef typename Container::iterator   Iter;
 
     std::vector<T> seq(input.begin(), input.end());
     size_t seqSize = seq.size();
+
 
 	// Base cases
     if (seqSize <= 1)
@@ -73,9 +74,9 @@ Container fjSort(const Container& input)
 	if (hasStraggler)
 		straggler = seq.back();
 
-    size_t pairCount = seqSize / 2;
 
-    // --- Step 1: form pairs (larger, smaller) ---
+    // Step 1: form pairs
+    size_t pairCount = seqSize / 2;
     std::vector<std::pair<T, T> > pairs;
     pairs.reserve(pairCount);
     for (size_t i = 0; i < pairCount; ++i)
@@ -87,47 +88,46 @@ Container fjSort(const Container& input)
         pairs.push_back(std::make_pair(a, b));
     }
 
-    // --- Step 2: recursively sort the larger elements (always via vector) ---
+
+    // Step 2: recursively sort the larger elements
     std::vector<T> largers;
-    largers.reserve(pairCount);
     for (size_t i = 0; i < pairCount; ++i)
         largers.push_back(pairs[i].first);
 
-    largers = fjSort<std::vector<T> >(largers);
+    largers = FordJohnson<std::vector<T> >(largers);
 
-    // --- Step 3: re-order pairs to match sorted largers ---
+
+    // Step 3: re-order pairs to match sorted largers
     std::multimap<T, std::pair<T, T> > mp;
     for (size_t i = 0; i < pairCount; ++i)
         mp.insert(std::make_pair(pairs[i].first, pairs[i]));
 
-    std::vector<std::pair<T, T> > ordered;
-    ordered.reserve(pairCount);
+    std::vector< std::pair<T, T> > smallers;
+	typename std::multimap<T, std::pair<T, T> >::iterator it;
     for (size_t i = 0; i < pairCount; ++i)
     {
-        typename std::multimap<T, std::pair<T, T> >::iterator it =
-            mp.find(largers[i]);
-        ordered.push_back(it->second);
+		it = mp.find(largers[i]);
+        smallers.push_back(it->second);
         mp.erase(it);
     }
 
-    // --- Step 4: build the initial chain as the REAL Container ---
-    // This is where vector/deque vs list performance diverges.
-    Container chain;
-    chain.push_back(ordered[0].second);
-    for (size_t i = 0; i < pairCount; ++i)
-        chain.push_back(ordered[i].first);
 
-    // --- Step 5: insert pending elements in Jacobsthal order ---
-    // lower_bound on a list iterator is O(n); on vector/deque it is O(log n).
-    // The insert itself is O(1) for list, O(n) for vector/deque.
+    // Step 4: build the Main Chain
+    Container chain;
+    chain.push_back(smallers[0].second);
+    for (size_t i = 0; i < pairCount; ++i)
+        chain.push_back(smallers[i].first);
+
+
+    // Step 5: insert pending elements in Jacobsthal order
     if (pairCount > 1)
     {
-        std::vector<size_t> order = jacobsthalSequence(pairCount - 1);
-        for (size_t i = 0; i < order.size(); ++i)
+        std::vector<size_t> jacbosthalSeq = jacobsthalSequence(pairCount - 1);
+        for (size_t i = 0; i < jacbosthalSeq.size(); ++i)
         {
-            size_t idx  = order[i];
-            T val       = ordered[idx].second;
-            T bound     = ordered[idx].first;
+            size_t idx  = jacbosthalSeq[i];
+            T val       = smallers[idx].second;
+            T bound     = smallers[idx].first;
 
             Iter ub  = std::upper_bound(chain.begin(), chain.end(), bound);
             Iter pos = std::lower_bound(chain.begin(), ub, val);
@@ -135,7 +135,8 @@ Container fjSort(const Container& input)
         }
     }
 
-    // --- Step 6: insert the straggler ---
+
+    // Step 6: insert the straggler
     if (hasStraggler)
     {
         Iter pos = std::lower_bound(chain.begin(), chain.end(), straggler);
@@ -176,19 +177,19 @@ int main(int argc, char* argv[])
 	// --- std::vector ---
 	std::vector<int> vecInput(seq.begin(), seq.end());
 	double t0 = getCurrTime();
-	std::vector<int> sortedVec = fjSort<std::vector<int> >(vecInput);
+	std::vector<int> sortedVec = FordJohnson<std::vector<int> >(vecInput);
 	double t1 = getCurrTime();
 
 	// --- std::deque ---
 	std::deque<int> deqInput(seq.begin(), seq.end());
 	double t2 = getCurrTime();
-	std::deque<int> sortedDeq = fjSort<std::deque<int> >(deqInput);
+	std::deque<int> sortedDeq = FordJohnson<std::deque<int> >(deqInput);
 	double t3 = getCurrTime();
 
 	// --- std::list ---
 	std::list<int> lstInput(seq.begin(), seq.end());
 	double t4 = getCurrTime();
-	std::list<int> sortedLst = fjSort<std::list<int> >(lstInput);
+	std::list<int> sortedLst = FordJohnson<std::list<int> >(lstInput);
 	double t5 = getCurrTime();
 
 	std::cout << "After:";
