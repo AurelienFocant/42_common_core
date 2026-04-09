@@ -1,3 +1,5 @@
+#include "utils.hpp"
+
 #include <vector>
 #include <deque>
 #include <list>
@@ -5,13 +7,8 @@
 #include <algorithm>
 #include <utility>
 #include <iostream>
-#include <sstream>
 #include <iomanip>
-#include <ctime>
 
-// ---------------------------------------------------------------------------
-// Jacobsthal sequence generator
-// ---------------------------------------------------------------------------
 static std::vector<size_t> jacobsthalSequence(size_t n)
 {
     std::vector<size_t> seq;
@@ -49,45 +46,34 @@ static std::vector<size_t> jacobsthalSequence(size_t n)
     return seq;
 }
 
-// ---------------------------------------------------------------------------
-// Generic Ford-Johnson (merge-insertion) sort.
-//
-// The main chain is kept as a Container throughout, so each container type
-// pays its real insertion cost:
-//   - std::vector  : O(n) shifts on insert, O(log n) binary search
-//   - std::deque   : O(n) shifts on insert, O(log n) binary search
-//   - std::list    : O(1) insert once position is found, but O(n) linear
-//                    search (no random-access iterator, so lower_bound
-//                    degrades from O(log n) to O(n))
-//
-// Recursion always uses std::vector internally (sorting the largers only),
-// so the Container penalty is isolated to the insertion phase.
-// ---------------------------------------------------------------------------
 template <typename Container>
 Container fjSort(const Container& input)
 {
     typedef typename Container::value_type T;
     typedef typename Container::iterator   Iter;
 
-    // Copy into a vector for indexed pairing — this is O(n) regardless and
-    // is not part of the timed insertion phase.
     std::vector<T> seq(input.begin(), input.end());
-    size_t n = seq.size();
+    size_t seqSize = seq.size();
 
-    if (n <= 1)
+	// Base cases
+    if (seqSize <= 1)
         return input;
 
-    if (n == 2)
+    if (seqSize == 2)
     {
-        std::vector<T> v(seq);
-        if (v[1] < v[0]) std::swap(v[0], v[1]);
-        return Container(v.begin(), v.end());
+        if (seq[1] < seq[0])
+			std::swap(seq[0], seq[1]);
+        return Container(seq.begin(), seq.end());
     }
 
-    bool hasStraggler = (n % 2 != 0);
-    T straggler = hasStraggler ? seq.back() : T();
 
-    size_t pairCount = n / 2;
+	// Lone odd element
+    bool hasStraggler = (seqSize % 2 != 0);
+    T straggler;
+	if (hasStraggler)
+		straggler = seq.back();
+
+    size_t pairCount = seqSize / 2;
 
     // --- Step 1: form pairs (larger, smaller) ---
     std::vector<std::pair<T, T> > pairs;
@@ -96,7 +82,8 @@ Container fjSort(const Container& input)
     {
         T a = seq[2 * i];
         T b = seq[2 * i + 1];
-        if (a < b) std::swap(a, b);
+        if (a < b)
+			std::swap(a, b);
         pairs.push_back(std::make_pair(a, b));
     }
 
@@ -158,15 +145,6 @@ Container fjSort(const Container& input)
     return chain;
 }
 
-// ---------------------------------------------------------------------------
-// Timer (microseconds via CLOCK_MONOTONIC)
-// ---------------------------------------------------------------------------
-static double getTimeUs()
-{
-    struct timespec ts;
-    clock_gettime(CLOCK_MONOTONIC, &ts);
-    return ts.tv_sec * 1e6 + ts.tv_nsec / 1e3;
-}
 
 // ---------------------------------------------------------------------------
 // Main
@@ -179,54 +157,51 @@ int main(int argc, char* argv[])
         return 1;
     }
 
-    std::vector<int> input;
-    for (int i = 1; i < argc; ++i)
-    {
-        std::istringstream iss(argv[i]);
-        int val;
-        if (!(iss >> val) || val < 0)
-        {
-            std::cerr << "Invalid number: " << argv[i] << "\n";
-            return 1;
-        }
-        input.push_back(val);
-    }
+	std::vector<int> seq;
+	try {
+		seq = parseInput(argc, argv);
+	}
+	catch (std::exception const& e) {
+		std::cerr << e.what();
+		return (1);
+	}
 
-    size_t n = input.size();
 
-    std::cout << "Before:";
-    for (size_t i = 0; i < n; ++i) std::cout << " " << input[i];
-    std::cout << "\n";
+	size_t size = seq.size();
 
-    // --- std::vector ---
-    std::vector<int> vecInput(input.begin(), input.end());
-    double t0 = getTimeUs();
-    std::vector<int> sortedVec = fjSort<std::vector<int> >(vecInput);
-    double t1 = getTimeUs();
+	std::cout << "Before:";
+	for (size_t i = 0; i < size; ++i) std::cout << " " << seq[i];
+	std::cout << "\n";
 
-    // --- std::deque ---
-    std::deque<int> deqInput(input.begin(), input.end());
-    double t2 = getTimeUs();
-    std::deque<int> sortedDeq = fjSort<std::deque<int> >(deqInput);
-    double t3 = getTimeUs();
+	// --- std::vector ---
+	std::vector<int> vecInput(seq.begin(), seq.end());
+	double t0 = getCurrTime();
+	std::vector<int> sortedVec = fjSort<std::vector<int> >(vecInput);
+	double t1 = getCurrTime();
 
-    // --- std::list ---
-    std::list<int> lstInput(input.begin(), input.end());
-    double t4 = getTimeUs();
-    std::list<int> sortedLst = fjSort<std::list<int> >(lstInput);
-    double t5 = getTimeUs();
+	// --- std::deque ---
+	std::deque<int> deqInput(seq.begin(), seq.end());
+	double t2 = getCurrTime();
+	std::deque<int> sortedDeq = fjSort<std::deque<int> >(deqInput);
+	double t3 = getCurrTime();
 
-    std::cout << "After:";
-    for (size_t i = 0; i < sortedVec.size(); ++i) std::cout << " " << sortedVec[i];
-    std::cout << "\n";
+	// --- std::list ---
+	std::list<int> lstInput(seq.begin(), seq.end());
+	double t4 = getCurrTime();
+	std::list<int> sortedLst = fjSort<std::list<int> >(lstInput);
+	double t5 = getCurrTime();
 
-    std::cout << std::fixed << std::setprecision(5);
-    std::cout << "Time to process a range of " << n
-              << " elements with std::vector : " << (t1 - t0) << " us\n";
-    std::cout << "Time to process a range of " << n
-              << " elements with std::deque  : " << (t3 - t2) << " us\n";
-    std::cout << "Time to process a range of " << n
-              << " elements with std::list   : " << (t5 - t4) << " us\n";
+	std::cout << "After:";
+	for (size_t i = 0; i < sortedVec.size(); ++i) std::cout << " " << sortedVec[i];
+	std::cout << "\n";
 
-    return 0;
+	std::cout << std::fixed << std::setprecision(5);
+	std::cout << "Time to process a range of " << size
+		<< " elements with std::vector : " << (t1 - t0) << " us\n";
+	std::cout << "Time to process a range of " << size
+		<< " elements with std::deque  : " << (t3 - t2) << " us\n";
+	std::cout << "Time to process a range of " << size
+		<< " elements with std::list   : " << (t5 - t4) << " us\n";
+
+	return 0;
 }
